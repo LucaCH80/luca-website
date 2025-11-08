@@ -143,7 +143,7 @@ export default function HomeEN() {
             Luca Chiesa
           </h1>
 
-        <p
+          <p
             style={{
               fontSize: "clamp(15px, 2.05vw, 18px)",
               color: mute,
@@ -190,7 +190,7 @@ export default function HomeEN() {
           </a>
         </main>
 
-        {/* Footer */}
+        {/* Footer with minimal legal notice */}
         <footer
           style={{
             marginTop: 84,
@@ -203,7 +203,27 @@ export default function HomeEN() {
               © {new Date().getFullYear()} Luca Chiesa
             </p>
 
-            <div style={{ display: "flex", gap: 14, justifyContent: "center" }}>
+            <p
+              style={{
+                margin: "0 auto 12px",
+                color: "#6B7280",
+                fontSize: 13,
+                lineHeight: 1.6,
+                maxWidth: 680,
+              }}
+            >
+              Personal website with no forms or registration. No personal data is
+              collected, and no third-party tracking cookies are used. To exercise
+              your data rights, write to{" "}
+              <a
+                href="mailto:contact@lucachiesa.net"
+                style={{ color: accent, textDecoration: "none", fontWeight: 600 }}
+              >
+                contact@lucachiesa.net
+              </a>.
+            </p>
+
+            <div style={{ display: "flex", gap: 14, justifyContent: "center", marginTop: 10 }}>
               {/* Email */}
               <a
                 href="mailto:contact@lucachiesa.net?subject=Inquiry%20from%20website"
