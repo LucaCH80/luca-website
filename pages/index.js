@@ -1,137 +1,87 @@
 export default function Home() {
-  const accent = "#D6B679";   // tono más suave y elegante
-  const linkedin = "#0A66C2"; // azul LinkedIn
-
-  const iconBtn = {
-    display: "inline-flex",
-    alignItems: "center",
-    justifyContent: "center",
-    width: 44,
-    height: 44,
-    borderRadius: "50%",
-    background: "white",
-    color: "#222",
-    border: "1px solid #e5e5e5",
-    boxShadow: "0 1px 2px rgba(0,0,0,.06)",
-    textDecoration: "none",
-    transition: "all .2s ease",
-  };
-
-  const iconBtnHover = {
-    transform: "translateY(-2px)",
-    boxShadow: "0 6px 14px rgba(0,0,0,.12)",
-  };
-
   return (
-    <main
+    <div
       style={{
-        fontFamily: "Arial, sans-serif",
+        fontFamily: "Inter, sans-serif",
         textAlign: "center",
-        padding: "80px 20px",
-        lineHeight: 1.6,
-        background: "#fff",
-        color: "#111",
+        padding: "100px 20px",
+        backgroundColor: "#fffaf5",
+        color: "#1a1a1a",
       }}
     >
-      <h1 style={{ fontSize: 32, marginBottom: 12 }}>Luca Chiesa</h1>
-      <p style={{ fontSize: 18, marginBottom: 36, color: "#555" }}>
+      <h1
+        style={{
+          fontSize: "2.5rem",
+          fontWeight: "700",
+          marginBottom: "10px",
+        }}
+      >
+        Luca Chiesa
+      </h1>
+
+      <p style={{ fontSize: "1.2rem", color: "#555", marginBottom: "40px" }}>
         Sales • Leadership • DISC
       </p>
 
-      {/* CTA principal */}
       <a
-        href="mailto:contact@lucachiesa.net?subject=Consulta%20desde%20la%20web&body=Hola%20Luca,"
+        href="mailto:contact@lucachiesa.net?subject=Consulta%20desde%20la%20web"
         style={{
-          display: "inline-block",
-          backgroundColor: accent,
-          color: "black",
-          padding: "12px 26px",
-          borderRadius: 10,
+          backgroundColor: "#2F67B2",
+          color: "#fff",
+          padding: "14px 36px",
+          borderRadius: "10px",
           textDecoration: "none",
-          fontWeight: "bold",
-          transition: "all .25s ease",
-          boxShadow: "0 3px 8px rgba(0,0,0,.1)",
+          fontWeight: "600",
+          fontSize: "1rem",
+          boxShadow: "0 4px 8px rgba(0,0,0,0.1)",
+          transition: "all 0.3s ease",
         }}
-        onMouseOver={(e) => {
-          e.currentTarget.style.transform = "translateY(-2px)";
-          e.currentTarget.style.backgroundColor = "#C7A86D"; // más oscuro al pasar
-          e.currentTarget.style.boxShadow = "0 8px 18px rgba(0,0,0,.18)";
-        }}
-        onMouseOut={(e) => {
-          e.currentTarget.style.transform = "none";
-          e.currentTarget.style.backgroundColor = accent;
-          e.currentTarget.style.boxShadow = "0 3px 8px rgba(0,0,0,.1)";
-        }}
+        onMouseOver={(e) => (e.target.style.backgroundColor = "#3E78C4")}
+        onMouseOut={(e) => (e.target.style.backgroundColor = "#2F67B2")}
       >
         Contacta con Luca
       </a>
 
-      {/* Footer */}
       <footer
         style={{
-          marginTop: 64,
-          borderTop: "1px solid #eee",
-          paddingTop: 22,
-          color: "#666",
-          fontSize: 14,
+          marginTop: "100px",
+          fontSize: "0.9rem",
+          color: "#777",
         }}
       >
-        <p style={{ marginBottom: 14 }}>© {new Date().getFullYear()} Luca Chiesa</p>
-
-        <div style={{ display: "flex", gap: 14, justifyContent: "center" }}>
-          {/* Email primero */}
+        <p>© 2025 Luca Chiesa</p>
+        <div
+          style={{
+            marginTop: "10px",
+            display: "flex",
+            justifyContent: "center",
+            gap: "20px",
+          }}
+        >
           <a
-            href="mailto:contact@lucachiesa.net?subject=Consulta%20desde%20la%20web&body=Hola%20Luca,"
-            aria-label="Enviar email a contact@lucachiesa.net"
-            style={{ ...iconBtn }}
-            onMouseOver={(e) => Object.assign(e.currentTarget.style, iconBtnHover)}
-            onMouseOut={(e) => {
-              e.currentTarget.style.transform = "none";
-              e.currentTarget.style.boxShadow = "0 1px 2px rgba(0,0,0,.06)";
+            href="mailto:contact@lucachiesa.net"
+            style={{
+              color: "#2F67B2",
+              fontSize: "1.5rem",
+              textDecoration: "none",
             }}
           >
-            <svg
-              width="22"
-              height="22"
-              viewBox="0 0 24 24"
-              fill="currentColor"
-              aria-hidden="true"
-            >
-              <path d="M20 4H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2zm0 4-8 5L4 8V6l8 5 8-5v2z"/>
-            </svg>
+            ✉️
           </a>
-
-          {/* Luego LinkedIn */}
           <a
-            href="https://www.linkedin.com/in/lucachiesa"
+            href="https://www.linkedin.com/in/lucachiesa/"
             target="_blank"
             rel="noopener noreferrer"
-            aria-label="LinkedIn de Luca Chiesa"
-            style={{ ...iconBtn, color: linkedin }}
-            onMouseOver={(e) => {
-              e.currentTarget.style.color = "#fff";
-              e.currentTarget.style.background = linkedin;
-              Object.assign(e.currentTarget.style, iconBtnHover);
-            }}
-            onMouseOut={(e) => {
-              e.currentTarget.style.color = linkedin;
-              e.currentTarget.style.background = "white";
-              e.currentTarget.style.transform = "none";
-              e.currentTarget.style.boxShadow = "0 1px 2px rgba(0,0,0,.06)";
+            style={{
+              color: "#2F67B2",
+              fontSize: "1.5rem",
+              textDecoration: "none",
             }}
           >
-            <svg
-              width="22"
-              height="22"
-              viewBox="0 0 24 24"
-              fill="currentColor"
-              aria-hidden="true"
-            >
-              <path d="M4.98 3.5c0 1.38-1.12 2.5-2.48 2.5A2.5 2.5 0 0 1 0 3.5C0 2.12 1.12 1 2.5 1S4.98 2.12 4.98 3.5zM0 8h5v16H0V8zm7.5 0h4.8v2.2h.07C13.04 8.99 14.67 7.73 17.1 7.73c5.06 0 6 3.33 6 7.66V24h-5v-7.9c0-1.88-.03-4.3-2.62-4.3-2.62 0-3.02 2.05-3.02 4.17V24h-5V8z"/>
-            </svg>
+            in
           </a>
         </div>
       </footer>
-    </main>
+    </div>
   );
 }
