@@ -1,259 +1,176 @@
 import Head from "next/head";
 
 export default function HomeES() {
-  // Paleta y tokens
-  const bgSoft = "#F7F6F4"; // fondo cálido confirmado
-  const ink = "#111";
-  const mute = "#4A5568";
-  const accent = "#2F67B2";
-  const line = "#E6ECF4";
-
-  // Estilos base
-  const pillBase = {
-    display: "inline-flex",
-    alignItems: "center",
-    justifyContent: "center",
-    minHeight: 32,
-    padding: "6px 12px",
-    borderRadius: 999,
-    fontSize: "0.92rem",
-    fontWeight: 600,
-    textDecoration: "none",
-    border: "1px solid transparent",
-    outline: "none",
-    cursor: "pointer",
-  };
-
-  const container = {
-    maxWidth: 900,
-    margin: "0 auto",
-    textAlign: "center",
-    padding: "0 22px",
-  };
-
-  const h2 = {
-    fontFamily: "Poppins, Inter, sans-serif",
-    fontWeight: 700,
-    letterSpacing: "0.5px",
-    fontSize: "clamp(18px, 1.7vw, 20px)",
-    textTransform: "uppercase",
-    color: "#20262E",
-    margin: "64px 0 14px",
-  };
-
-  const lead = {
-    color: mute,
-    fontSize: "clamp(16px, 2.1vw, 19px)",
-    lineHeight: 1.9,
-    margin: "0 auto 10px",
-    maxWidth: 860,
-  };
-
-  const sub = {
-    color: "#5B6572",
-    fontSize: "clamp(15px, 1.9vw, 17px)",
-    lineHeight: 1.85,
-    margin: "0 auto 10px",
-    maxWidth: 860,
-  };
-
-  const divider = {
-    borderTop: `1px solid ${line}`,
-    margin: "36px auto",
-    maxWidth: 860,
-  };
+  const email = "contact@lucachiesa.net";
+  const linkedin = "https://www.linkedin.com/in/lucachiesa/";
 
   return (
     <>
       <Head>
-        {/* Tipografías */}
-        <link rel="preconnect" href="https://fonts.googleapis.com"/>
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin=""/>
-        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Poppins:wght@600;700&display=swap" rel="stylesheet"/>
-        <title>Luca Chiesa | Ventas con propósito y liderazgo consciente</title>
-        <meta name="viewport" content="width=device-width, initial-scale=1"/>
+        <title>Luca Chiesa — Consultor en Ventas y Comunicación</title>
+        <meta
+          name="description"
+          content="Ventas, comunicación y DISC para equipos comerciales. Formación, acompañamiento y certificaciones DISC."
+        />
+        <meta httpEquiv="content-language" content="es" />
+        <link rel="alternate" hrefLang="es" href="https://lucachiesa.net/" />
+        <link rel="alternate" hrefLang="en" href="https://lucachiesa.net/en" />
+        <link rel="alternate" hrefLang="x-default" href="https://lucachiesa.net/" />
+        <meta property="og:locale" content="es_ES" />
+        <meta property="og:title" content="Luca Chiesa — Ventas, Comunicación, DISC" />
+        <meta
+          property="og:description"
+          content="Formación en ventas y comunicación, motivación de equipos, liderazgo y DISC. Certificaciones y aplicaciones prácticas."
+        />
+        <meta property="og:url" content="https://lucachiesa.net/" />
+        <meta property="og:type" content="website" />
       </Head>
 
-      {/* Skip link accesible */}
-      <a
-        href="#main"
-        style={{
-          position: "absolute",
-          left: -9999,
-          top: -9999,
-          background: "#111",
-          color: "#fff",
-          padding: "8px 12px",
-          borderRadius: 8,
-        }}
-        onFocus={(e) => {
-          e.currentTarget.style.left = "16px";
-          e.currentTarget.style.top = "16px";
-          e.currentTarget.style.zIndex = 50;
-        }}
-        onBlur={(e) => {
-          e.currentTarget.style.left = "-9999px";
-          e.currentTarget.style.top = "-9999px";
-        }}
-      >
-        Saltar al contenido
-      </a>
-
-      <div
-        style={{
-          fontFamily: "Inter, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif",
-          minHeight: "100vh",
-          background: bgSoft,
-          color: ink,
-          padding: "100px 0 72px",
-          position: "relative",
-        }}
-      >
-        {/* Header / selector de idioma */}
-        <nav
-          role="navigation"
-          aria-label="Selector de idioma"
-          style={{
-            position: "absolute",
-            top: 18,
-            right: 20,
-            display: "flex",
-            gap: 10,
-            alignItems: "center",
-          }}
-        >
-          <span aria-current="page" style={{ ...pillBase, background: ink, color: "#fff" }}>ES</span>
-          <a
-            href="/en"
-            aria-label="Cambiar a inglés"
-            style={{ ...pillBase, color: accent, background: "#fff", borderColor: "#e5e7eb", boxShadow: "0 1px 1px rgba(0,0,0,.03)" }}
-            onMouseOver={(e) => { e.currentTarget.style.background = "#EEF3FB"; e.currentTarget.style.borderColor = "#D7E3F8"; }}
-            onMouseOut={(e) => { e.currentTarget.style.background = "#fff"; e.currentTarget.style.borderColor = "#e5e7eb"; }}
-          >EN</a>
+      <main className="wrap">
+        {/* Selector de idioma */}
+        <nav className="lang">
+          <a aria-current="page" href="/">ES</a>
+          <span>·</span>
+          <a href="/en">EN</a>
         </nav>
 
-        <main id="main" style={container}>
-          {/* HERO */}
-          <h1 style={{
-            fontFamily: "Poppins, Inter, sans-serif",
-            fontWeight: 700,
-            letterSpacing: "-0.4px",
-            fontSize: "clamp(34px, 6vw, 56px)",
-            margin: "8px 0 14px",
-            color: ink
-          }}>
-            Luca Chiesa
-          </h1>
+        {/* Hero */}
+        <section className="hero">
+          <h1>Luca Chiesa</h1>
+          <p className="kicker">Sales • Leadership • DISC</p>
 
-          <p style={{
-            fontSize: "clamp(15px, 2.05vw, 18px)",
-            color: mute,
-            fontWeight: 500,
-            margin: "0 0 38px"
-          }}>
-            Sales • Leadership • DISC
-          </p>
-
-          <a
-            href="mailto:contact@lucachiesa.net?subject=Consulta%20desde%20la%20web"
-            style={{
-              display: "inline-block",
-              backgroundColor: accent,
-              color: "#fff",
-              padding: "14px 28px",
-              borderRadius: 12,
-              textDecoration: "none",
-              fontWeight: 600,
-              fontSize: 16,
-              boxShadow: "0 10px 24px rgba(47,103,178,0.22)"
-            }}
-          >
-            Hablemos
+          <a className="cta" href={`mailto:${email}?subject=Consulta desde la web`}>
+            Contacta con Luca
           </a>
+        </section>
 
-          {/* SOBRE MÍ */}
-          <h2 style={h2}>Sobre mí</h2>
-          <p style={lead}>
-            Impulso a equipos de ventas a conectar mejor, comunicar con propósito y crear relaciones comerciales que inspiran confianza.
-          </p>
-          <p style={sub}>
-            Formador en ventas, motivación y comunicación con enfoque DISC.
-          </p>
-          <p style={{ ...sub, marginBottom: 0 }}>
-            Apasionado del crecimiento personal y la excelencia profesional.
-          </p>
+        {/* Footer con iconos */}
+        <footer className="foot">
+          <p>© {new Date().getFullYear()} Luca Chiesa</p>
 
-          <div style={divider} />
+          <div className="icons">
+            {/* Email */}
+            <a className="icon" href={`mailto:${email}?subject=Consulta desde la web`} aria-label="Escribir un email">
+              <svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" strokeWidth="1.6">
+                <rect x="3" y="5" width="18" height="14" rx="2"></rect>
+                <path d="M3 7l9 6 9-6"></path>
+              </svg>
+            </a>
 
-          {/* SERVICIOS */}
-          <h2 style={h2}>Servicios</h2>
-
-          {/* Ventas */}
-          <h3 style={{ margin: "22px 0 10px", fontWeight: 700, fontSize: 18, color: "#1F2937" }}>
-            🎯 Formación en Ventas
-          </h3>
-          <p style={sub}>
-            Estrategias prácticas, método y actitud. Desde la prospección hasta el cierre, con herramientas para generar confianza y resultados sostenibles.
-          </p>
-          <p style={{ ...sub, marginTop: 6, marginBottom: 2 }}>
-            Siempre con el modelo DISC como base de autoconocimiento y comunicación.
-          </p>
-
-          {/* Comunicación & Motivación */}
-          <h3 style={{ margin: "28px 0 10px", fontWeight: 700, fontSize: 18, color: "#1F2937" }}>
-            💬 Comunicación & Motivación de Equipos
-          </h3>
-          <p style={sub}>
-            Comunicar mejor para liderar mejor. Trabajo la escucha, el feedback y la energía de equipo con metodologías participativas y el modelo DISC como lenguaje común.
-          </p>
-          <p style={{ ...sub, marginTop: 6, marginBottom: 2 }}>
-            Sesiones que combinan reflexión, práctica y acción.
-          </p>
-
-          {/* Liderazgo y Autoliderazgo */}
-          <h3 style={{ margin: "28px 0 10px", fontWeight: 700, fontSize: 18, color: "#1F2937" }}>
-            🧭 Liderazgo y Autoliderazgo Consciente
-          </h3>
-          <p style={sub}>
-            Desarrollo de competencias para liderar personas —y a uno mismo— con claridad, empatía y propósito.
-          </p>
-          <p style={{ ...sub, marginTop: 6, marginBottom: 2 }}>
-            Programas que integran motivación, gestión emocional y comunicación efectiva.
-          </p>
-
-          {/* DISC */}
-          <h3 style={{ margin: "28px 0 10px", fontWeight: 700, fontSize: 18, color: "#1F2937" }}>
-            🔷 DISC: Formación y Certificación
-          </h3>
-          <p style={sub}>
-            Formo y certifico a profesionales y empresas en el uso del modelo DISC — abierto o in-company (RR.HH., ventas o liderazgo).
-          </p>
-          <p style={{ ...sub, marginTop: 6 }}>
-            También distribuyo informes DISC para evaluación y desarrollo de equipos.
-          </p>
-        </main>
-
-        {/* FOOTER */}
-        <footer style={{ marginTop: 96, borderTop: `1px solid ${line}`, paddingTop: 24 }}>
-          <div style={container}>
-            <p style={{ margin: "0 0 12px", color: "#5B6572", fontSize: 14 }}>
-              © {new Date().getFullYear()} Luca Chiesa
-            </p>
-            <p style={{ margin: "0 auto 12px", color: "#6B7280", fontSize: 13.5, lineHeight: 1.65, maxWidth: 860 }}>
-              Sitio personal sin formularios ni registro. No se recopilan datos personales ni se utilizan cookies de terceros con fines de seguimiento.  
-              Escríbeme a{" "}
-              <a href="mailto:contact@lucachiesa.net" style={{ color: accent, textDecoration: "none", fontWeight: 600 }}>
-                contact@lucachiesa.net
-              </a>.
-            </p>
-
-            <div style={{ display: "flex", gap: 16, justifyContent: "center", marginTop: 12 }}>
-              <a href="mailto:contact@lucachiesa.net" style={{ color: accent, textDecoration: "none", fontWeight: 600 }}>Email</a>
-              <a href="https://www.linkedin.com/in/chiesaluca/" target="_blank" rel="noopener noreferrer" style={{ color: accent, textDecoration: "none", fontWeight: 600 }}>LinkedIn</a>
-            </div>
+            {/* LinkedIn */}
+            <a className="icon" href={linkedin} target="_blank" rel="noreferrer" aria-label="Ir a LinkedIn">
+              <svg viewBox="0 0 24 24" width="28" height="28" fill="currentColor">
+                <path d="M20.45 20.45h-3.56V14.9c0-1.32-.02-3.01-1.83-3.01-1.83 0-2.11 1.43-2.11 2.91v5.65H9.39V9.75h3.41v1.47h.05c.47-.9 1.61-1.83 3.31-1.83 3.54 0 4.19 2.33 4.19 5.36v5.7zM6.34 8.29a2.06 2.06 0 11.01-4.12 2.06 2.06 0 01-.01 4.12zM8.12 20.45H4.56V9.75h3.56v10.7z" />
+              </svg>
+            </a>
           </div>
         </footer>
-      </div>
+      </main>
+
+      <style jsx>{`
+        :root {
+          --bg: #eef2f7;
+          --text: #0f172a; /* slate-900 */
+          --muted: #475569; /* slate-600 */
+          --accent: #2563eb; /* azul profesional */
+          --accent-700: #1d4ed8;
+          --ring: rgba(37, 99, 235, 0.3);
+          --card: #ffffff;
+        }
+        html, body {
+          background: var(--bg);
+          margin: 0;
+          color: var(--text);
+          font-family: system-ui, -apple-system, Segoe UI, Roboto, Inter, "Helvetica Neue", Arial, "Noto Sans", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+          -webkit-font-smoothing: antialiased;
+          -moz-osx-font-smoothing: grayscale;
+        }
+        .wrap {
+          min-height: 100svh;
+          display: grid;
+          grid-template-rows: auto 1fr auto;
+          max-width: 980px;
+          margin: 0 auto;
+          padding: clamp(16px, 4vw, 32px);
+        }
+        .lang {
+          justify-self: end;
+          display: flex;
+          gap: .5rem;
+          color: var(--muted);
+          font-size: .95rem;
+        }
+        .lang a {
+          color: var(--muted);
+          text-decoration: none;
+        }
+        .lang a[aria-current="page"] {
+          color: var(--text);
+          font-weight: 600;
+        }
+        .hero {
+          display: grid;
+          place-items: center;
+          text-align: center;
+          padding-block: clamp(24px, 8vw, 64px);
+        }
+        h1 {
+          margin: 0 0 .8rem 0;
+          font-weight: 800;
+          letter-spacing: -0.02em;
+          font-size: clamp(2.2rem, 5.5vw, 4rem);
+        }
+        .kicker {
+          margin: 0 0 2.2rem 0;
+          color: var(--muted);
+          font-size: clamp(1.05rem, 2.4vw, 1.25rem);
+        }
+        .cta {
+          display: inline-block;
+          background: var(--accent);
+          color: #fff;
+          padding: .9rem 1.35rem;
+          border-radius: 12px;
+          text-decoration: none;
+          font-weight: 700;
+          letter-spacing: .01em;
+          box-shadow: 0 8px 18px rgba(37, 99, 235, .18);
+          transition: transform .08s ease, background .15s ease, box-shadow .2s ease;
+        }
+        .cta:hover { background: var(--accent-700); }
+        .cta:active { transform: translateY(1px); }
+        .cta:focus-visible {
+          outline: none;
+          box-shadow: 0 0 0 6px var(--ring);
+        }
+        .foot {
+          border-top: 1px solid rgba(15, 23, 42, .06);
+          margin-top: clamp(24px, 6vw, 72px);
+          padding-top: clamp(16px, 4vw, 28px);
+          display: grid;
+          place-items: center;
+          gap: 12px;
+          color: var(--muted);
+          text-align: center;
+        }
+        .icons {
+          display: flex;
+          gap: 14px;
+        }
+        .icon {
+          display: grid;
+          place-items: center;
+          width: 46px;
+          height: 46px;
+          border-radius: 999px;
+          background: var(--card);
+          color: var(--text);
+          box-shadow: 0 2px 8px rgba(0,0,0,.06), 0 1px 0 rgba(255,255,255,.6) inset;
+          transition: transform .08s ease, box-shadow .2s ease;
+        }
+        .icon:hover { transform: translateY(-1px); box-shadow: 0 6px 16px rgba(0,0,0,.1); }
+        .icon:focus-visible { outline: none; box-shadow: 0 0 0 6px var(--ring); }
+      `}</style>
     </>
   );
 }
