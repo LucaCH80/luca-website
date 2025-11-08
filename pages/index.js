@@ -69,7 +69,7 @@ export default function Home() {
             ✉️
           </a>
           <a
-            href="https://www.linkedin.com/in/lucachiesa/"
+            href="https://www.linkedin.com/in/chiesaluca/"
             target="_blank"
             rel="noopener noreferrer"
             style={{
