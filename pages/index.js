@@ -20,7 +20,7 @@ export default function HomeES() {
         <meta property="og:title" content="Luca Chiesa — Ventas, Comunicación, DISC" />
         <meta
           property="og:description"
-          content="Formación en ventas y comunicación, motivación de equipos, liderazgo y DISC. Certificaciones y aplicaciones prácticas."
+          content="Formación en ventas y comunicación, motivación de equipos, liderazgo y DISC. Certificaciones y aplicación práctica."
         />
         <meta property="og:url" content="https://lucachiesa.net/" />
         <meta property="og:type" content="website" />
@@ -28,9 +28,9 @@ export default function HomeES() {
 
       <main className="wrap">
         {/* Selector de idioma */}
-        <nav className="lang">
+        <nav className="lang" aria-label="Selector de idioma">
           <a aria-current="page" href="/">ES</a>
-          <span>·</span>
+          <span aria-hidden="true">·</span>
           <a href="/en">EN</a>
         </nav>
 
@@ -44,7 +44,7 @@ export default function HomeES() {
           </a>
         </section>
 
-        {/* Footer con iconos */}
+        {/* Footer */}
         <footer className="foot">
           <p>© {new Date().getFullYear()} Luca Chiesa</p>
 
@@ -74,9 +74,12 @@ export default function HomeES() {
           --muted: #475569; /* slate-600 */
           --accent: #2563eb; /* azul profesional */
           --accent-700: #1d4ed8;
-          --ring: rgba(37, 99, 235, 0.3);
+          --ring: rgba(37, 99, 235, 0.35);
           --card: #ffffff;
+          --shadow: 0 8px 18px rgba(37, 99, 235, .18);
+          --shadow-hover: 0 10px 22px rgba(37, 99, 235, .22);
         }
+
         html, body {
           background: var(--bg);
           margin: 0;
@@ -85,46 +88,57 @@ export default function HomeES() {
           -webkit-font-smoothing: antialiased;
           -moz-osx-font-smoothing: grayscale;
         }
+
         .wrap {
           min-height: 100svh;
           display: grid;
           grid-template-rows: auto 1fr auto;
           max-width: 980px;
           margin: 0 auto;
-          padding: clamp(16px, 4vw, 32px);
+          padding: clamp(12px, 3.5vw, 28px);
         }
+
         .lang {
           justify-self: end;
           display: flex;
-          gap: .5rem;
+          align-items: center;
+          gap: .55rem;
           color: var(--muted);
           font-size: .95rem;
         }
         .lang a {
           color: var(--muted);
           text-decoration: none;
+          padding: .15rem .3rem;
+          border-radius: 6px;
         }
         .lang a[aria-current="page"] {
           color: var(--text);
           font-weight: 600;
+          background: rgba(255,255,255,.6);
+          box-shadow: 0 1px 0 rgba(15,23,42,.06);
         }
+
         .hero {
           display: grid;
           place-items: center;
           text-align: center;
-          padding-block: clamp(24px, 8vw, 64px);
+          padding-block: clamp(18px, 6.5vw, 56px);
         }
+
         h1 {
-          margin: 0 0 .8rem 0;
+          margin: 0 0 .7rem 0;
           font-weight: 800;
           letter-spacing: -0.02em;
-          font-size: clamp(2.2rem, 5.5vw, 4rem);
+          font-size: clamp(2.25rem, 5.6vw, 4rem);
         }
+
         .kicker {
-          margin: 0 0 2.2rem 0;
+          margin: 0 0 clamp(16px, 3.2vw, 28px) 0;
           color: var(--muted);
-          font-size: clamp(1.05rem, 2.4vw, 1.25rem);
+          font-size: clamp(1.02rem, 2.3vw, 1.22rem);
         }
+
         .cta {
           display: inline-block;
           background: var(--accent);
@@ -134,29 +148,32 @@ export default function HomeES() {
           text-decoration: none;
           font-weight: 700;
           letter-spacing: .01em;
-          box-shadow: 0 8px 18px rgba(37, 99, 235, .18);
+          box-shadow: var(--shadow);
+          transform: translateZ(0);
           transition: transform .08s ease, background .15s ease, box-shadow .2s ease;
+          will-change: transform;
+          animation: floaty 4.5s ease-in-out infinite;
         }
-        .cta:hover { background: var(--accent-700); }
+        .cta:hover { background: var(--accent-700); box-shadow: var(--shadow-hover); }
         .cta:active { transform: translateY(1px); }
         .cta:focus-visible {
           outline: none;
-          box-shadow: 0 0 0 6px var(--ring);
+          box-shadow: 0 0 0 6px var(--ring), var(--shadow);
         }
+
         .foot {
           border-top: 1px solid rgba(15, 23, 42, .06);
-          margin-top: clamp(24px, 6vw, 72px);
-          padding-top: clamp(16px, 4vw, 28px);
+          margin-top: clamp(22px, 6vw, 64px);
+          padding-top: clamp(14px, 4vw, 26px);
           display: grid;
           place-items: center;
           gap: 12px;
           color: var(--muted);
           text-align: center;
         }
-        .icons {
-          display: flex;
-          gap: 14px;
-        }
+
+        .icons { display: flex; gap: 14px; }
+
         .icon {
           display: grid;
           place-items: center;
@@ -166,10 +183,28 @@ export default function HomeES() {
           background: var(--card);
           color: var(--text);
           box-shadow: 0 2px 8px rgba(0,0,0,.06), 0 1px 0 rgba(255,255,255,.6) inset;
-          transition: transform .08s ease, box-shadow .2s ease;
+          transition: transform .12s ease, box-shadow .2s ease, background .2s ease;
         }
-        .icon:hover { transform: translateY(-1px); box-shadow: 0 6px 16px rgba(0,0,0,.1); }
-        .icon:focus-visible { outline: none; box-shadow: 0 0 0 6px var(--ring); }
+        .icon:hover {
+          transform: translateY(-2px) scale(1.015);
+          box-shadow: 0 8px 18px rgba(0,0,0,.12);
+          background: #f8fafc;
+        }
+        .icon:focus-visible {
+          outline: none;
+          box-shadow: 0 0 0 6px var(--ring), 0 2px 8px rgba(0,0,0,.06);
+        }
+
+        /* Animación sutil del botón */
+        @keyframes floaty {
+          0%, 100% { transform: translateY(0); }
+          50%      { transform: translateY(-2px); }
+        }
+
+        /* Respeto a usuarios con movimiento reducido */
+        @media (prefers-reduced-motion: reduce) {
+          .cta, .icon { transition: none !important; animation: none !important; }
+        }
       `}</style>
     </>
   );
