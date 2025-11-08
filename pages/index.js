@@ -1,4 +1,5 @@
 import Head from "next/head";
+
 export default function HomeES() {
   const email = "contact@lucachiesa.net";
   const subject = encodeURIComponent("Consulta desde la web");
