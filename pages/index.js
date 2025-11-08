@@ -1,5 +1,4 @@
 import Head from "next/head";
-
 export default function HomeES() {
   const email = "contact@lucachiesa.net";
   const subject = encodeURIComponent("Consulta desde la web");
@@ -39,6 +38,10 @@ export default function HomeES() {
       <section className="wrap hero">
         <h1>Luca Chiesa</h1>
         <p className="tag">Ventas • Liderazgo • DISC</p>
+        <p className="sub">
+          Más de 15 años ayudando a equipos comerciales a crecer, comunicar mejor
+          y vender con propósito.
+        </p>
 
         <a
           className="cta"
@@ -52,10 +55,8 @@ export default function HomeES() {
       <section className="wrap section">
         <h2 className="h2">Sobre mí</h2>
         <p className="lead">
-          Soy formador y acompañante comercial. Ayudo a equipos y profesionales
-          a vender con propósito, comunicar con claridad y construir relaciones duraderas.
-          Trabajo con metodología práctica, casos reales y el modelo DISC como base
-          para entender personas, negociar mejor y lograr resultados sostenibles.
+          Acompaño a equipos y profesionales a vender con sentido, comunicar con claridad y construir relaciones que duren en el tiempo. 
+          Trabajo desde la experiencia, con una mirada práctica y humana, enfocada en generar resultados reales y sostenibles.
         </p>
       </section>
 
@@ -65,7 +66,7 @@ export default function HomeES() {
 
         <div className="grid">
           <article className="card">
-            <h3 className="h3">Formación en Ventas (con DISC)</h3>
+            <h3 className="h3">Formación en Ventas</h3>
             <p>
               Prospección, apertura, preguntas, propuesta de valor, objeciones y cierre.
               Talleres prácticos para vender con método y confianza.
@@ -73,10 +74,10 @@ export default function HomeES() {
           </article>
 
           <article className="card">
-            <h3 className="h3">Comunicación &amp; DISC</h3>
+            <h3 className="h3">Comunicación</h3>
             <p>
-              Perfiles DISC, reuniones efectivas y feedback. Mejora la relación con clientes
-              y dentro del equipo comprendiendo estilos de conducta.
+              Reuniones efectivas, feedback y conexión real. 
+              Mejora la relación con clientes y equipos comprendiendo distintos estilos de comunicación.
             </p>
           </article>
 
@@ -216,6 +217,12 @@ export default function HomeES() {
           color: #374151;
           text-align: center;
         }
+        .sub {
+          margin: 8px 0 0;
+          font-size: clamp(15px, 1.9vw, 18px);
+          color: #4b5563;
+          text-align: center;
+        }
 
         .cta {
           display: inline-block;
@@ -269,14 +276,10 @@ export default function HomeES() {
         }
         .card p { margin: 0; color: #4b5563; line-height: 1.55; }
 
-        /* 2 columnas en tablet, 3 en desktop */
         @media (min-width: 720px) { .card { grid-column: span 6; } }
         @media (min-width: 1024px) { .card { grid-column: span 4; } }
 
-        .ctaBlock {
-          text-align: center;
-          padding-bottom: 8px;
-        }
+        .ctaBlock { text-align: center; padding-bottom: 8px; }
 
         .footer {
           max-width: 1100px;
