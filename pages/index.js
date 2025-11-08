@@ -154,7 +154,7 @@ export default function HomeES() {
             Sales • Leadership • DISC
           </p>
 
-          {/* CTA con focus visible */}
+          {/* CTA */}
           <a
             href="mailto:contact@lucachiesa.net?subject=Consulta%20desde%20la%20web"
             style={{
@@ -190,7 +190,7 @@ export default function HomeES() {
           </a>
         </main>
 
-        {/* Footer */}
+        {/* Footer con aviso legal mínimo */}
         <footer
           style={{
             marginTop: 84,
@@ -203,7 +203,27 @@ export default function HomeES() {
               © {new Date().getFullYear()} Luca Chiesa
             </p>
 
-            <div style={{ display: "flex", gap: 14, justifyContent: "center" }}>
+            <p
+              style={{
+                margin: "0 auto 12px",
+                color: "#6B7280",
+                fontSize: 13,
+                lineHeight: 1.6,
+                maxWidth: 680,
+              }}
+            >
+              Sitio personal sin formularios ni registro. No se recopilan datos
+              personales ni se utilizan cookies de terceros con fines de
+              seguimiento. Para ejercer derechos de acceso o supresión, escríbeme a{" "}
+              <a
+                href="mailto:contact@lucachiesa.net"
+                style={{ color: accent, textDecoration: "none", fontWeight: 600 }}
+              >
+                contact@lucachiesa.net
+              </a>.
+            </p>
+
+            <div style={{ display: "flex", gap: 14, justifyContent: "center", marginTop: 10 }}>
               {/* Email */}
               <a
                 href="mailto:contact@lucachiesa.net?subject=Consulta%20desde%20la%20web"
