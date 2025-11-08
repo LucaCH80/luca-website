@@ -48,20 +48,20 @@ export default function HomeES() {
           className="cta"
           href={`mailto:${email}?subject=${subject}&body=${body}`}
         >
-          Contacta con Luca
+          Hablemos
         </a>
       </section>
 
-      {/* SOBRE MÍ */}
-      <section className="wrap section">
+      {/* SOBRE MÍ (centrado) */}
+      <section className="wrap section centered">
         <h2 className="h2">Sobre mí</h2>
         <p className="lead">
-          Acompaño a equipos y profesionales a vender con sentido, comunicar con claridad y construir relaciones que duren en el tiempo. 
+          Acompaño a equipos y profesionales a vender con sentido, comunicar con claridad y construir relaciones que duren en el tiempo.
           Trabajo desde la experiencia, con una mirada práctica y humana, enfocada en generar resultados reales y sostenibles.
         </p>
       </section>
 
-      {/* SERVICIOS */}
+      {/* SERVICIOS (alineado normal) */}
       <section className="wrap section">
         <h2 className="h2">Servicios</h2>
 
@@ -77,7 +77,7 @@ export default function HomeES() {
           <article className="card">
             <h3 className="h3">Comunicación</h3>
             <p>
-              Reuniones efectivas, feedback y conexión real. 
+              Reuniones efectivas, feedback y conexión real.
               Mejora la relación con clientes y equipos comprendiendo distintos estilos de comunicación.
             </p>
           </article>
@@ -116,8 +116,8 @@ export default function HomeES() {
         </div>
       </section>
 
-      {/* CTA FINAL */}
-      <section className="wrap section ctaBlock">
+      {/* CTA FINAL (centrado) */}
+      <section className="wrap section ctaBlock centered">
         <h2 className="h2">Hablemos</h2>
         <p className="lead">
           Cuéntame en qué punto estás y diseñamos juntos el siguiente paso.
@@ -160,7 +160,7 @@ export default function HomeES() {
         </div>
       </footer>
 
-      {/* ESTILOS (tipografía y espaciado refinados) */}
+      {/* ESTILOS (ajustados: centrado en Sobre mí y Hablemos + CTA visible) */}
       <style jsx>{`
         :root{
           --bg: #f6f7fb;
@@ -170,11 +170,10 @@ export default function HomeES() {
           --brand: #2563eb;
           --brand-700: #1e40af;
           --paper: #fff;
-          --ring: rgba(37, 99, 235, .35);
           --shadow: 0 10px 24px rgba(16,24,40,.06);
           --shadow-2: 0 14px 28px rgba(30,64,175,.20);
           --radius: 14px;
-          --wrap: 1020px;   /* ancho de línea cómodo */
+          --wrap: 1020px;
         }
 
         :global(html, body) {
@@ -214,7 +213,7 @@ export default function HomeES() {
 
         .hero { text-align: center; padding-top: 10px; }
         h1 {
-          font-size: clamp(38px, 5.4vw, 66px);  /* un punto más elegante */
+          font-size: clamp(38px, 5.4vw, 66px);
           line-height: 1.08;
           margin: 0 0 .5rem 0;
           font-weight: 800;
@@ -224,7 +223,6 @@ export default function HomeES() {
           margin: 0;
           font-size: clamp(16.5px, 2.1vw, 22px);
           color: var(--muted);
-          letter-spacing: .01em;
         }
         .sub {
           margin: .6rem auto 0;
@@ -236,19 +234,25 @@ export default function HomeES() {
 
         .cta {
           display: inline-block;
-          margin-top: 26px;
+          margin-top: 28px;
           background: var(--brand);
           color: #fff;
           text-decoration: none;
-          padding: 13px 22px;
+          padding: 13px 26px;
           border-radius: 12px;
           font-weight: 700;
           box-shadow: var(--shadow);
           transition: transform .12s ease, box-shadow .2s ease, background .15s ease;
         }
-        .cta:hover { background: var(--brand-700); transform: translateY(-1px); box-shadow: var(--shadow-2); }
+        .cta:hover {
+          background: var(--brand-700);
+          transform: translateY(-1px);
+          box-shadow: var(--shadow-2);
+        }
 
         .section { margin-top: clamp(56px, 7vw, 78px); }
+        .section.centered { text-align: center; } /* centramos SOLO Sobre mí y Hablemos */
+
         .h2 {
           font-size: clamp(24px, 3.1vw, 32px);
           margin: 0 0 .65rem 0;
@@ -257,16 +261,16 @@ export default function HomeES() {
         .lead {
           font-size: clamp(16px, 2vw, 18.2px);
           color: var(--muted-2);
-          line-height: 1.66;         /* lectura más cómoda */
-          max-width: 850px;
-          margin: 0;
+          line-height: 1.66;
+          max-width: 780px;
+          margin: 0 auto;
         }
 
         .grid {
           margin-top: 18px;
           display: grid;
           grid-template-columns: repeat(12, 1fr);
-          gap: 18px;                 /* un poco más de aire */
+          gap: 18px;
         }
         .card {
           grid-column: span 12;
