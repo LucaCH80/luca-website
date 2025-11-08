@@ -1,7 +1,7 @@
 import Head from "next/head";
 
 export default function HomeES() {
-  const bgSoft = "linear-gradient(180deg, #F4F7FB 0%, #F7FAFF 60%, #F4F7FB 100%)";
+  const bgSoft = "const bgSoft = "#F7F6F4";
   const ink = "#111";
   const mute = "#4A5568";
   const accent = "#2F67B2";
