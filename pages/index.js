@@ -1,24 +1,26 @@
 import Head from "next/head";
 
 export default function HomeES() {
-  // Paleta y tokens
-  const bg = "#F4F7FB";          // fondo base
+  // Tokens
   const bgSoft = "linear-gradient(180deg, #F4F7FB 0%, #F7FAFF 60%, #F4F7FB 100%)";
-  const ink = "#111";            // texto principal
-  const mute = "#4A5568";        // texto secundario (un poco más suave)
-  const accent = "#2F67B2";      // azul profesional
-  const line = "#E6ECF4";        // líneas y bordes sutiles
+  const ink = "#111";
+  const mute = "#4A5568";
+  const accent = "#2F67B2";
+  const line = "#E6ECF4";
 
-  // Estilos base
   const pillBase = {
-    display: "inline-block",
-    padding: "6px 10px",
-    borderRadius: "999px",
+    display: "inline-flex",
+    alignItems: "center",
+    justifyContent: "center",
+    minHeight: 32,
+    padding: "6px 12px",
+    borderRadius: 999,
     fontSize: "0.9rem",
     fontWeight: 600,
     textDecoration: "none",
-    transition: "all .2s ease",
+    transition: "background-color .18s ease, box-shadow .18s ease, border-color .18s ease, color .18s ease",
     border: "1px solid transparent",
+    outline: "none",
   };
 
   const container = {
@@ -32,20 +34,41 @@ export default function HomeES() {
     <>
       <Head>
         {/* Tipografías */}
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="" />
-        <link
-          href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Poppins:wght@600;700&display=swap"
-          rel="stylesheet"
-        />
+        <link rel="preconnect" href="https://fonts.googleapis.com"/>
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin=""/>
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Poppins:wght@600;700&display=swap" rel="stylesheet"/>
         <title>Luca Chiesa | Ventas con propósito y liderazgo consciente</title>
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta name="viewport" content="width=device-width, initial-scale=1"/>
       </Head>
+
+      {/* Skip link accesible */}
+      <a
+        href="#main"
+        style={{
+          position: "absolute",
+          left: -9999,
+          top: -9999,
+          background: "#111",
+          color: "#fff",
+          padding: "8px 12px",
+          borderRadius: 8,
+        }}
+        onFocus={(e) => {
+          e.currentTarget.style.left = "16px";
+          e.currentTarget.style.top = "16px";
+          e.currentTarget.style.zIndex = 50;
+        }}
+        onBlur={(e) => {
+          e.currentTarget.style.left = "-9999px";
+          e.currentTarget.style.top = "-9999px";
+        }}
+      >
+        Saltar al contenido
+      </a>
 
       <div
         style={{
-          fontFamily:
-            "Inter, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif",
+          fontFamily: "Inter, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif",
           minHeight: "100vh",
           background: bgSoft,
           color: ink,
@@ -53,8 +76,10 @@ export default function HomeES() {
           position: "relative",
         }}
       >
-        {/* Header con selector de idioma */}
-        <header
+        {/* Header / selector de idioma */}
+        <nav
+          role="navigation"
+          aria-label="Selector de idioma"
           style={{
             position: "absolute",
             top: 18,
@@ -67,12 +92,8 @@ export default function HomeES() {
         >
           {/* ES activo */}
           <span
-            style={{
-              ...pillBase,
-              background: ink,
-              color: "#fff",
-              borderColor: "transparent",
-            }}
+            aria-current="page"
+            style={{ ...pillBase, background: ink, color: "#fff" }}
           >
             ES
           </span>
@@ -80,7 +101,7 @@ export default function HomeES() {
           {/* EN inactivo */}
           <a
             href="/en"
-            aria-label="Switch to English"
+            aria-label="Cambiar a inglés"
             style={{
               ...pillBase,
               color: accent,
@@ -96,12 +117,18 @@ export default function HomeES() {
               e.currentTarget.style.background = "#fff";
               e.currentTarget.style.borderColor = "#e5e7eb";
             }}
+            onFocus={(e) => {
+              e.currentTarget.style.boxShadow = "0 0 0 3px rgba(47,103,178,0.35)";
+            }}
+            onBlur={(e) => {
+              e.currentTarget.style.boxShadow = "0 1px 1px rgba(0,0,0,.03)";
+            }}
           >
             EN
           </a>
-        </header>
+        </nav>
 
-        <main style={container}>
+        <main id="main" style={container}>
           {/* Hero */}
           <h1
             style={{
@@ -110,6 +137,7 @@ export default function HomeES() {
               letterSpacing: "-0.4px",
               fontSize: "clamp(34px, 6vw, 56px)",
               margin: "6px 0 12px",
+              color: ink,
             }}
           >
             Luca Chiesa
@@ -126,7 +154,7 @@ export default function HomeES() {
             Sales • Leadership • DISC
           </p>
 
-          {/* CTA accesible */}
+          {/* CTA con focus visible */}
           <a
             href="mailto:contact@lucachiesa.net?subject=Consulta%20desde%20la%20web"
             style={{
@@ -139,29 +167,23 @@ export default function HomeES() {
               fontWeight: 600,
               fontSize: 16,
               boxShadow: "0 10px 24px rgba(47,103,178,0.22)",
-              transition:
-                "transform .18s ease, box-shadow .18s ease, background-color .18s ease",
+              transition: "background-color .18s ease, box-shadow .18s ease",
               outline: "none",
             }}
             onMouseOver={(e) => {
-              e.currentTarget.style.transform = "translateY(-2px)";
               e.currentTarget.style.backgroundColor = "#3E78C4";
-              e.currentTarget.style.boxShadow =
-                "0 14px 32px rgba(47,103,178,0.28)";
+              e.currentTarget.style.boxShadow = "0 14px 32px rgba(47,103,178,0.28)";
             }}
             onMouseOut={(e) => {
-              e.currentTarget.style.transform = "none";
               e.currentTarget.style.backgroundColor = accent;
-              e.currentTarget.style.boxShadow =
-                "0 10px 24px rgba(47,103,178,0.22)";
+              e.currentTarget.style.boxShadow = "0 10px 24px rgba(47,103,178,0.22)";
             }}
             onFocus={(e) => {
               e.currentTarget.style.boxShadow =
                 "0 0 0 3px rgba(47,103,178,0.35), 0 10px 24px rgba(47,103,178,0.22)";
             }}
             onBlur={(e) => {
-              e.currentTarget.style.boxShadow =
-                "0 10px 24px rgba(47,103,178,0.22)";
+              e.currentTarget.style.boxShadow = "0 10px 24px rgba(47,103,178,0.22)";
             }}
           >
             Contacta con Luca
@@ -177,23 +199,11 @@ export default function HomeES() {
           }}
         >
           <div style={container}>
-            <p
-              style={{
-                margin: "0 0 12px",
-                color: "#5B6572",
-                fontSize: 14,
-              }}
-            >
+            <p style={{ margin: "0 0 12px", color: "#5B6572", fontSize: 14 }}>
               © {new Date().getFullYear()} Luca Chiesa
             </p>
 
-            <div
-              style={{
-                display: "flex",
-                gap: 14,
-                justifyContent: "center",
-              }}
-            >
+            <div style={{ display: "flex", gap: 14, justifyContent: "center" }}>
               {/* Email */}
               <a
                 href="mailto:contact@lucachiesa.net?subject=Consulta%20desde%20la%20web"
@@ -210,27 +220,17 @@ export default function HomeES() {
                   border: `1px solid ${line}`,
                   boxShadow: "0 1px 2px rgba(0,0,0,.06)",
                   textDecoration: "none",
-                  transition: "all .2s ease",
+                  transition: "background-color .18s ease, box-shadow .18s ease, color .18s ease",
                 }}
                 onMouseOver={(e) => {
-                  e.currentTarget.style.transform = "translateY(-2px)";
-                  e.currentTarget.style.boxShadow =
-                    "0 8px 18px rgba(0,0,0,.12)";
+                  e.currentTarget.style.boxShadow = "0 8px 18px rgba(0,0,0,.12)";
                 }}
                 onMouseOut={(e) => {
-                  e.currentTarget.style.transform = "none";
-                  e.currentTarget.style.boxShadow =
-                    "0 1px 2px rgba(0,0,0,.06)";
+                  e.currentTarget.style.boxShadow = "0 1px 2px rgba(0,0,0,.06)";
                 }}
               >
-                <svg
-                  width="22"
-                  height="22"
-                  viewBox="0 0 24 24"
-                  fill="currentColor"
-                  aria-hidden="true"
-                >
-                  <path d="M20 4H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2zm0 4-8 5L4 8V6l8 5 8-5v2z" />
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                  <path d="M20 4H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2zm0 4-8 5L4 8V6l8 5 8-5v2z"/>
                 </svg>
               </a>
 
@@ -252,31 +252,21 @@ export default function HomeES() {
                   border: `1px solid ${line}`,
                   boxShadow: "0 1px 2px rgba(0,0,0,.06)",
                   textDecoration: "none",
-                  transition: "all .2s ease",
+                  transition: "background-color .18s ease, box-shadow .18s ease, color .18s ease",
                 }}
                 onMouseOver={(e) => {
-                  e.currentTarget.style.transform = "translateY(-2px)";
                   e.currentTarget.style.color = "#fff";
                   e.currentTarget.style.background = "#0A66C2";
-                  e.currentTarget.style.boxShadow =
-                    "0 8px 18px rgba(0,0,0,.12)";
+                  e.currentTarget.style.boxShadow = "0 8px 18px rgba(0,0,0,.12)";
                 }}
                 onMouseOut={(e) => {
-                  e.currentTarget.style.transform = "none";
                   e.currentTarget.style.color = "#0A66C2";
                   e.currentTarget.style.background = "#fff";
-                  e.currentTarget.style.boxShadow =
-                    "0 1px 2px rgba(0,0,0,.06)";
+                  e.currentTarget.style.boxShadow = "0 1px 2px rgba(0,0,0,.06)";
                 }}
               >
-                <svg
-                  width="22"
-                  height="22"
-                  viewBox="0 0 24 24"
-                  fill="currentColor"
-                  aria-hidden="true"
-                >
-                  <path d="M4.98 3.5c0 1.38-1.12 2.5-2.48 2.5A2.5 2.5 0 0 1 0 3.5C0 2.12 1.12 1 2.5 1S4.98 2.12 4.98 3.5zM0 8h5v16H0V8zm7.5 0h4.8v2.2h.07C13.04 8.99 14.67 7.73 17.1 7.73c5.06 0 6 3.33 6 7.66V24h-5v-7.9c0-1.88-.03-4.3-2.62-4.3-2.62 0-3.02 2.05-3.02 4.17V24h-5V8z" />
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                  <path d="M4.98 3.5c0 1.38-1.12 2.5-2.48 2.5A2.5 2.5 0 0 1 0 3.5C0 2.12 1.12 1 2.5 1S4.98 2.12 4.98 3.5zM0 8h5v16H0V8zm7.5 0h4.8v2.2h.07C13.04 8.99 14.67 7.73 17.1 7.73c5.06 0 6 3.33 6 7.66V24h-5v-7.9c0-1.88-.03-4.3-2.62-4.3-2.62 0-3.02 2.05-3.02 4.17V24h-5V8z"/>
                 </svg>
               </a>
             </div>
