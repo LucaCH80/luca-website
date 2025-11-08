@@ -5,7 +5,7 @@ export default function Home() {
         fontFamily: "Inter, sans-serif",
         textAlign: "center",
         padding: "100px 20px",
-        backgroundColor: "#fffaf5",
+        backgroundColor: "#f4f7fb", // fondo azul muy suave
         color: "#1a1a1a",
       }}
     >
