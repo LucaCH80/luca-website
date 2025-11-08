@@ -52,21 +52,23 @@ export default function HomeES() {
         </a>
       </section>
 
-      {/* SOBRE MÍ (centrado) */}
+      {/* SOBRE MÍ */}
       <section className="wrap section centered">
         <h2 className="h2">Sobre mí</h2>
         <p className="lead">
-          Acompaño a equipos y profesionales a vender con sentido, comunicar con claridad y construir relaciones que duren en el tiempo.
-          Trabajo desde la experiencia, con una mirada práctica y humana, enfocada en generar resultados reales y sostenibles.
+          Acompaño a equipos y profesionales a vender con sentido, comunicar con claridad
+          y construir relaciones que duren en el tiempo. Trabajo desde la experiencia,
+          con una mirada práctica y humana, enfocada en generar resultados reales y sostenibles.
         </p>
       </section>
 
-      {/* SERVICIOS (alineado normal) */}
+      {/* SERVICIOS */}
       <section className="wrap section">
         <h2 className="h2">Servicios</h2>
 
         <div className="grid">
           <article className="card">
+            <div className="badge">Ventas</div>
             <h3 className="h3">Formación en Ventas</h3>
             <p>
               Prospección, apertura, preguntas, propuesta de valor, objeciones y cierre.
@@ -75,30 +77,34 @@ export default function HomeES() {
           </article>
 
           <article className="card">
+            <div className="badge">Comunicación</div>
             <h3 className="h3">Comunicación</h3>
             <p>
-              Reuniones efectivas, feedback y conexión real.
-              Mejora la relación con clientes y equipos comprendiendo distintos estilos de comunicación.
+              Reuniones efectivas, feedback y conexión real. Mejora la relación con
+              clientes y equipos comprendiendo distintos estilos de comunicación.
             </p>
           </article>
 
           <article className="card">
+            <div className="badge">Equipos</div>
             <h3 className="h3">Motivación de Equipos</h3>
             <p>
-              Rituals, foco y hábitos. Energía sostenida para alcanzar objetivos
-              sin perder el cuidado del equipo.
+              Rituals, foco y hábitos. Energía sostenida para alcanzar objetivos sin
+              perder el cuidado del equipo.
             </p>
           </article>
 
           <article className="card">
+            <div className="badge">Liderazgo</div>
             <h3 className="h3">Liderazgo y Autoliderazgo</h3>
             <p>
-              Conversaciones clave, priorizar, delegar y dar dirección.
-              Desarrollo del criterio y la coherencia del líder.
+              Conversaciones clave, priorizar, delegar y dar dirección. Desarrollo del
+              criterio y la coherencia del líder.
             </p>
           </article>
 
           <article className="card">
+            <div className="badge">DISC</div>
             <h3 className="h3">Certificación DISC</h3>
             <p>
               Certificaciones abiertas y programas cerrados para RR. HH. y mandos.
@@ -107,6 +113,7 @@ export default function HomeES() {
           </article>
 
           <article className="card">
+            <div className="badge">On-the-job</div>
             <h3 className="h3">Acompañamiento Comercial</h3>
             <p>
               Sesiones 1:1 y on-the-job. Preparación de visitas, roleplays y seguimiento
@@ -116,7 +123,7 @@ export default function HomeES() {
         </div>
       </section>
 
-      {/* CTA FINAL (centrado) */}
+      {/* CTA FINAL */}
       <section className="wrap section ctaBlock centered">
         <h2 className="h2">Hablemos</h2>
         <p className="lead">
@@ -139,6 +146,7 @@ export default function HomeES() {
             className="icon"
             href={`mailto:${email}?subject=${subject}&body=${body}`}
             aria-label="Email"
+            title="Email"
           >
             <svg width="22" height="22" viewBox="0 0 24 24" fill="none">
               <path d="M4 6h16a1 1 0 0 1 1 1v10a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1Z" stroke="currentColor" strokeWidth="1.6" />
@@ -152,6 +160,7 @@ export default function HomeES() {
             target="_blank"
             rel="noopener noreferrer"
             aria-label="LinkedIn"
+            title="LinkedIn"
           >
             <svg width="22" height="22" viewBox="0 0 24 24" fill="none">
               <path d="M4.98 3.5C4.98 4.88 3.88 6 2.5 6S0 4.88 0 3.5 1.12 1 2.5 1s2.48 1.12 2.48 2.5ZM.5 8.5h4V23h-4V8.5Zm7.5 0h3.8v2h.05c.53-1 1.84-2.05 3.8-2.05C20.6 8.45 23 10.2 23 14.1V23h-4v-7.5c0-1.8-.03-4.1-2.5-4.1-2.5 0-2.88 1.95-2.88 4v7.6H8V8.5Z" fill="currentColor"/>
@@ -160,20 +169,21 @@ export default function HomeES() {
         </div>
       </footer>
 
-      {/* ESTILOS (ajustados: centrado en Sobre mí y Hablemos + CTA visible) */}
+      {/* ESTILOS CON COLOR */}
       <style jsx>{`
         :root{
-          --bg: #f6f7fb;
-          --ink: #111214;
+          --bg: #f6f7fb;          /* fondo suave */
+          --ink: #0f172a;         /* texto principal */
           --muted: #475569;
           --muted-2: #64748b;
-          --brand: #2563eb;
+          --brand: #2563eb;       /* azul profesional */
           --brand-700: #1e40af;
-          --paper: #fff;
+          --paper: #ffffff;
+          --radius: 14px;
+          --wrap: 1060px;
           --shadow: 0 10px 24px rgba(16,24,40,.06);
           --shadow-2: 0 14px 28px rgba(30,64,175,.20);
-          --radius: 14px;
-          --wrap: 1020px;
+          --ring: 0 0 0 3px rgba(37,99,235,.18);
         }
 
         :global(html, body) {
@@ -203,7 +213,7 @@ export default function HomeES() {
         .lang a { color: var(--muted-2); text-decoration: none; padding: 6px 9px; border-radius: 8px; }
         .lang a:hover { background:#eef2ff; color:#1e2a8a; }
         .lang .active { background:#e9efff; color:#1e40af; font-weight:600; padding:6px 9px; border-radius:8px; }
-        .lang .dot { opacity:.4; margin:0 .2rem; }
+        .lang .dot { opacity:.45; margin:0 .2rem; }
 
         .wrap {
           max-width: var(--wrap);
@@ -211,10 +221,13 @@ export default function HomeES() {
           padding: clamp(36px, 6vw, 56px) 20px 0;
         }
 
-        .hero { text-align: center; padding-top: 10px; }
+        .hero { 
+          text-align: center; 
+          padding-top: 8px;
+        }
         h1 {
-          font-size: clamp(38px, 5.4vw, 66px);
-          line-height: 1.08;
+          font-size: clamp(38px, 5.2vw, 64px);
+          line-height: 1.06;
           margin: 0 0 .5rem 0;
           font-weight: 800;
           letter-spacing: -0.02em;
@@ -251,7 +264,7 @@ export default function HomeES() {
         }
 
         .section { margin-top: clamp(56px, 7vw, 78px); }
-        .section.centered { text-align: center; } /* centramos SOLO Sobre mí y Hablemos */
+        .section.centered { text-align: center; }
 
         .h2 {
           font-size: clamp(24px, 3.1vw, 32px);
@@ -278,8 +291,21 @@ export default function HomeES() {
           border-radius: var(--radius);
           padding: 18px 18px 16px;
           box-shadow: 0 6px 18px rgba(0,0,0,.06);
+          position: relative;
         }
-        .h3 { font-size: 18px; margin: 0 0 6px; letter-spacing: -.005em; }
+        .badge{
+          position:absolute;
+          top: -10px;
+          left: 16px;
+          background: #e9efff;
+          color: #1e40af;
+          font-size: 12px;
+          font-weight: 700;
+          padding: 6px 10px;
+          border-radius: 999px;
+          box-shadow: var(--shadow);
+        }
+        .h3 { font-size: 18px; margin: 8px 0 6px; letter-spacing: -.005em; }
         .card p { margin: 0; color: var(--muted-2); line-height: 1.6; }
 
         @media (min-width: 720px) { .card { grid-column: span 6; } }
@@ -302,9 +328,9 @@ export default function HomeES() {
           width: 46px; height: 46px; border-radius: 12px;
           background: var(--paper); color: #111827;
           box-shadow: 0 4px 14px rgba(0,0,0,.08);
-          transition: transform .12s ease, box-shadow .2s ease;
+          transition: transform .12s ease, box-shadow .2s ease, outline .1s ease;
         }
-        .icon:hover { transform: translateY(-1px); box-shadow: 0 8px 18px rgba(0,0,0,.12); }
+        .icon:hover { transform: translateY(-1px); box-shadow: 0 8px 18px rgba(0,0,0,.12); outline: var(--ring); }
       `}</style>
     </>
   );
