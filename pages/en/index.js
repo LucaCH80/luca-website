@@ -33,6 +33,7 @@ export default function HomeEN() {
           <a aria-current="page" href="/en">EN</a>
         </nav>
 
+        {/* HERO */}
         <section className="hero">
           <h1>Luca Chiesa</h1>
           <p className="kicker">Sales • Leadership • DISC</p>
@@ -42,6 +43,78 @@ export default function HomeEN() {
           </a>
         </section>
 
+        {/* ABOUT */}
+        <section className="section card">
+          <h2>About</h2>
+          <p>
+            I help commercial teams and organisations sell with purpose and
+            communicate better. I combine hands-on training, on-the-job coaching
+            and <strong>DISC</strong> to turn behaviours into sustainable results.
+          </p>
+        </section>
+
+        {/* SERVICES */}
+        <section className="section">
+          <h2>Services</h2>
+
+          <div className="grid">
+            <article className="svc">
+              <h3>Sales Training</h3>
+              <p>
+                Prospecting, discovery, proposals, closing and objections.
+                Real practice workshops to move straight into action.
+              </p>
+            </article>
+
+            <article className="svc">
+              <h3>Communication with DISC</h3>
+              <p>
+                Applying DISC in sales, teams and customer service.
+                Reports, feedback sessions and improvement plans.
+              </p>
+            </article>
+
+            <article className="svc">
+              <h3>Team Motivation</h3>
+              <p>
+                Habits, commercial rituals, focus and follow-up. Simple systems
+                that keep energy and commitment high.
+              </p>
+            </article>
+
+            <article className="svc">
+              <h3>Leadership & Self-Leadership</h3>
+              <p>
+                Priorities, difficult conversations, energy and stress management.
+                Practical tools for leaders and salespeople.
+              </p>
+            </article>
+
+            <article className="svc">
+              <h3>Sales Coaching</h3>
+              <p>
+                Role-plays, shadowing and improvement agreements.
+                Actionable feedback to accelerate results.
+              </p>
+            </article>
+
+            <article className="svc">
+              <h3>DISC Certification</h3>
+              <p>
+                Open certifications and in-company programmes for HR and managers,
+                enabling professional use of the tool.
+              </p>
+            </article>
+          </div>
+
+          <div className="section-cta">
+            <a className="cta ghost" href={`mailto:${email}?subject=Services inquiry`}>
+              Let’s talk
+            </a>
+          </div>
+        </section>
+
+        {/* FOOTER */}
         <footer className="foot">
           <p>© {new Date().getFullYear()} Luca Chiesa</p>
 
@@ -71,6 +144,7 @@ export default function HomeEN() {
           --accent-700: #1d4ed8;
           --ring: rgba(37, 99, 235, 0.35);
           --card: #ffffff;
+          --card-border: rgba(15, 23, 42, .06);
           --shadow: 0 8px 18px rgba(37, 99, 235, .18);
           --shadow-hover: 0 10px 22px rgba(37, 99, 235, .22);
         }
@@ -128,11 +202,51 @@ export default function HomeEN() {
           font-size: clamp(2.25rem, 5.6vw, 4rem);
         }
 
+        h2 {
+          font-size: clamp(1.5rem, 3vw, 2rem);
+          letter-spacing: -.01em;
+          margin: 0 0 .5rem 0;
+        }
+
+        h3 {
+          font-size: clamp(1.05rem, 2.1vw, 1.15rem);
+          margin: 0 0 .25rem 0;
+        }
+
         .kicker {
           margin: 0 0 clamp(16px, 3.2vw, 28px) 0;
           color: var(--muted);
           font-size: clamp(1.02rem, 2.3vw, 1.22rem);
         }
+
+        .section {
+          margin-top: clamp(26px, 6.5vw, 64px);
+        }
+
+        .card {
+          background: var(--card);
+          border: 1px solid var(--card-border);
+          border-radius: 16px;
+          padding: clamp(16px, 3.2vw, 24px);
+          box-shadow: 0 8px 22px rgba(0,0,0,.04);
+        }
+
+        .grid {
+          display: grid;
+          gap: clamp(14px, 2.4vw, 18px);
+          grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+          margin-top: clamp(12px, 2.6vw, 18px);
+        }
+
+        .svc {
+          background: var(--card);
+          border: 1px solid var(--card-border);
+          border-radius: 14px;
+          padding: 16px 16px 18px;
+          box-shadow: 0 4px 14px rgba(0,0,0,.04);
+        }
+
+        .section-cta { text-align: center; margin-top: 16px; }
 
         .cta {
           display: inline-block;
@@ -155,6 +269,15 @@ export default function HomeEN() {
           outline: none;
           box-shadow: 0 0 0 6px var(--ring), var(--shadow);
         }
+
+        .cta.ghost {
+          background: transparent;
+          color: var(--accent);
+          border: 2px solid var(--accent);
+          box-shadow: none;
+          padding: .78rem 1.2rem;
+        }
+        .cta.ghost:hover { background: rgba(37, 99, 235, .06); }
 
         .foot {
           border-top: 1px solid rgba(15, 23, 42, .06);
