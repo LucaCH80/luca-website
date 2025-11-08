@@ -1,7 +1,6 @@
 import Head from "next/head";
 
 export default function HomeEN() {
-  // Tokens
   const bgSoft = "linear-gradient(180deg, #F4F7FB 0%, #F7FAFF 60%, #F4F7FB 100%)";
   const ink = "#111";
   const mute = "#4A5568";
@@ -18,30 +17,65 @@ export default function HomeEN() {
     fontSize: "0.9rem",
     fontWeight: 600,
     textDecoration: "none",
-    transition: "background-color .18s ease, box-shadow .18s ease, border-color .18s ease, color .18s ease",
+    transition:
+      "background-color .18s ease, box-shadow .18s ease, border-color .18s ease, color .18s ease",
     border: "1px solid transparent",
     outline: "none",
+    cursor: "pointer",
   };
 
   const container = {
-    maxWidth: 760,
+    maxWidth: 880,
     margin: "0 auto",
     textAlign: "center",
     padding: "0 20px",
   };
 
+  const h2 = {
+    fontFamily: "Poppins, Inter, sans-serif",
+    fontWeight: 700,
+    letterSpacing: "0.5px",
+    fontSize: "clamp(18px, 1.8vw, 20px)",
+    textTransform: "uppercase",
+    color: "#20262E",
+    margin: "56px 0 12px",
+  };
+
+  const lead = {
+    color: mute,
+    fontSize: "clamp(15px, 2vw, 18px)",
+    lineHeight: 1.8,
+    margin: "0 auto 8px",
+    maxWidth: 760,
+  };
+
+  const sub = {
+    color: "#5B6572",
+    fontSize: "clamp(14px, 1.8vw, 16px)",
+    lineHeight: 1.75,
+    margin: "0 auto 8px",
+    maxWidth: 760,
+  };
+
+  const divider = {
+    borderTop: `1px solid ${line}`,
+    margin: "32px auto",
+    maxWidth: 760,
+  };
+
   return (
     <>
       <Head>
-        {/* Fonts */}
-        <link rel="preconnect" href="https://fonts.googleapis.com"/>
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin=""/>
-        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Poppins:wght@600;700&display=swap" rel="stylesheet"/>
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="" />
+        <link
+          href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Poppins:wght@600;700&display=swap"
+          rel="stylesheet"
+        />
         <title>Luca Chiesa | Purpose-driven Sales & Conscious Leadership</title>
-        <meta name="viewport" content="width=device-width, initial-scale=1"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
       </Head>
 
-      {/* Skip link */}
       <a
         href="#main"
         style={{
@@ -68,7 +102,8 @@ export default function HomeEN() {
 
       <div
         style={{
-          fontFamily: "Inter, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif",
+          fontFamily:
+            "Inter, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif",
           minHeight: "100vh",
           background: bgSoft,
           color: ink,
@@ -76,7 +111,6 @@ export default function HomeEN() {
           position: "relative",
         }}
       >
-        {/* Header / language switcher */}
         <nav
           role="navigation"
           aria-label="Language selector"
@@ -90,15 +124,12 @@ export default function HomeEN() {
             fontFamily: "Inter, sans-serif",
           }}
         >
-          {/* EN active */}
           <span
             aria-current="page"
             style={{ ...pillBase, background: ink, color: "#fff" }}
           >
             EN
           </span>
-
-          {/* ES inactive */}
           <a
             href="/"
             aria-label="Switch to Spanish"
@@ -117,19 +148,12 @@ export default function HomeEN() {
               e.currentTarget.style.background = "#fff";
               e.currentTarget.style.borderColor = "#e5e7eb";
             }}
-            onFocus={(e) => {
-              e.currentTarget.style.boxShadow = "0 0 0 3px rgba(47,103,178,0.35)";
-            }}
-            onBlur={(e) => {
-              e.currentTarget.style.boxShadow = "0 1px 1px rgba(0,0,0,.03)";
-            }}
           >
             ES
           </a>
         </nav>
 
         <main id="main" style={container}>
-          {/* Hero */}
           <h1
             style={{
               fontFamily: "Poppins, Inter, sans-serif",
@@ -142,7 +166,6 @@ export default function HomeEN() {
           >
             Luca Chiesa
           </h1>
-
           <p
             style={{
               fontSize: "clamp(15px, 2.05vw, 18px)",
@@ -153,8 +176,6 @@ export default function HomeEN() {
           >
             Sales • Leadership • DISC
           </p>
-
-          {/* CTA */}
           <a
             href="mailto:contact@lucachiesa.net?subject=Inquiry%20from%20website"
             style={{
@@ -167,128 +188,84 @@ export default function HomeEN() {
               fontWeight: 600,
               fontSize: 16,
               boxShadow: "0 10px 24px rgba(47,103,178,0.22)",
-              transition: "background-color .18s ease, box-shadow .18s ease",
-              outline: "none",
-            }}
-            onMouseOver={(e) => {
-              e.currentTarget.style.backgroundColor = "#3E78C4";
-              e.currentTarget.style.boxShadow = "0 14px 32px rgba(47,103,178,0.28)";
-            }}
-            onMouseOut={(e) => {
-              e.currentTarget.style.backgroundColor = accent;
-              e.currentTarget.style.boxShadow = "0 10px 24px rgba(47,103,178,0.22)";
-            }}
-            onFocus={(e) => {
-              e.currentTarget.style.boxShadow =
-                "0 0 0 3px rgba(47,103,178,0.35), 0 10px 24px rgba(47,103,178,0.22)";
-            }}
-            onBlur={(e) => {
-              e.currentTarget.style.boxShadow = "0 10px 24px rgba(47,103,178,0.22)";
             }}
           >
-            Contact Luca
+            Let’s talk
           </a>
+
+          <h2 style={h2}>About</h2>
+          <p style={lead}>
+            I help sales teams connect better, communicate with purpose, and build client relationships based on trust.
+          </p>
+          <p style={sub}>
+            Trainer in sales, motivation, and communication with a DISC-based approach.
+          </p>
+          <p style={{ ...sub, marginBottom: 0 }}>
+            Passionate about personal growth and professional excellence.
+          </p>
+
+          <div style={divider} />
+
+          <h2 style={h2}>Services</h2>
+
+          <h3 style={{ margin: "18px 0 8px", fontWeight: 700, fontSize: 18, color: "#1F2937" }}>
+            🎯 Sales Training
+          </h3>
+          <p style={sub}>
+            Practical strategies, method and mindset. From prospecting to closing, with tools to build trust and achieve sustainable results.
+          </p>
+          <p style={sub}>
+            Always based on the DISC model for self-awareness and communication.
+          </p>
+
+          <h3 style={{ margin: "22px 0 8px", fontWeight: 700, fontSize: 18, color: "#1F2937" }}>
+            💬 Communication & Team Motivation
+          </h3>
+          <p style={sub}>
+            Better communication, better leadership. I work on listening, feedback and team energy through participative methods, using DISC as a shared language.
+          </p>
+          <p style={sub}>
+            Sessions that combine reflection, practice and action.
+          </p>
+
+          <h3 style={{ margin: "22px 0 8px", fontWeight: 700, fontSize: 18, color: "#1F2937" }}>
+            🧭 Conscious Leadership & Self-Leadership
+          </h3>
+          <p style={sub}>
+            Developing the ability to lead others —and oneself— with clarity, empathy and purpose.
+          </p>
+          <p style={sub}>
+            Programs that integrate motivation, emotional management and effective communication.
+          </p>
+
+          <h3 style={{ margin: "22px 0 8px", fontWeight: 700, fontSize: 18, color: "#1F2937" }}>
+            🔷 DISC: Training & Certification
+          </h3>
+          <p style={sub}>
+            I train and certify professionals and companies in the DISC model. Open and in-company certifications for HR, sales or leadership teams.
+          </p>
+          <p style={sub}>
+            I also provide DISC assessments for team development and evaluation.
+          </p>
         </main>
 
-        {/* Footer with minimal legal notice */}
-        <footer
-          style={{
-            marginTop: 84,
-            borderTop: `1px solid ${line}`,
-            paddingTop: 20,
-          }}
-        >
+        <footer style={{ marginTop: 84, borderTop: `1px solid ${line}`, paddingTop: 20 }}>
           <div style={container}>
             <p style={{ margin: "0 0 12px", color: "#5B6572", fontSize: 14 }}>
               © {new Date().getFullYear()} Luca Chiesa
             </p>
-
-            <p
-              style={{
-                margin: "0 auto 12px",
-                color: "#6B7280",
-                fontSize: 13,
-                lineHeight: 1.6,
-                maxWidth: 680,
-              }}
-            >
-              Personal website with no forms or registration. No personal data is
-              collected, and no third-party tracking cookies are used. To exercise
-              your data rights, write to{" "}
-              <a
-                href="mailto:contact@lucachiesa.net"
-                style={{ color: accent, textDecoration: "none", fontWeight: 600 }}
-              >
+            <p style={{ margin: "0 auto 12px", color: "#6B7280", fontSize: 13, lineHeight: 1.6, maxWidth: 760 }}>
+              Personal website with no forms or registration. No personal data is collected and no third-party tracking cookies are used.  
+              Write to{" "}
+              <a href="mailto:contact@lucachiesa.net" style={{ color: accent, textDecoration: "none", fontWeight: 600 }}>
                 contact@lucachiesa.net
-              </a>.
+              </a>{" "}
+              for any inquiries.
             </p>
 
             <div style={{ display: "flex", gap: 14, justifyContent: "center", marginTop: 10 }}>
-              {/* Email */}
-              <a
-                href="mailto:contact@lucachiesa.net?subject=Inquiry%20from%20website"
-                aria-label="Send email to contact@lucachiesa.net"
-                style={{
-                  display: "inline-flex",
-                  alignItems: "center",
-                  justifyContent: "center",
-                  width: 44,
-                  height: 44,
-                  borderRadius: "50%",
-                  background: "#fff",
-                  color: "#222",
-                  border: `1px solid ${line}`,
-                  boxShadow: "0 1px 2px rgba(0,0,0,.06)",
-                  textDecoration: "none",
-                  transition: "background-color .18s ease, box-shadow .18s ease, color .18s ease",
-                }}
-                onMouseOver={(e) => {
-                  e.currentTarget.style.boxShadow = "0 8px 18px rgba(0,0,0,.12)";
-                }}
-                onMouseOut={(e) => {
-                  e.currentTarget.style.boxShadow = "0 1px 2px rgba(0,0,0,.06)";
-                }}
-              >
-                <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
-                  <path d="M20 4H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2zm0 4-8 5L4 8V6l8 5 8-5v2z"/>
-                </svg>
-              </a>
-
-              {/* LinkedIn */}
-              <a
-                href="https://www.linkedin.com/in/chiesaluca/"
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="Luca Chiesa on LinkedIn"
-                style={{
-                  display: "inline-flex",
-                  alignItems: "center",
-                  justifyContent: "center",
-                  width: 44,
-                  height: 44,
-                  borderRadius: "50%",
-                  background: "#fff",
-                  color: "#0A66C2",
-                  border: `1px solid ${line}`,
-                  boxShadow: "0 1px 2px rgba(0,0,0,.06)",
-                  textDecoration: "none",
-                  transition: "background-color .18s ease, box-shadow .18s ease, color .18s ease",
-                }}
-                onMouseOver={(e) => {
-                  e.currentTarget.style.color = "#fff";
-                  e.currentTarget.style.background = "#0A66C2";
-                  e.currentTarget.style.boxShadow = "0 8px 18px rgba(0,0,0,.12)";
-                }}
-                onMouseOut={(e) => {
-                  e.currentTarget.style.color = "#0A66C2";
-                  e.currentTarget.style.background = "#fff";
-                  e.currentTarget.style.boxShadow = "0 1px 2px rgba(0,0,0,.06)";
-                }}
-              >
-                <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
-                  <path d="M4.98 3.5c0 1.38-1.12 2.5-2.48 2.5A2.5 2.5 0 0 1 0 3.5C0 2.12 1.12 1 2.5 1S4.98 2.12 4.98 3.5zM0 8h5v16H0V8zm7.5 0h4.8v2.2h.07C13.04 8.99 14.67 7.73 17.1 7.73c5.06 0 6 3.33 6 7.66V24h-5v-7.9c0-1.88-.03-4.3-2.62-4.3-2.62 0-3.02 2.05-3.02 4.17V24h-5V8z"/>
-                </svg>
-              </a>
+              <a href="mailto:contact@lucachiesa.net" style={{ color: accent, textDecoration: "none" }}>Email</a>
+              <a href="https://www.linkedin.com/in/chiesaluca/" target="_blank" rel="noopener noreferrer" style={{ color: accent, textDecoration: "none" }}>LinkedIn</a>
             </div>
           </div>
         </footer>
