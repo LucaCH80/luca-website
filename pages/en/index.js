@@ -27,14 +27,12 @@ export default function HomeEN() {
       </Head>
 
       <main className="wrap">
-        {/* Language switch */}
         <nav className="lang" aria-label="Language switcher">
           <a href="/">ES</a>
           <span aria-hidden="true">·</span>
           <a aria-current="page" href="/en">EN</a>
         </nav>
 
-        {/* Hero */}
         <section className="hero">
           <h1>Luca Chiesa</h1>
           <p className="kicker">Sales • Leadership • DISC</p>
@@ -44,12 +42,10 @@ export default function HomeEN() {
           </a>
         </section>
 
-        {/* Footer */}
         <footer className="foot">
           <p>© {new Date().getFullYear()} Luca Chiesa</p>
 
           <div className="icons">
-            {/* Email */}
             <a className="icon" href={`mailto:${email}?subject=Website inquiry`} aria-label="Write an email">
               <svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" strokeWidth="1.6">
                 <rect x="3" y="5" width="18" height="14" rx="2"></rect>
@@ -57,7 +53,6 @@ export default function HomeEN() {
               </svg>
             </a>
 
-            {/* LinkedIn */}
             <a className="icon" href={linkedin} target="_blank" rel="noreferrer" aria-label="Go to LinkedIn">
               <svg viewBox="0 0 24 24" width="28" height="28" fill="currentColor">
                 <path d="M20.45 20.45h-3.56V14.9c0-1.32-.02-3.01-1.83-3.01-1.83 0-2.11 1.43-2.11 2.91v5.65H9.39V9.75h3.41v1.47h.05c.47-.9 1.61-1.83 3.31-1.83 3.54 0 4.19 2.33 4.19 5.36v5.7zM6.34 8.29a2.06 2.06 0 11.01-4.12 2.06 2.06 0 01-.01 4.12zM8.12 20.45H4.56V9.75h3.56v10.7z" />
