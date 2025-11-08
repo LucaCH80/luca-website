@@ -1,6 +1,6 @@
 export default function Home() {
-  const saffron = "#E6B800";   // color de acento (a juego con el favicon)
-  const linkedin = "#0A66C2";  // azul oficial de LinkedIn
+  const accent = "#D6B679";   // tono más suave y elegante
+  const linkedin = "#0A66C2"; // azul LinkedIn
 
   const iconBtn = {
     display: "inline-flex",
@@ -38,33 +38,35 @@ export default function Home() {
         Sales • Leadership • DISC
       </p>
 
-      {/* CTA principal: email */}
+      {/* CTA principal */}
       <a
         href="mailto:contact@lucachiesa.net?subject=Consulta%20desde%20la%20web&body=Hola%20Luca,"
         style={{
           display: "inline-block",
-          backgroundColor: saffron,
+          backgroundColor: accent,
           color: "black",
-          padding: "12px 24px",
+          padding: "12px 26px",
           borderRadius: 10,
           textDecoration: "none",
           fontWeight: "bold",
-          transition: "all .2s ease",
-          boxShadow: "0 4px 10px rgba(0,0,0,.12)",
+          transition: "all .25s ease",
+          boxShadow: "0 3px 8px rgba(0,0,0,.1)",
         }}
         onMouseOver={(e) => {
           e.currentTarget.style.transform = "translateY(-2px)";
-          e.currentTarget.style.boxShadow = "0 10px 20px rgba(0,0,0,.20)";
+          e.currentTarget.style.backgroundColor = "#C7A86D"; // más oscuro al pasar
+          e.currentTarget.style.boxShadow = "0 8px 18px rgba(0,0,0,.18)";
         }}
         onMouseOut={(e) => {
           e.currentTarget.style.transform = "none";
-          e.currentTarget.style.boxShadow = "0 4px 10px rgba(0,0,0,.12)";
+          e.currentTarget.style.backgroundColor = accent;
+          e.currentTarget.style.boxShadow = "0 3px 8px rgba(0,0,0,.1)";
         }}
       >
         Contacta con Luca
       </a>
 
-      {/* Footer con iconos */}
+      {/* Footer */}
       <footer
         style={{
           marginTop: 64,
