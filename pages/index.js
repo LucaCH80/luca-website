@@ -11,7 +11,7 @@ export default function HomeES() {
         <title>Luca Chiesa — Ventas • Liderazgo • DISC</title>
         <meta
           name="description"
-          content="Formación y acompañamiento comercial. Ventas, comunicación (DISC), motivación y liderazgo."
+          content="Formación y acompañamiento comercial. Ventas, comunicación, motivación y liderazgo."
         />
         <link rel="canonical" href="https://lucachiesa.net/" />
         <link rel="alternate" hrefLang="en" href="https://lucachiesa.net/en" />
@@ -20,7 +20,7 @@ export default function HomeES() {
         <meta property="og:title" content="Luca Chiesa — Ventas • Liderazgo • DISC" />
         <meta
           property="og:description"
-          content="Formación y acompañamiento comercial. Ventas, comunicación (DISC), motivación y liderazgo."
+          content="Formación y acompañamiento comercial. Ventas, comunicación, motivación y liderazgo."
         />
         <meta property="og:url" content="https://lucachiesa.net/" />
         <meta property="og:type" content="website" />
@@ -38,7 +38,7 @@ export default function HomeES() {
       {/* HERO */}
       <section className="wrap hero">
         <h1>Luca Chiesa</h1>
-        <p className="tag">Ventas • Liderazgo • DISC</p>
+        <p className="kicker">Ventas • Liderazgo • DISC</p>
         <p className="sub">
           Más de 15 años ayudando a equipos comerciales a crecer, comunicar mejor
           y vender con propósito.
@@ -85,7 +85,7 @@ export default function HomeES() {
           <article className="card">
             <h3 className="h3">Motivación de Equipos</h3>
             <p>
-              Dinámicas, foco y hábitos. Energía sostenida para alcanzar objetivos comerciales
+              Rituals, foco y hábitos. Energía sostenida para alcanzar objetivos
               sin perder el cuidado del equipo.
             </p>
           </article>
@@ -93,7 +93,7 @@ export default function HomeES() {
           <article className="card">
             <h3 className="h3">Liderazgo y Autoliderazgo</h3>
             <p>
-              Liderar conversaciones, priorizar, delegar y dar dirección.
+              Conversaciones clave, priorizar, delegar y dar dirección.
               Desarrollo del criterio y la coherencia del líder.
             </p>
           </article>
@@ -160,105 +160,105 @@ export default function HomeES() {
         </div>
       </footer>
 
-      {/* ESTILOS */}
+      {/* ESTILOS (tipografía y espaciado refinados) */}
       <style jsx>{`
+        :root{
+          --bg: #f6f7fb;
+          --ink: #111214;
+          --muted: #475569;
+          --muted-2: #64748b;
+          --brand: #2563eb;
+          --brand-700: #1e40af;
+          --paper: #fff;
+          --ring: rgba(37, 99, 235, .35);
+          --shadow: 0 10px 24px rgba(16,24,40,.06);
+          --shadow-2: 0 14px 28px rgba(30,64,175,.20);
+          --radius: 14px;
+          --wrap: 1020px;   /* ancho de línea cómodo */
+        }
+
         :global(html, body) {
           padding: 0;
           margin: 0;
-          background: #f6f7fb;
-          color: #111;
+          background: var(--bg);
+          color: var(--ink);
           font-family: Inter, ui-sans-serif, system-ui, -apple-system, Segoe UI,
             Roboto, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji";
+          text-rendering: optimizeLegibility;
+          -webkit-font-smoothing: antialiased;
+          -moz-osx-font-smoothing: grayscale;
         }
 
         .topbar {
           display: flex;
           justify-content: flex-end;
-          max-width: 1100px;
+          max-width: var(--wrap);
           margin: 0 auto;
           padding: 18px 20px 0;
         }
-
         .lang {
-          font-size: 14px;
-          color: #1f2937;
+          font-size: 14.5px;
+          color: var(--muted);
+          display:flex; align-items:center; gap:.35rem;
         }
-        .lang a {
-          color: #1f2937;
-          text-decoration: none;
-          opacity: 0.8;
-        }
-        .lang a:hover { opacity: 1; }
-        .lang .active {
-          background: #e9efff;
-          border-radius: 10px;
-          padding: 6px 9px;
-          color: #1e40af;
-          font-weight: 600;
-        }
-        .lang .dot { margin: 0 8px; opacity: 0.35; }
+        .lang a { color: var(--muted-2); text-decoration: none; padding: 6px 9px; border-radius: 8px; }
+        .lang a:hover { background:#eef2ff; color:#1e2a8a; }
+        .lang .active { background:#e9efff; color:#1e40af; font-weight:600; padding:6px 9px; border-radius:8px; }
+        .lang .dot { opacity:.4; margin:0 .2rem; }
 
         .wrap {
-          max-width: 1100px;
+          max-width: var(--wrap);
           margin: 0 auto;
-          padding: 44px 20px 0;
+          padding: clamp(36px, 6vw, 56px) 20px 0;
         }
-        .hero { text-align: center; padding-top: 10px; }
 
+        .hero { text-align: center; padding-top: 10px; }
         h1 {
-          font-size: clamp(40px, 5vw, 72px);
+          font-size: clamp(38px, 5.4vw, 66px);  /* un punto más elegante */
           line-height: 1.08;
-          margin: 18px 0 10px;
+          margin: 0 0 .5rem 0;
           font-weight: 800;
           letter-spacing: -0.02em;
         }
-        .tag {
+        .kicker {
           margin: 0;
-          font-size: clamp(16px, 2.2vw, 22px);
-          color: #374151;
-          text-align: center;
+          font-size: clamp(16.5px, 2.1vw, 22px);
+          color: var(--muted);
+          letter-spacing: .01em;
         }
         .sub {
-          margin: 8px 0 0;
-          font-size: clamp(15px, 1.9vw, 18px);
-          color: #4b5563;
-          text-align: center;
+          margin: .6rem auto 0;
+          font-size: clamp(15.5px, 1.9vw, 18px);
+          color: var(--muted-2);
+          max-width: 820px;
+          line-height: 1.55;
         }
 
         .cta {
           display: inline-block;
-          margin-top: 28px;
-          background: #2563eb;
-          color: white;
+          margin-top: 26px;
+          background: var(--brand);
+          color: #fff;
           text-decoration: none;
-          padding: 14px 28px;
+          padding: 13px 22px;
           border-radius: 12px;
           font-weight: 700;
-          box-shadow: 0 10px 22px rgba(37, 99, 235, 0.22);
-          transition: transform 0.12s ease, box-shadow 0.2s ease, background 0.15s ease;
+          box-shadow: var(--shadow);
+          transition: transform .12s ease, box-shadow .2s ease, background .15s ease;
         }
-        .cta:hover {
-          background: #1e40af;
-          transform: translateY(-1px);
-          box-shadow: 0 14px 26px rgba(30, 64, 175, 0.28);
-        }
+        .cta:hover { background: var(--brand-700); transform: translateY(-1px); box-shadow: var(--shadow-2); }
 
-        .section { margin-top: 72px; }
+        .section { margin-top: clamp(56px, 7vw, 78px); }
         .h2 {
-          font-size: clamp(24px, 3.2vw, 32px);
-          margin: 0 0 10px;
-          letter-spacing: -0.01em;
-        }
-        .h3 {
-          font-size: 18px;
-          margin: 0 0 6px;
-          letter-spacing: -0.01em;
+          font-size: clamp(24px, 3.1vw, 32px);
+          margin: 0 0 .65rem 0;
+          letter-spacing: -.01em;
         }
         .lead {
-          font-size: clamp(16px, 2vw, 18px);
-          color: #374151;
-          line-height: 1.6;
-          max-width: 820px;
+          font-size: clamp(16px, 2vw, 18.2px);
+          color: var(--muted-2);
+          line-height: 1.66;         /* lectura más cómoda */
+          max-width: 850px;
           margin: 0;
         }
 
@@ -266,16 +266,17 @@ export default function HomeES() {
           margin-top: 18px;
           display: grid;
           grid-template-columns: repeat(12, 1fr);
-          gap: 16px;
+          gap: 18px;                 /* un poco más de aire */
         }
         .card {
           grid-column: span 12;
-          background: #ffffff;
-          border-radius: 14px;
+          background: var(--paper);
+          border-radius: var(--radius);
           padding: 18px 18px 16px;
-          box-shadow: 0 6px 18px rgba(0, 0, 0, 0.06);
+          box-shadow: 0 6px 18px rgba(0,0,0,.06);
         }
-        .card p { margin: 0; color: #4b5563; line-height: 1.55; }
+        .h3 { font-size: 18px; margin: 0 0 6px; letter-spacing: -.005em; }
+        .card p { margin: 0; color: var(--muted-2); line-height: 1.6; }
 
         @media (min-width: 720px) { .card { grid-column: span 6; } }
         @media (min-width: 1024px) { .card { grid-column: span 4; } }
@@ -283,35 +284,23 @@ export default function HomeES() {
         .ctaBlock { text-align: center; padding-bottom: 8px; }
 
         .footer {
-          max-width: 1100px;
-          margin: 84px auto 46px;
+          max-width: var(--wrap);
+          margin: clamp(64px, 8vw, 96px) auto 48px;
           padding: 0 20px;
           text-align: center;
-          color: #4b5563;
+          color: var(--muted);
         }
         .icons {
-          display: flex;
-          gap: 14px;
-          align-items: center;
-          justify-content: center;
-          margin-top: 14px;
+          display: flex; gap: 14px; align-items: center; justify-content: center; margin-top: 12px;
         }
         .icon {
-          display: inline-flex;
-          align-items: center;
-          justify-content: center;
-          width: 48px;
-          height: 48px;
-          border-radius: 12px;
-          background: white;
-          color: #111827;
-          box-shadow: 0 4px 14px rgba(0, 0, 0, 0.08);
-          transition: transform 0.12s ease, box-shadow 0.2s ease;
+          display: inline-flex; align-items: center; justify-content: center;
+          width: 46px; height: 46px; border-radius: 12px;
+          background: var(--paper); color: #111827;
+          box-shadow: 0 4px 14px rgba(0,0,0,.08);
+          transition: transform .12s ease, box-shadow .2s ease;
         }
-        .icon:hover {
-          transform: translateY(-1px);
-          box-shadow: 0 8px 18px rgba(0, 0, 0, 0.12);
-        }
+        .icon:hover { transform: translateY(-1px); box-shadow: 0 8px 18px rgba(0,0,0,.12); }
       `}</style>
     </>
   );
