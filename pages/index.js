@@ -8,16 +8,16 @@ export default function HomeES() {
   return (
     <>
       <Head>
-        <title>Luca Chiesa — Sales • Leadership • DISC</title>
+        <title>Luca Chiesa — Ventas • Liderazgo • DISC</title>
         <meta
           name="description"
-          content="Sales • Leadership • DISC — Formación y acompañamiento comercial."
+          content="Ventas • Liderazgo • DISC — Formación y acompañamiento comercial."
         />
         <link rel="canonical" href="https://lucachiesa.net/" />
         <link rel="alternate" hrefLang="en" href="https://lucachiesa.net/en" />
         <link rel="alternate" hrefLang="es" href="https://lucachiesa.net/" />
         <meta property="og:locale" content="es_ES" />
-        <meta property="og:title" content="Luca Chiesa — Sales • Leadership • DISC" />
+        <meta property="og:title" content="Luca Chiesa — Ventas • Liderazgo • DISC" />
         <meta property="og:description" content="Formación y acompañamiento comercial." />
         <meta property="og:url" content="https://lucachiesa.net/" />
         <meta property="og:type" content="website" />
@@ -35,7 +35,7 @@ export default function HomeES() {
       {/* Contenido principal */}
       <main className="wrap">
         <h1>Luca Chiesa</h1>
-        <p className="tag">Sales • Leadership • DISC</p>
+        <p className="tag">Ventas • Liderazgo • DISC</p>
 
         <a
           className="cta"
@@ -54,7 +54,6 @@ export default function HomeES() {
             href={`mailto:${email}?subject=${subject}&body=${body}`}
             aria-label="Email"
           >
-            {/* Email (sobre) */}
             <svg width="22" height="22" viewBox="0 0 24 24" fill="none">
               <path
                 d="M4 6h16a1 1 0 0 1 1 1v10a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1Z"
@@ -72,7 +71,6 @@ export default function HomeES() {
             rel="noopener noreferrer"
             aria-label="LinkedIn"
           >
-            {/* LinkedIn */}
             <svg width="22" height="22" viewBox="0 0 24 24" fill="none">
               <path d="M4.98 3.5C4.98 4.88 3.88 6 2.5 6S0 4.88 0 3.5 1.12 1 2.5 1s2.48 1.12 2.48 2.5ZM.5 8.5h4V23h-4V8.5Zm7.5 0h3.8v2h.05c.53-1 1.84-2.05 3.8-2.05C20.6 8.45 23 10.2 23 14.1V23h-4v-7.5c0-1.8-.03-4.1-2.5-4.1-2.5 0-2.88 1.95-2.88 4v7.6H8V8.5Z" fill="currentColor"/>
             </svg>
@@ -85,7 +83,7 @@ export default function HomeES() {
         :global(html, body) {
           padding: 0;
           margin: 0;
-          background: #f6f7fb; /* fondo suave */
+          background: #f6f7fb;
           color: #111;
           font-family: Inter, ui-sans-serif, system-ui, -apple-system, Segoe UI,
             Roboto, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji";
@@ -135,7 +133,7 @@ export default function HomeES() {
         }
 
         h1 {
-          font-size: clamp(44px, 6.2vw, 86px);
+          font-size: clamp(40px, 5vw, 72px); /* más elegante */
           line-height: 1.08;
           margin: 18px 0 10px;
           font-weight: 800;
@@ -151,7 +149,7 @@ export default function HomeES() {
         .cta {
           display: inline-block;
           margin-top: 28px;
-          background: #2563eb;          /* azul profesional */
+          background: #2563eb;
           color: white;
           text-decoration: none;
           padding: 14px 28px;
