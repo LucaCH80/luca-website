@@ -2,327 +2,177 @@ import Head from "next/head";
 
 export default function HomeES() {
   const email = "contact@lucachiesa.net";
-  const linkedin = "https://www.linkedin.com/in/lucachiesa/";
+  const subject = encodeURIComponent("Consulta desde la web");
+  const body = encodeURIComponent("Hola Luca,\n\nMe gustaría hablar contigo.\n\nGracias.");
+  const mailto = `mailto:${email}?subject=${subject}&body=${body}`;
 
   return (
-    <>
+    <div className="wrap">
       <Head>
-        <title>Luca Chiesa — Consultor en Ventas y Comunicación</title>
-        <meta
-          name="description"
-          content="Ventas, comunicación y DISC para equipos comerciales. Formación, acompañamiento y certificaciones DISC."
-        />
-        <meta httpEquiv="content-language" content="es" />
-        <link rel="alternate" hrefLang="es" href="https://lucachiesa.net/" />
+        <title>Luca Chiesa — Ventas • Leadership • DISC</title>
+        <meta name="description" content="Formación en ventas, comunicación y DISC. Acompaño equipos comerciales a vender con propósito." />
+        <link rel="canonical" href="https://lucachiesa.net/" />
         <link rel="alternate" hrefLang="en" href="https://lucachiesa.net/en" />
-        <link rel="alternate" hrefLang="x-default" href="https://lucachiesa.net/" />
+        <link rel="alternate" hrefLang="es" href="https://lucachiesa.net/" />
         <meta property="og:locale" content="es_ES" />
-        <meta property="og:title" content="Luca Chiesa — Ventas, Comunicación, DISC" />
-        <meta
-          property="og:description"
-          content="Formación en ventas y comunicación, motivación de equipos, liderazgo y DISC. Certificaciones y aplicación práctica."
-        />
+        <meta property="og:title" content="Luca Chiesa — Ventas • Leadership • DISC" />
+        <meta property="og:description" content="Formación en ventas, comunicación y DISC." />
         <meta property="og:url" content="https://lucachiesa.net/" />
         <meta property="og:type" content="website" />
       </Head>
 
-      <main className="wrap">
-        <nav className="lang" aria-label="Selector de idioma">
-          <a aria-current="page" href="/">ES</a>
-          <span aria-hidden="true">·</span>
-          <a href="/en">EN</a>
+      {/* Header con selector de idioma */}
+      <header className="header">
+        <nav className="lang">
+          <a className="langLink active" href="/">ES</a>
+          <span>·</span>
+          <a className="langLink" href="/en">EN</a>
         </nav>
+      </header>
 
-        {/* HERO */}
-        <section className="hero">
-          <h1>Luca Chiesa</h1>
-          <p className="kicker">Sales • Leadership • DISC</p>
+      {/* Hero */}
+      <main className="hero">
+        <h1 className="title">Luca Chiesa</h1>
+        <p className="subtitle">Sales • Leadership • DISC</p>
 
-          <a className="cta" href={`mailto:${email}?subject=Consulta desde la web`}>
-            Contacta con Luca
-          </a>
-        </section>
-
-        {/* SOBRE MÍ */}
-        <section className="section card">
-          <h2>Sobre mí</h2>
-          <p>
-            Ayudo a equipos comerciales y organizaciones a vender con propósito y
-            comunicar mejor. Trabajo con formación muy práctica, acompañamiento
-            en campo y <strong>DISC</strong> para transformar comportamientos en
-            resultados sostenibles.
-          </p>
-        </section>
-
-        {/* SERVICIOS */}
-        <section className="section">
-          <h2>Servicios</h2>
-
-          <div className="grid">
-            <article className="svc">
-              <h3>Formación en Ventas</h3>
-              <p>
-                Prospección, discovery, propuestas, cierre y manejo de objeciones.
-                Talleres con práctica real para llevar a acción inmediata.
-              </p>
-            </article>
-
-            <article className="svc">
-              <h3>Comunicación con DISC</h3>
-              <p>
-                Aplicación de DISC en ventas, equipos y atención al cliente.
-                Informes, sesiones de feedback y planes de mejora.
-              </p>
-            </article>
-
-            <article className="svc">
-              <h3>Motivación de Equipos</h3>
-              <p>
-                Hábitos, rituales comerciales, foco y seguimiento. Sistemas simples
-                que mantienen la energía y el compromiso.
-              </p>
-            </article>
-
-            <article className="svc">
-              <h3>Liderazgo y Autoliderazgo</h3>
-              <p>
-                Prioridades, conversaciones difíciles, gestión de la energía
-                y del estrés. Herramientas prácticas para líderes y vendedores.
-              </p>
-            </article>
-
-            <article className="svc">
-              <h3>Acompañamiento Comercial</h3>
-              <p>
-                Roleplays, shadowing y acuerdos de mejora. Feedback accionable
-                para acelerar resultados.
-              </p>
-            </article>
-
-            <article className="svc">
-              <h3>Certificación DISC</h3>
-              <p>
-                Certificaciones abiertas y programas internos para empresas
-                (RR.HH. y managers) con uso profesional de la herramienta.
-              </p>
-            </article>
-          </div>
-
-          <div className="section-cta">
-            <a className="cta ghost" href={`mailto:${email}?subject=Quiero información de servicios`}>
-              Hablemos
-            </a>
-          </div>
-        </section>
-
-        {/* FOOTER */}
-        <footer className="foot">
-          <p>© {new Date().getFullYear()} Luca Chiesa</p>
-
-          <div className="icons">
-            <a className="icon" href={`mailto:${email}?subject=Consulta desde la web`} aria-label="Escribir un email">
-              <svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" strokeWidth="1.6">
-                <rect x="3" y="5" width="18" height="14" rx="2"></rect>
-                <path d="M3 7l9 6 9-6"></path>
-              </svg>
-            </a>
-
-            <a className="icon" href={linkedin} target="_blank" rel="noreferrer" aria-label="Ir a LinkedIn">
-              <svg viewBox="0 0 24 24" width="28" height="28" fill="currentColor">
-                <path d="M20.45 20.45h-3.56V14.9c0-1.32-.02-3.01-1.83-3.01-1.83 0-2.11 1.43-2.11 2.91v5.65H9.39V9.75h3.41v1.47h.05c.47-.9 1.61-1.83 3.31-1.83 3.54 0 4.19 2.33 4.19 5.36v5.7zM6.34 8.29a2.06 2.06 0 11.01-4.12 2.06 2.06 0 01-.01 4.12zM8.12 20.45H4.56V9.75h3.56v10.7z" />
-              </svg>
-            </a>
-          </div>
-        </footer>
+        <a href={mailto} className="cta" aria-label="Escríbele por email a Luca">
+          Contacta con Luca
+        </a>
       </main>
 
+      {/* Footer con iconos: email primero, luego LinkedIn */}
+      <footer className="footer">
+        <p>© 2025 Luca Chiesa</p>
+        <div className="icons">
+          <a className="iconBtn" href={mailto} aria-label="Enviar email a Luca">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none">
+              <path d="M4 6h16a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2Z" stroke="currentColor" strokeWidth="1.6" />
+              <path d="m4 8 8 5 8-5" stroke="currentColor" strokeWidth="1.6" fill="none"/>
+            </svg>
+          </a>
+          <a
+            className="iconBtn"
+            href="https://www.linkedin.com/in/lucachiesa/"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Visitar el LinkedIn de Luca"
+          >
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M4.98 3.5A2.5 2.5 0 1 1 5 8.5a2.5 2.5 0 0 1 0-5ZM4 9h3v12H4zM10 9h2.9v1.6h.04c.4-.76 1.37-1.56 2.82-1.56 3 0 3.55 1.98 3.55 4.56V21h-3v-5.2c0-1.24-.02-2.84-1.73-2.84-1.73 0-1.99 1.35-1.99 2.74V21h-3z"/>
+            </svg>
+          </a>
+        </div>
+      </footer>
+
+      {/* ====== ESTILOS GLOBALES DE LA LANDING ====== */}
       <style jsx>{`
-        :root {
-          --bg: #eef2f7;
-          --text: #0f172a;
-          --muted: #475569;
-          --accent: #2563eb;
-          --accent-700: #1d4ed8;
-          --ring: rgba(37, 99, 235, 0.35);
-          --card: #ffffff;
-          --card-border: rgba(15, 23, 42, .06);
-          --shadow: 0 8px 18px rgba(37, 99, 235, .18);
-          --shadow-hover: 0 10px 22px rgba(37, 99, 235, .22);
+        :root{
+          --bg: #f7f9fc;             /* fondo limpio, muy suave */
+          --paper: #ffffff;           /* blanco para elementos */
+          --text: #111214;            /* texto principal */
+          --muted: #5c6672;           /* texto secundario */
+          --brand: #2F5DFF;           /* azul profesional del botón */
+          --brand-ink: #ffffff;       /* texto en botón */
+          --ring: 40, 90, 255;        /* para sombras y focus */
         }
+        *{ box-sizing: border-box; }
+        html, body, .wrap{ height:100%; }
+        body{
+          margin:0;
+          font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Helvetica Neue", Arial, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", system-ui, sans-serif;
+          color:var(--text);
+          background: radial-gradient(1200px 800px at 50% -10%, #eaf0ff 0%, transparent 60%), var(--bg);
+        }
+        .wrap{
+          display:flex;
+          flex-direction:column;
+          min-height:100vh;
+        }
+        .header{
+          display:flex;
+          justify-content:flex-end;
+          padding:16px 24px;
+        }
+        .lang{
+          display:flex; gap:8px; align-items:center;
+          color:var(--muted);
+          font-size:14.5px;
+        }
+        .langLink{
+          text-decoration:none;
+          color:var(--muted);
+          padding:6px 10px;
+          border-radius:8px;
+          transition:all .2s ease;
+        }
+        .langLink:hover{ background:#eef2ff; color:#273a93; }
+        .langLink.active{ background:#e7ecff; color:#1f32a0; font-weight:600; }
 
-        html, body {
-          background: var(--bg);
-          margin: 0;
-          color: var(--text);
-          font-family: system-ui, -apple-system, Segoe UI, Roboto, Inter, "Helvetica Neue", Arial, "Noto Sans", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
-          -webkit-font-smoothing: antialiased;
-          -moz-osx-font-smoothing: grayscale;
+        .hero{
+          display:flex; flex-direction:column; align-items:center; text-align:center;
+          padding:64px 20px 32px;
+          max-width:900px; margin:0 auto;
         }
-
-        .wrap {
-          min-height: 100svh;
-          display: grid;
-          grid-template-rows: auto 1fr auto;
-          max-width: 980px;
-          margin: 0 auto;
-          padding: clamp(12px, 3.5vw, 28px);
-        }
-
-        .lang {
-          justify-self: end;
-          display: flex;
-          align-items: center;
-          gap: .55rem;
-          color: var(--muted);
-          font-size: .95rem;
-        }
-        .lang a {
-          color: var(--muted);
-          text-decoration: none;
-          padding: .15rem .3rem;
-          border-radius: 6px;
-        }
-        .lang a[aria-current="page"] {
-          color: var(--text);
-          font-weight: 600;
-          background: rgba(255,255,255,.6);
-          box-shadow: 0 1px 0 rgba(15,23,42,.06);
-        }
-
-        .hero {
-          display: grid;
-          place-items: center;
-          text-align: center;
-          padding-block: clamp(18px, 6.5vw, 56px);
-        }
-
-        h1 {
-          margin: 0 0 .7rem 0;
-          font-weight: 800;
+        .title{
+          font-size: clamp(38px, 6vw, 72px);
+          line-height:1.15;
           letter-spacing: -0.02em;
-          font-size: clamp(2.25rem, 5.6vw, 4rem);
+          margin: 28px 0 14px;
+          font-weight: 800;
         }
-
-        h2 {
-          font-size: clamp(1.5rem, 3vw, 2rem);
-          letter-spacing: -.01em;
-          margin: 0 0 .5rem 0;
-        }
-
-        h3 {
-          font-size: clamp(1.05rem, 2.1vw, 1.15rem);
-          margin: 0 0 .25rem 0;
-        }
-
-        .kicker {
-          margin: 0 0 clamp(16px, 3.2vw, 28px) 0;
+        .subtitle{
+          font-size: clamp(16px, 2.2vw, 22px);
           color: var(--muted);
-          font-size: clamp(1.02rem, 2.3vw, 1.22rem);
+          margin: 0 0 28px;
+          letter-spacing:.02em;
         }
-
-        .section {
-          margin-top: clamp(26px, 6.5vw, 64px);
-        }
-
-        .card {
-          background: var(--card);
-          border: 1px solid var(--card-border);
-          border-radius: 16px;
-          padding: clamp(16px, 3.2vw, 24px);
-          box-shadow: 0 8px 22px rgba(0,0,0,.04);
-        }
-
-        .grid {
-          display: grid;
-          gap: clamp(14px, 2.4vw, 18px);
-          grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-          margin-top: clamp(12px, 2.6vw, 18px);
-        }
-
-        .svc {
-          background: var(--card);
-          border: 1px solid var(--card-border);
-          border-radius: 14px;
-          padding: 16px 16px 18px;
-          box-shadow: 0 4px 14px rgba(0,0,0,.04);
-        }
-
-        .section-cta { text-align: center; margin-top: 16px; }
-
-        .cta {
-          display: inline-block;
-          background: var(--accent);
-          color: #fff;
-          padding: .9rem 1.35rem;
+        .cta{
+          display:inline-block;
+          margin-top: 10px;
+          padding: 14px 22px;
+          background: var(--brand);
+          color: var(--brand-ink);
           border-radius: 12px;
+          font-weight: 600;
           text-decoration: none;
-          font-weight: 700;
-          letter-spacing: .01em;
-          box-shadow: var(--shadow);
+          box-shadow: 0 10px 24px rgba(var(--ring), .18), 0 2px 6px rgba(0,0,0,.06);
           transform: translateZ(0);
-          transition: transform .08s ease, background .15s ease, box-shadow .2s ease;
-          will-change: transform;
-          animation: floaty 4.5s ease-in-out infinite;
+          transition: transform .15s ease, box-shadow .2s ease, background .2s ease;
         }
-        .cta:hover { background: var(--accent-700); box-shadow: var(--shadow-hover); }
-        .cta:active { transform: translateY(1px); }
-        .cta:focus-visible {
-          outline: none;
-          box-shadow: 0 0 0 6px var(--ring), var(--shadow);
+        .cta:hover{
+          transform: translateY(-1px);
+          box-shadow: 0 14px 30px rgba(var(--ring), .22), 0 3px 10px rgba(0,0,0,.07);
         }
+        .cta:active{ transform: translateY(0); }
 
-        .cta.ghost {
-          background: transparent;
-          color: var(--accent);
-          border: 2px solid var(--accent);
-          box-shadow: none;
-          padding: .78rem 1.2rem;
-        }
-        .cta.ghost:hover { background: rgba(37, 99, 235, .06); }
-
-        .foot {
-          border-top: 1px solid rgba(15, 23, 42, .06);
-          margin-top: clamp(22px, 6vw, 64px);
-          padding-top: clamp(14px, 4vw, 26px);
-          display: grid;
-          place-items: center;
-          gap: 12px;
+        .footer{
+          margin-top:auto;
+          text-align:center;
+          padding: 34px 16px 46px;
           color: var(--muted);
-          text-align: center;
+          font-size:14px;
+        }
+        .icons{ display:flex; gap:14px; justify-content:center; margin-top: 10px; }
+        .iconBtn{
+          width:44px; height:44px;
+          display:inline-flex; align-items:center; justify-content:center;
+          color:#0f141c;
+          background: var(--paper);
+          border-radius: 12px;
+          text-decoration:none;
+          box-shadow: 0 8px 18px rgba(16,24,40,.06), 0 2px 4px rgba(16,24,40,.05);
+          transition: transform .15s ease, box-shadow .2s ease;
+        }
+        .iconBtn:hover{
+          transform: translateY(-1px);
+          box-shadow: 0 10px 22px rgba(16,24,40,.08), 0 3px 6px rgba(16,24,40,.06);
         }
 
-        .icons { display: flex; gap: 14px; }
-
-        .icon {
-          display: grid;
-          place-items: center;
-          width: 46px;
-          height: 46px;
-          border-radius: 999px;
-          background: var(--card);
-          color: var(--text);
-          box-shadow: 0 2px 8px rgba(0,0,0,.06), 0 1px 0 rgba(255,255,255,.6) inset;
-          transition: transform .12s ease, box-shadow .2s ease, background .2s ease;
-        }
-        .icon:hover {
-          transform: translateY(-2px) scale(1.015);
-          box-shadow: 0 8px 18px rgba(0,0,0,.12);
-          background: #f8fafc;
-        }
-        .icon:focus-visible {
-          outline: none;
-          box-shadow: 0 0 0 6px var(--ring), 0 2px 8px rgba(0,0,0,.06);
-        }
-
-        @keyframes floaty {
-          0%, 100% { transform: translateY(0); }
-          50%      { transform: translateY(-2px); }
-        }
-
-        @media (prefers-reduced-motion: reduce) {
-          .cta, .icon { transition: none !important; animation: none !important; }
+        @media (max-width:560px){
+          .header{ padding:12px 16px; }
+          .hero{ padding-top:48px; }
         }
       `}</style>
-    </>
+    </div>
   );
 }
