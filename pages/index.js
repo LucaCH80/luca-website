@@ -33,6 +33,7 @@ export default function HomeES() {
           <a href="/en">EN</a>
         </nav>
 
+        {/* HERO */}
         <section className="hero">
           <h1>Luca Chiesa</h1>
           <p className="kicker">Sales • Leadership • DISC</p>
@@ -42,6 +43,79 @@ export default function HomeES() {
           </a>
         </section>
 
+        {/* SOBRE MÍ */}
+        <section className="section card">
+          <h2>Sobre mí</h2>
+          <p>
+            Ayudo a equipos comerciales y organizaciones a vender con propósito y
+            comunicar mejor. Trabajo con formación muy práctica, acompañamiento
+            en campo y <strong>DISC</strong> para transformar comportamientos en
+            resultados sostenibles.
+          </p>
+        </section>
+
+        {/* SERVICIOS */}
+        <section className="section">
+          <h2>Servicios</h2>
+
+          <div className="grid">
+            <article className="svc">
+              <h3>Formación en Ventas</h3>
+              <p>
+                Prospección, discovery, propuestas, cierre y manejo de objeciones.
+                Talleres con práctica real para llevar a acción inmediata.
+              </p>
+            </article>
+
+            <article className="svc">
+              <h3>Comunicación con DISC</h3>
+              <p>
+                Aplicación de DISC en ventas, equipos y atención al cliente.
+                Informes, sesiones de feedback y planes de mejora.
+              </p>
+            </article>
+
+            <article className="svc">
+              <h3>Motivación de Equipos</h3>
+              <p>
+                Hábitos, rituales comerciales, foco y seguimiento. Sistemas simples
+                que mantienen la energía y el compromiso.
+              </p>
+            </article>
+
+            <article className="svc">
+              <h3>Liderazgo y Autoliderazgo</h3>
+              <p>
+                Prioridades, conversaciones difíciles, gestión de la energía
+                y del estrés. Herramientas prácticas para líderes y vendedores.
+              </p>
+            </article>
+
+            <article className="svc">
+              <h3>Acompañamiento Comercial</h3>
+              <p>
+                Roleplays, shadowing y acuerdos de mejora. Feedback accionable
+                para acelerar resultados.
+              </p>
+            </article>
+
+            <article className="svc">
+              <h3>Certificación DISC</h3>
+              <p>
+                Certificaciones abiertas y programas internos para empresas
+                (RR.HH. y managers) con uso profesional de la herramienta.
+              </p>
+            </article>
+          </div>
+
+          <div className="section-cta">
+            <a className="cta ghost" href={`mailto:${email}?subject=Quiero información de servicios`}>
+              Hablemos
+            </a>
+          </div>
+        </section>
+
+        {/* FOOTER */}
         <footer className="foot">
           <p>© {new Date().getFullYear()} Luca Chiesa</p>
 
@@ -71,6 +145,7 @@ export default function HomeES() {
           --accent-700: #1d4ed8;
           --ring: rgba(37, 99, 235, 0.35);
           --card: #ffffff;
+          --card-border: rgba(15, 23, 42, .06);
           --shadow: 0 8px 18px rgba(37, 99, 235, .18);
           --shadow-hover: 0 10px 22px rgba(37, 99, 235, .22);
         }
@@ -128,11 +203,51 @@ export default function HomeES() {
           font-size: clamp(2.25rem, 5.6vw, 4rem);
         }
 
+        h2 {
+          font-size: clamp(1.5rem, 3vw, 2rem);
+          letter-spacing: -.01em;
+          margin: 0 0 .5rem 0;
+        }
+
+        h3 {
+          font-size: clamp(1.05rem, 2.1vw, 1.15rem);
+          margin: 0 0 .25rem 0;
+        }
+
         .kicker {
           margin: 0 0 clamp(16px, 3.2vw, 28px) 0;
           color: var(--muted);
           font-size: clamp(1.02rem, 2.3vw, 1.22rem);
         }
+
+        .section {
+          margin-top: clamp(26px, 6.5vw, 64px);
+        }
+
+        .card {
+          background: var(--card);
+          border: 1px solid var(--card-border);
+          border-radius: 16px;
+          padding: clamp(16px, 3.2vw, 24px);
+          box-shadow: 0 8px 22px rgba(0,0,0,.04);
+        }
+
+        .grid {
+          display: grid;
+          gap: clamp(14px, 2.4vw, 18px);
+          grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+          margin-top: clamp(12px, 2.6vw, 18px);
+        }
+
+        .svc {
+          background: var(--card);
+          border: 1px solid var(--card-border);
+          border-radius: 14px;
+          padding: 16px 16px 18px;
+          box-shadow: 0 4px 14px rgba(0,0,0,.04);
+        }
+
+        .section-cta { text-align: center; margin-top: 16px; }
 
         .cta {
           display: inline-block;
@@ -155,6 +270,15 @@ export default function HomeES() {
           outline: none;
           box-shadow: 0 0 0 6px var(--ring), var(--shadow);
         }
+
+        .cta.ghost {
+          background: transparent;
+          color: var(--accent);
+          border: 2px solid var(--accent);
+          box-shadow: none;
+          padding: .78rem 1.2rem;
+        }
+        .cta.ghost:hover { background: rgba(37, 99, 235, .06); }
 
         .foot {
           border-top: 1px solid rgba(15, 23, 42, .06);
