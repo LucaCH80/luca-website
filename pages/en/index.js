@@ -54,11 +54,7 @@ export default function HomeEN() {
               >
                 Talk for 15 minutes
               </a>
-
-              <a className="btn ghost" href="#why">
-                Our why
-              </a>
-
+              <a className="btn ghost" href="#why">Our why</a>
               <a
                 className="btn ghost"
                 href="https://www.linkedin.com/in/lucachiesa/"
@@ -78,17 +74,18 @@ export default function HomeEN() {
           <h2>Why we do this work</h2>
 
           <p className="lead left">
-            Because selling is not just about techniques. It is about judgement, conversation and people.
+            Because selling is not just about techniques. It is about judgement,
+            conversation and people.
           </p>
 
           <p className="lead left">
-            Sales teams improve when they understand what they do, why they do it and how it impacts both
-            results and relationships.
+            Sales teams improve when they understand what they do, why they do it
+            and how it impacts their results and relationships.
           </p>
 
           <p className="lead left">
-            That is why we start from the inside out: developing habits, clarity and self-leadership
-            to achieve real and sustainable improvement.
+            That is why we start from the inside out: developing habits, clarity
+            and self-leadership so improvement is real and sustainable.
           </p>
         </div>
       </section>
@@ -97,9 +94,8 @@ export default function HomeEN() {
       <section className="section">
         <div className="wrap">
           <h2>How we work</h2>
-
           <p className="lead left">
-            We work to develop and professionalise sales teams, combining training, coaching and practical tools.
+            We develop sales teams by combining training, coaching and practical tools.
           </p>
         </div>
       </section>
@@ -113,92 +109,65 @@ export default function HomeEN() {
             <article className="card">
               <div className="badge">Training</div>
               <h3>Sales training for teams</h3>
-              <p>Prospecting, sales meetings, value proposition, objection handling and closing.</p>
-              <p>Practical content focused on daily sales activity.</p>
+              <p>Prospecting, sales meetings, value proposition, objections and closing.</p>
+              <p>Practical content for day-to-day sales activity.</p>
             </article>
 
             <article className="card">
               <div className="badge">Coaching</div>
               <h3>Commercial coaching for salespeople</h3>
-              <p>Meeting preparation, role plays, observation and individual feedback.</p>
-              <p>Turning training into habits and sustainable results.</p>
+              <p>Meeting preparation, role plays, observation and feedback.</p>
+              <p>Turning training into habits and results.</p>
             </article>
 
             <article className="card">
               <div className="badge">DISC</div>
               <h3>DISC applied to sales and communication</h3>
-              <p>Improving sales conversations by adapting communication to behavioural styles.</p>
-              <p>Practical use of DISC in sales and negotiation.</p>
+              <p>Adapting the message to different customer profiles.</p>
+              <p>Practical use in sales and negotiation.</p>
             </article>
           </div>
         </div>
       </section>
 
-      {/* ABOUT */}
-      <section id="about" className="section">
+      {/* PROCESS */}
+      <section id="process" className="section">
         <div className="wrap">
-          <h2>Who is behind this</h2>
+          <h2>A clear process to help sales teams grow and evolve</h2>
 
-          <div className="twoCol">
-            <div className="panel">
-              <p className="lead left">
-                I’m Luca Chiesa. I’ve worked with sales teams for 15+ years across B2B and B2C contexts.
-                My approach is practical: what we do in a session must hold up in everyday execution.
-              </p>
-
-              <ul className="bullets">
-                <li>15+ years with sales teams (B2B & B2C)</li>
-                <li>DISC certification applied to sales and communication</li>
-                <li>Self-leadership and motivation as performance foundations</li>
-                <li>International experience (Europe & Asia)</li>
-              </ul>
-            </div>
-
-            <div className="panel soft">
-              <h3>How it shows up in the work</h3>
-              <p>
-                Less “nice theory” and more practice: scripts, simulations, tough conversations and follow-up.
-                We focus on clarity, judgement and habits.
-              </p>
-              <p className="muted">
-                If you want, we can add 2–3 real cases here later (named or anonymised).
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* RESULTS */}
-      <section id="results" className="section">
-        <div className="wrap">
-          <h2>Typical outcomes</h2>
           <p className="lead left">
-            Depending on the industry and starting point, these are common outcomes we aim for:
+            Before deciding whether training, coaching or both make sense,
+            we analyse the sales context and define the most suitable approach.
           </p>
 
           <div className="grid">
             <article className="card">
-              <div className="badge">Pipeline</div>
-              <h3>Better sales conversations</h3>
-              <p>More structured meetings, better questions and clearer value propositions.</p>
+              <div className="badge">Step 1</div>
+              <h3>Quick diagnosis</h3>
+              <p>
+                We understand the type of sale, sales cycle, team profile
+                and current improvement areas.
+              </p>
             </article>
 
             <article className="card">
-              <div className="badge">Closing</div>
-              <h3>More control with objections</h3>
-              <p>Handling price, competition and “let me think about it” with calm and judgement.</p>
+              <div className="badge">Step 2</div>
+              <h3>Plan and focus</h3>
+              <p>
+                We define priorities, key messages and concrete habits,
+                deciding which intervention makes most sense.
+              </p>
             </article>
 
             <article className="card">
-              <div className="badge">Team</div>
-              <h3>Sustainable habits</h3>
-              <p>Simple routines (prep, follow-up, focus) that maintain performance over time.</p>
+              <div className="badge">Step 3</div>
+              <h3>Implementation and follow-up</h3>
+              <p>
+                We train in real situations and accompany the process
+                to consolidate learning and results.
+              </p>
             </article>
           </div>
-
-          <p className="note">
-            *No magic promises: we measure, train and consolidate habits. Transfer is the goal.
-          </p>
         </div>
       </section>
 
@@ -206,11 +175,9 @@ export default function HomeEN() {
       <section className="section">
         <div className="wrap contactBox">
           <h2>Tell us about your sales context</h2>
-
           <p className="lead left">
-            If you want to develop or professionalise your sales team, briefly explain your situation and we will assess the fit.
+            Briefly explain your situation and we will assess whether it makes sense to work together.
           </p>
-
           <a
             className="btn primary"
             href={`mailto:${email}?subject=${subject}&body=${body}`}
@@ -220,7 +187,6 @@ export default function HomeEN() {
         </div>
       </section>
 
-      {/* FOOTER */}
       <footer className="footer">
         <p>© 2025 Luca Chiesa</p>
       </footer>
@@ -228,77 +194,34 @@ export default function HomeEN() {
       {/* STYLES */}
       <style jsx>{`
         :root {
-          --bg:#f6f7fb;
-          --ink:#0f172a;
-          --muted:#475569;
-          --muted2:#64748b;
-          --paper:#ffffff;
-          --brand:#2563eb;
-          --wrap:1060px;
-          --radius:18px;
-          --shadow:0 10px 24px rgba(16,24,40,.06);
+          --bg:#f6f7fb; --ink:#0f172a; --muted:#475569; --muted2:#64748b;
+          --paper:#ffffff; --brand:#2563eb; --wrap:1060px;
+          --radius:18px; --shadow:0 10px 24px rgba(16,24,40,.06);
         }
-
-        :global(html,body){
-          margin:0;
-          background:var(--bg);
-          color:var(--ink);
-          font-family:Inter,system-ui,Arial;
-        }
-
+        :global(html,body){margin:0;background:var(--bg);color:var(--ink);font-family:Inter,system-ui;}
         .wrap{max-width:var(--wrap);margin:0 auto;padding:0 20px;}
         .topbarInner{display:flex;justify-content:flex-end;padding:18px 20px;}
         .lang{font-size:14px;color:var(--muted);}
         .lang a{text-decoration:none;color:var(--muted2);}
         .lang .active{font-weight:700;color:var(--brand);}
         .lang .dot{margin:0 6px;}
-
         .hero{padding-top:20px;}
-        .heroCard{
-          background:var(--paper);
-          border-radius:28px;
-          padding:40px 32px;
-          box-shadow:var(--shadow);
-          text-align:center;
-        }
-
+        .heroCard{background:var(--paper);border-radius:28px;padding:40px 32px;box-shadow:var(--shadow);text-align:center;}
         h1{font-size:42px;margin:0 0 16px;}
-        h2{margin:0 0 12px;}
-        h3{margin:0 0 8px;}
         .kicker{color:var(--muted);font-weight:600;}
         .sub{max-width:820px;margin:12px auto;color:var(--muted2);}
-
         .ctaRow{margin-top:20px;display:flex;gap:10px;justify-content:center;flex-wrap:wrap;}
         .btn{padding:12px 18px;border-radius:12px;text-decoration:none;font-weight:700;}
         .btn.primary{background:var(--brand);color:#fff;}
         .btn.ghost{background:#fff;border:1px solid #ddd;color:var(--ink);}
-
         .section{padding:60px 0;}
         .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:18px;}
         .card{background:#fff;border-radius:var(--radius);padding:20px;box-shadow:var(--shadow);}
-        .badge{font-size:12px;font-weight:700;color:var(--brand); margin-bottom:10px;}
-        .lead{color:var(--muted2); line-height:1.7; max-width:900px;}
+        .badge{font-size:12px;font-weight:700;color:var(--brand);margin-bottom:8px;}
+        .lead{color:var(--muted2);line-height:1.7;max-width:900px;}
         .lead.left{margin:0 0 12px;}
-        .note{margin-top:12px;color:var(--muted);font-size:13px;}
-
-        .twoCol{display:grid;grid-template-columns:1fr;gap:18px;margin-top:12px;}
-        .panel{background:var(--paper);border-radius:var(--radius);padding:20px;box-shadow:var(--shadow);}
-        .panel.soft{background:#f1f5ff;}
-        .bullets{margin:12px 0 0;padding-left:18px;color:var(--muted2);line-height:1.7;}
-        .muted{color:var(--muted);font-size:13px;margin-top:10px;}
-
-        .contactBox{
-          background:var(--paper);
-          border-radius:28px;
-          padding:28px 22px;
-          box-shadow:var(--shadow);
-        }
-
+        .contactBox{background:var(--paper);border-radius:28px;padding:28px 22px;box-shadow:var(--shadow);}
         .footer{text-align:center;color:var(--muted);padding:40px 0;}
-
-        @media (min-width: 920px){
-          .twoCol{grid-template-columns:1.15fr .85fr;}
-        }
       `}</style>
     </>
   );
