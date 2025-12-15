@@ -8,20 +8,20 @@ export default function HomeES() {
   return (
     <>
       <Head>
-        <title>Luca Chiesa — Formación en Ventas y Comunicación Comercial</title>
+        <title>Luca Chiesa — Desarrollo Comercial de Equipos de Ventas</title>
         <meta
           name="description"
-          content="Formación para equipos comerciales B2B y B2C. Ventas, comunicación, motivación y DISC aplicados al día a día comercial."
+          content="Formación y acompañamiento comercial para equipos de ventas B2B y B2C. Ventas, comunicación, motivación y DISC aplicados al día a día."
         />
         <link rel="canonical" href="https://lucachiesa.net/" />
         <link rel="alternate" hrefLang="en" href="https://lucachiesa.net/en" />
         <link rel="alternate" hrefLang="es" href="https://lucachiesa.net/" />
 
         <meta property="og:locale" content="es_ES" />
-        <meta property="og:title" content="Luca Chiesa — Formación Comercial" />
+        <meta property="og:title" content="Luca Chiesa — Desarrollo Comercial" />
         <meta
           property="og:description"
-          content="Formación para equipos comerciales. Ventas, comunicación, motivación y DISC con enfoque práctico."
+          content="Te ayudamos a desarrollar y profesionalizar tu equipo de ventas con formación y acompañamiento comercial."
         />
         <meta property="og:url" content="https://lucachiesa.net/" />
         <meta property="og:type" content="website" />
@@ -45,9 +45,9 @@ export default function HomeES() {
             <div className="pill">Barcelona · Europa · Online</div>
 
             <h1>
-              Formación para equipos comerciales
+              Te ayudamos a desarrollar y profesionalizar
               <br />
-              que quieren vender mejor sin perder el factor humano
+              tu equipo de ventas
             </h1>
 
             <p className="kicker">
@@ -55,10 +55,9 @@ export default function HomeES() {
             </p>
 
             <p className="sub">
-              Más de 15 años trabajando con equipos comerciales B2B y B2C.
-              Formaciones prácticas en ventas, comunicación y motivación,
-              con el autoliderazgo como base para rendir mejor primero a nivel
-              individual y luego en equipo.
+              Formación y acompañamiento comercial en ventas, comunicación y motivación.
+              Trabajo práctico con vendedores B2B y B2C, desde el autoliderazgo hasta
+              la ejecución diaria.
             </p>
 
             <div className="ctaRow">
@@ -91,7 +90,7 @@ export default function HomeES() {
                 <span className="okDot" /> Certificación DISC aplicada a ventas y comunicación
               </span>
               <span className="proofItem">
-                <span className="okDot" /> Autoliderazgo y motivación para mejorar resultados
+                <span className="okDot" /> Formación + acompañamiento real a vendedores
               </span>
             </div>
           </div>
@@ -103,32 +102,40 @@ export default function HomeES() {
         <div className="wrap">
           <h2>Servicios</h2>
           <p className="lead left">
-            Formación aplicada a equipos comerciales. Sin teoría decorativa.
+            Todo el trabajo está orientado a mejorar el rendimiento comercial en el día a día.
           </p>
 
           <div className="grid">
             <article className="card">
               <div className="badge">Ventas</div>
-              <h3>Formación en Ventas</h3>
-              <p>Prospección, reuniones, propuesta de valor, objeciones y cierre.</p>
+              <h3>Formación en ventas</h3>
+              <p>
+                Prospección, reuniones, propuesta de valor, gestión de objeciones y cierre.
+              </p>
             </article>
 
             <article className="card">
               <div className="badge">Comunicación</div>
               <h3>Comunicación comercial</h3>
-              <p>Adaptar el mensaje, influir mejor y reducir fricción con clientes.</p>
+              <p>
+                Ajustar el mensaje al interlocutor y mejorar conversaciones con clientes.
+              </p>
             </article>
 
             <article className="card">
-              <div className="badge">Motivación</div>
-              <h3>Motivación y hábitos</h3>
-              <p>Foco, energía y hábitos sostenibles para equipos comerciales.</p>
+              <div className="badge">Acompañamiento</div>
+              <h3>Acompañamiento comercial</h3>
+              <p>
+                Preparación de visitas, roleplays, observación y feedback en situaciones reales.
+              </p>
             </article>
 
             <article className="card">
               <div className="badge">DISC</div>
               <h3>DISC aplicado a ventas</h3>
-              <p>Comprender estilos y vender mejor según el perfil del cliente.</p>
+              <p>
+                Comprender estilos de comportamiento para vender y comunicar mejor.
+              </p>
             </article>
           </div>
         </div>
@@ -140,7 +147,7 @@ export default function HomeES() {
           <div>
             <h2>Hablemos</h2>
             <p className="lead left">
-              Cuéntame tu objetivo comercial y vemos si encaja.
+              Cuéntanos tu contexto y vemos si tiene sentido trabajar juntos.
             </p>
 
             <a
@@ -185,6 +192,7 @@ export default function HomeES() {
         .lang{font-size:14px;color:var(--muted);}
         .lang a{text-decoration:none;color:var(--muted2);}
         .lang .active{font-weight:700;color:var(--brand);}
+        .lang .dot{margin:0 6px;}
 
         .hero{padding-top:20px;}
         .heroCard{
@@ -195,7 +203,7 @@ export default function HomeES() {
           text-align:center;
         }
 
-        h1{font-size:48px;margin:16px 0;}
+        h1{font-size:42px;margin:16px 0;}
         .kicker{color:var(--muted);font-weight:600;}
         .sub{max-width:820px;margin:12px auto;color:var(--muted2);}
 
