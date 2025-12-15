@@ -45,9 +45,9 @@ export default function HomeEN() {
             </p>
 
             <p className="sub">
-              Sales training and commercial coaching focused on real situations.
-              Practical work with B2B and B2C sales teams, from self-leadership
-              to daily execution.
+              Sales training and commercial coaching for B2B and B2C sales teams.
+              Practical work with salespeople, from self-leadership to
+              everyday commercial execution.
             </p>
 
             <div className="ctaRow">
@@ -58,8 +58,8 @@ export default function HomeEN() {
                 Talk for 15 minutes
               </a>
 
-              <a className="btn ghost" href="#services">
-                View services
+              <a className="btn ghost" href="#why">
+                Our why
               </a>
 
               <a
@@ -71,42 +71,59 @@ export default function HomeEN() {
                 LinkedIn
               </a>
             </div>
-
-            <div className="proof">
-              <span className="proofItem">
-                <span className="okDot" /> 15+ years working with B2B & B2C sales teams
-              </span>
-              <span className="proofItem">
-                <span className="okDot" /> DISC certification applied to sales and communication
-              </span>
-              <span className="proofItem">
-                <span className="okDot" /> Training plus real commercial coaching
-              </span>
-            </div>
           </div>
         </div>
       </section>
 
-      {/* SERVICES */}
-      <section id="services" className="section">
+      {/* WHY */}
+      <section id="why" className="section">
+        <div className="wrap">
+          <h2>Why we do this work</h2>
+
+          <p className="lead left">
+            Because selling is not just about techniques.
+            It is about judgement, conversation and people.
+          </p>
+
+          <p className="lead left">
+            Sales teams improve when they understand what they do,
+            why they do it and how it impacts both results
+            and relationships.
+          </p>
+
+          <p className="lead left">
+            That is why we start from the inside out:
+            developing habits, clarity and self-leadership
+            to achieve real and sustainable improvement.
+          </p>
+        </div>
+      </section>
+
+      {/* HOW */}
+      <section className="section">
         <div className="wrap">
           <h2>How we work</h2>
 
           <p className="lead left">
-            Interventions designed to develop and professionalise sales teams,
+            We work to develop and professionalise sales teams,
             combining training, coaching and practical tools.
           </p>
+        </div>
+      </section>
 
+      {/* WHAT / SERVICES */}
+      <section id="services" className="section">
+        <div className="wrap">
           <div className="grid">
             <article className="card">
               <div className="badge">Training</div>
               <h3>Sales training for teams</h3>
               <p>
-                Programmes adapted to the team’s reality: prospecting, sales
-                meetings, value proposition, objection handling and closing.
+                Work on prospecting, sales meetings, value proposition,
+                objection handling and closing.
               </p>
               <p>
-                Practical content directly applicable to daily sales activity.
+                Practical content focused on daily sales activity.
               </p>
             </article>
 
@@ -114,8 +131,8 @@ export default function HomeEN() {
               <div className="badge">Coaching</div>
               <h3>Commercial coaching for salespeople</h3>
               <p>
-                Direct work with salespeople: meeting preparation, role plays,
-                observation and individual feedback.
+                Meeting preparation, role plays, observation
+                and individual feedback.
               </p>
               <p>
                 Turning training into habits and sustainable results.
@@ -126,36 +143,14 @@ export default function HomeEN() {
               <div className="badge">DISC</div>
               <h3>DISC applied to sales and communication</h3>
               <p>
-                Improving sales conversations by adapting communication to
-                different behavioural styles.
+                Improving sales conversations by adapting communication
+                to different behavioural styles.
               </p>
               <p>
-                Practical application of DISC in sales and negotiation.
+                Practical use of DISC in sales and negotiation.
               </p>
             </article>
           </div>
-        </div>
-      </section>
-
-      {/* WHY */}
-      <section className="section">
-        <div className="wrap">
-          <h2>Why we do this work</h2>
-
-          <p className="lead left">
-            Because selling is not just about techniques. It is about judgement,
-            conversation and people.
-          </p>
-
-          <p className="lead left">
-            Sales teams improve when they understand what they do, why they do it
-            and how it impacts both results and relationships.
-          </p>
-
-          <p className="lead left">
-            That is why we work from the inside out: developing habits, clarity
-            and self-leadership to achieve real and sustainable improvement.
-          </p>
         </div>
       </section>
 
@@ -165,8 +160,8 @@ export default function HomeEN() {
           <h2>Tell us about your sales context</h2>
 
           <p className="lead left">
-            If you want to develop or professionalise your sales team, briefly
-            explain your situation and we will assess the fit.
+            If you want to develop or professionalise your sales team,
+            briefly explain your situation and we will assess the fit.
           </p>
 
           <a
@@ -228,9 +223,6 @@ export default function HomeEN() {
         .btn{padding:12px 18px;border-radius:12px;text-decoration:none;font-weight:700;}
         .btn.primary{background:var(--brand);color:#fff;}
         .btn.ghost{background:#fff;border:1px solid #ddd;color:var(--ink);}
-
-        .proof{margin-top:18px;display:flex;gap:14px;justify-content:center;flex-wrap:wrap;font-size:14px;}
-        .okDot{display:inline-block;width:8px;height:8px;background:var(--brand);border-radius:50%;margin-right:6px;}
 
         .section{padding:60px 0;}
         .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:18px;}
