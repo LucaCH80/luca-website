@@ -150,33 +150,34 @@ export default function HomeES() {
           <div className="grid">
             <article className="card">
               <h3>Venta consultiva B2B</h3>
-              <p>Formación y acompañamiento para estructurar conversaciones, profundizar en necesidades y defender valor.</p>
+              <p>Estructuración de conversaciones comerciales y defensa de valor.</p>
             </article>
 
             <article className="card">
               <h3>Venta horizontal</h3>
-              <p>Trabajo para aumentar el ticket medio y pasar de vendedor de pedidos a desarrollador de clientes.</p>
+              <p>Aumento del ticket medio y desarrollo de clientes existentes.</p>
             </article>
 
             <article className="card">
               <h3>Gestión de objeciones</h3>
-              <p>Formación práctica para gestionar precio, competencia y bloqueos habituales con mayor criterio.</p>
+              <p>Gestión de precio, competencia y bloqueos habituales.</p>
             </article>
 
             <article className="card">
               <h3>Seguimiento comercial</h3>
-              <p>Estructuración del seguimiento para mejorar control del pipeline y cierre de oportunidades.</p>
+              <p>Mejora del control del pipeline y del cierre.</p>
             </article>
           </div>
         </div>
       </section>
 
-      {/* CTA */}
+      {/* CTA FINAL */}
       <section className="section">
         <div className="wrap contactBox">
-          <h2>Cuéntanos tu situación comercial</h2>
+          <h2>Hablemos de cómo impulsar las ventas</h2>
           <p className="lead left">
-            Explícanos brevemente tu contexto y valoramos si tiene sentido trabajar juntos.
+            Si quieres dar un paso adelante en la forma en que tu equipo vende,
+            cuéntanos brevemente tu contexto y lo analizamos juntos, con foco y criterio.
           </p>
           <a className="btn primary" href={`mailto:${email}?subject=${subject}&body=${body}`}>
             Escribir a {email}
