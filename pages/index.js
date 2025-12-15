@@ -45,8 +45,8 @@ export default function HomeES() {
             </p>
 
             <p className="sub">
-              Formación y acompañamiento comercial en ventas, comunicación y motivación.
-              Trabajo práctico con vendedores B2B y B2C, desde el autoliderazgo hasta
+              Formación y acompañamiento comercial para equipos de ventas B2B y B2C.
+              Trabajo práctico con vendedores, desde el autoliderazgo hasta
               el día a día comercial.
             </p>
 
@@ -58,8 +58,8 @@ export default function HomeES() {
                 Hablar 15 minutos
               </a>
 
-              <a className="btn ghost" href="#servicios">
-                Ver servicios
+              <a className="btn ghost" href="#porque">
+                Nuestro porqué
               </a>
 
               <a
@@ -71,24 +71,36 @@ export default function HomeES() {
                 LinkedIn
               </a>
             </div>
-
-            <div className="proof">
-              <span className="proofItem">
-                <span className="okDot" /> +15 años con equipos comerciales B2B y B2C
-              </span>
-              <span className="proofItem">
-                <span className="okDot" /> Certificación DISC aplicada a ventas y comunicación
-              </span>
-              <span className="proofItem">
-                <span className="okDot" /> Formación y acompañamiento real a vendedores
-              </span>
-            </div>
           </div>
         </div>
       </section>
 
-      {/* SERVICIOS */}
-      <section id="servicios" className="section">
+      {/* POR QUÉ */}
+      <section id="porque" className="section">
+        <div className="wrap">
+          <h2>Por qué hacemos este trabajo</h2>
+
+          <p className="lead left">
+            Porque vender no va solo de técnicas. Va de criterio,
+            de conversación y de personas.
+          </p>
+
+          <p className="lead left">
+            Creemos que los equipos comerciales mejoran cuando entienden
+            lo que hacen, por qué lo hacen y cómo impacta en sus resultados
+            y en sus relaciones.
+          </p>
+
+          <p className="lead left">
+            Por eso empezamos desde dentro: desarrollando hábitos,
+            claridad y autoliderazgo, para que la mejora comercial
+            sea real y sostenible en el tiempo.
+          </p>
+        </div>
+      </section>
+
+      {/* CÓMO */}
+      <section className="section">
         <div className="wrap">
           <h2>Cómo trabajamos</h2>
 
@@ -96,14 +108,19 @@ export default function HomeES() {
             Trabajamos para desarrollar y profesionalizar equipos de ventas,
             combinando formación, acompañamiento y herramientas prácticas.
           </p>
+        </div>
+      </section>
 
+      {/* QUÉ / SERVICIOS */}
+      <section id="servicios" className="section">
+        <div className="wrap">
           <div className="grid">
             <article className="card">
               <div className="badge">Formación</div>
               <h3>Formación comercial para equipos de ventas</h3>
               <p>
-                Trabajo sobre prospección, reuniones comerciales, propuesta de valor,
-                gestión de objeciones y cierre.
+                Trabajo sobre prospección, reuniones comerciales, propuesta
+                de valor, gestión de objeciones y cierre.
               </p>
               <p>
                 Contenido práctico, enfocado al día a día del equipo.
@@ -114,11 +131,11 @@ export default function HomeES() {
               <div className="badge">Acompañamiento</div>
               <h3>Acompañamiento comercial a vendedores</h3>
               <p>
-                Preparación de visitas, roleplays, observación de reuniones y
-                feedback individual.
+                Preparación de visitas, roleplays, observación de reuniones
+                y feedback individual.
               </p>
               <p>
-                El objetivo es convertir la formación en hábitos y resultados sostenibles.
+                Convertir la formación en hábitos y resultados sostenibles.
               </p>
             </article>
 
@@ -134,30 +151,6 @@ export default function HomeES() {
               </p>
             </article>
           </div>
-        </div>
-      </section>
-
-      {/* POR QUÉ */}
-      <section className="section">
-        <div className="wrap">
-          <h2>Por qué hacemos este trabajo</h2>
-
-          <p className="lead left">
-            Porque vender no va solo de técnicas. Va de criterio,
-            de conversación y de personas.
-          </p>
-
-          <p className="lead left">
-            Los equipos comerciales mejoran cuando entienden mejor
-            lo que hacen, por qué lo hacen y cómo impacta en sus resultados
-            y en sus relaciones.
-          </p>
-
-          <p className="lead left">
-            Por eso trabajamos desde dentro, desarrollando hábitos,
-            claridad y autoliderazgo, para que la mejora comercial
-            sea real y sostenible en el tiempo.
-          </p>
         </div>
       </section>
 
@@ -230,9 +223,6 @@ export default function HomeES() {
         .btn{padding:12px 18px;border-radius:12px;text-decoration:none;font-weight:700;}
         .btn.primary{background:var(--brand);color:#fff;}
         .btn.ghost{background:#fff;border:1px solid #ddd;color:var(--ink);}
-
-        .proof{margin-top:18px;display:flex;gap:14px;justify-content:center;flex-wrap:wrap;font-size:14px;}
-        .okDot{display:inline-block;width:8px;height:8px;background:var(--brand);border-radius:50%;margin-right:6px;}
 
         .section{padding:60px 0;}
         .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:18px;}
