@@ -137,12 +137,35 @@ export default function HomeES() {
         </div>
       </section>
 
-      {/* CONTACTO */}
+      {/* POR QUÉ */}
+      <section className="section">
+        <div className="wrap">
+          <h2>Por qué hacemos este trabajo</h2>
+
+          <p className="lead left">
+            Porque vender no va solo de técnicas. Va de criterio, de conversación y de personas.
+          </p>
+
+          <p className="lead left">
+            Creemos que los equipos comerciales mejoran cuando entienden mejor lo que hacen,
+            por qué lo hacen y cómo impacta en sus resultados y en sus relaciones.
+          </p>
+
+          <p className="lead left">
+            Por eso trabajamos desde dentro: desarrollando hábitos, claridad y autoliderazgo,
+            para que la mejora comercial sea real y sostenible en el tiempo.
+          </p>
+        </div>
+      </section>
+
+      {/* CTA FINAL */}
       <section className="section">
         <div className="wrap contactBox">
-          <h2>Hablemos</h2>
+          <h2>Cuéntanos tu situación comercial</h2>
+
           <p className="lead left">
-            Cuéntanos tu contexto y vemos si tiene sentido trabajar juntos.
+            Si quieres desarrollar o profesionalizar tu equipo de ventas,
+            explícanos brevemente tu contexto y valoramos el encaje.
           </p>
 
           <a
@@ -174,46 +197,4 @@ export default function HomeES() {
         }
 
         :global(html,body){
-          margin:0;
-          background:var(--bg);
-          color:var(--ink);
-          font-family:Inter,system-ui,Arial;
-        }
-
-        .wrap{max-width:var(--wrap);margin:0 auto;padding:0 20px;}
-        .topbarInner{display:flex;justify-content:flex-end;padding:18px 20px;}
-        .lang{font-size:14px;color:var(--muted);}
-        .lang a{text-decoration:none;color:var(--muted2);}
-        .lang .active{font-weight:700;color:var(--brand);}
-        .lang .dot{margin:0 6px;}
-
-        .hero{padding-top:20px;}
-        .heroCard{
-          background:var(--paper);
-          border-radius:28px;
-          padding:40px 32px;
-          box-shadow:var(--shadow);
-          text-align:center;
-        }
-
-        h1{font-size:42px;margin:0 0 16px;}
-        .kicker{color:var(--muted);font-weight:600;}
-        .sub{max-width:820px;margin:12px auto;color:var(--muted2);}
-
-        .ctaRow{margin-top:20px;display:flex;gap:10px;justify-content:center;flex-wrap:wrap;}
-        .btn{padding:12px 18px;border-radius:12px;text-decoration:none;font-weight:700;}
-        .btn.primary{background:var(--brand);color:#fff;}
-        .btn.ghost{background:#fff;border:1px solid #ddd;color:var(--ink);}
-
-        .proof{margin-top:18px;display:flex;gap:14px;justify-content:center;flex-wrap:wrap;font-size:14px;}
-        .okDot{display:inline-block;width:8px;height:8px;background:var(--brand);border-radius:50%;margin-right:6px;}
-
-        .section{padding:60px 0;}
-        .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:18px;}
-        .card{background:#fff;border-radius:var(--radius);padding:20px;box-shadow:var(--shadow);}
-        .badge{font-size:12px;font-weight:700;color:var(--brand);}
-        .footer{text-align:center;color:var(--muted);padding:40px 0;}
-      `}</style>
-    </>
-  );
-}
+          mar
