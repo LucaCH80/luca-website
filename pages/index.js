@@ -16,14 +16,6 @@ export default function HomeES() {
         <link rel="canonical" href="https://lucachiesa.net/" />
         <link rel="alternate" hrefLang="en" href="https://lucachiesa.net/en" />
         <link rel="alternate" hrefLang="es" href="https://lucachiesa.net/" />
-
-        <meta property="og:locale" content="es_ES" />
-        <meta property="og:title" content="Luca Chiesa — Desarrollo Comercial" />
-        <meta
-          property="og:description"
-          content="Te ayudamos a desarrollar y profesionalizar tu equipo de ventas con formación y acompañamiento comercial."
-        />
-        <meta property="og:url" content="https://lucachiesa.net/" />
         <meta property="og:type" content="website" />
       </Head>
 
@@ -41,8 +33,7 @@ export default function HomeES() {
       {/* HERO */}
       <section className="hero">
         <div className="wrap">
-          <div className="heroCard"
-
+          <div className="heroCard">
             <h1>
               Te ayudamos a desarrollar y profesionalizar
               <br />
@@ -99,41 +90,47 @@ export default function HomeES() {
       {/* SERVICIOS */}
       <section id="servicios" className="section">
         <div className="wrap">
-          <h2>Servicios</h2>
+          <h2>Cómo trabajamos</h2>
+
           <p className="lead left">
-            Todo el trabajo está orientado a mejorar el rendimiento comercial en el día a día.
+            Intervenciones pensadas para desarrollar y profesionalizar equipos de ventas,
+            combinando formación, acompañamiento y herramientas prácticas.
           </p>
 
           <div className="grid">
             <article className="card">
-              <div className="badge">Ventas</div>
-              <h3>Formación en ventas</h3>
+              <div className="badge">Formación</div>
+              <h3>Formación comercial para equipos de ventas</h3>
               <p>
-                Prospección, reuniones, propuesta de valor, gestión de objeciones y cierre.
+                Programas adaptados a la realidad del equipo: prospección, reuniones
+                comerciales, propuesta de valor, gestión de objeciones y cierre.
               </p>
-            </article>
-
-            <article className="card">
-              <div className="badge">Comunicación</div>
-              <h3>Comunicación comercial</h3>
               <p>
-                Ajustar el mensaje al interlocutor y mejorar conversaciones con clientes.
+                Contenido práctico y aplicable al día a día comercial.
               </p>
             </article>
 
             <article className="card">
               <div className="badge">Acompañamiento</div>
-              <h3>Acompañamiento comercial</h3>
+              <h3>Acompañamiento comercial a vendedores</h3>
               <p>
-                Preparación de visitas, roleplays, observación y feedback en situaciones reales.
+                Trabajo directo con vendedores: preparación de visitas, roleplays,
+                observación y feedback individual.
+              </p>
+              <p>
+                Convertir la formación en hábitos y resultados sostenibles.
               </p>
             </article>
 
             <article className="card">
               <div className="badge">DISC</div>
-              <h3>DISC aplicado a ventas</h3>
+              <h3>DISC aplicado a ventas y comunicación</h3>
               <p>
-                Comprender estilos de comportamiento para vender y comunicar mejor.
+                Mejora de la comunicación comercial adaptando el mensaje al perfil
+                del cliente.
+              </p>
+              <p>
+                Aplicación práctica del modelo en ventas y negociación.
               </p>
             </article>
           </div>
@@ -141,21 +138,19 @@ export default function HomeES() {
       </section>
 
       {/* CONTACTO */}
-      <section id="contacto" className="section">
+      <section className="section">
         <div className="wrap contactBox">
-          <div>
-            <h2>Hablemos</h2>
-            <p className="lead left">
-              Cuéntanos tu contexto y vemos si tiene sentido trabajar juntos.
-            </p>
+          <h2>Hablemos</h2>
+          <p className="lead left">
+            Cuéntanos tu contexto y vemos si tiene sentido trabajar juntos.
+          </p>
 
-            <a
-              className="btn primary"
-              href={`mailto:${email}?subject=${subject}&body=${body}`}
-            >
-              Escribir a {email}
-            </a>
-          </div>
+          <a
+            className="btn primary"
+            href={`mailto:${email}?subject=${subject}&body=${body}`}
+          >
+            Escribir a {email}
+          </a>
         </div>
       </section>
 
@@ -173,7 +168,6 @@ export default function HomeES() {
           --muted2:#64748b;
           --paper:#ffffff;
           --brand:#2563eb;
-          --brand2:#1e40af;
           --wrap:1060px;
           --radius:18px;
           --shadow:0 10px 24px rgba(16,24,40,.06);
@@ -197,12 +191,12 @@ export default function HomeES() {
         .heroCard{
           background:var(--paper);
           border-radius:28px;
-          padding:32px;
+          padding:40px 32px;
           box-shadow:var(--shadow);
           text-align:center;
         }
 
-        h1{font-size:42px;margin:16px 0;}
+        h1{font-size:42px;margin:0 0 16px;}
         .kicker{color:var(--muted);font-weight:600;}
         .sub{max-width:820px;margin:12px auto;color:var(--muted2);}
 
@@ -215,8 +209,8 @@ export default function HomeES() {
         .okDot{display:inline-block;width:8px;height:8px;background:var(--brand);border-radius:50%;margin-right:6px;}
 
         .section{padding:60px 0;}
-        .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:18px;}
-        .card{background:#fff;border-radius:var(--radius);padding:18px;box-shadow:var(--shadow);}
+        .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:18px;}
+        .card{background:#fff;border-radius:var(--radius);padding:20px;box-shadow:var(--shadow);}
         .badge{font-size:12px;font-weight:700;color:var(--brand);}
         .footer{text-align:center;color:var(--muted);padding:40px 0;}
       `}</style>
