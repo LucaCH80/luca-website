@@ -48,17 +48,10 @@ export default function HomeES() {
             </p>
 
             <div className="ctaRow">
-              <a
-                className="btn primary"
-                href={`mailto:${email}?subject=${subject}&body=${body}`}
-              >
+              <a className="btn primary" href={`mailto:${email}?subject=${subject}&body=${body}`}>
                 Hablar 15 minutos
               </a>
-
-              <a className="btn ghost" href="#porque">
-                Nuestro porqué
-              </a>
-
+              <a className="btn ghost" href="#porque">Nuestro porqué</a>
               <a
                 className="btn ghost"
                 href="https://www.linkedin.com/in/lucachiesa/"
@@ -72,40 +65,36 @@ export default function HomeES() {
         </div>
       </section>
 
-      {/* WHY */}
+      {/* POR QUÉ */}
       <section id="porque" className="section">
         <div className="wrap">
           <h2>Por qué hacemos este trabajo</h2>
-
           <p className="lead left">
             Porque vender no va solo de técnicas. Va de criterio, de conversación y de personas.
           </p>
-
           <p className="lead left">
-            Creemos que los equipos comerciales mejoran cuando entienden lo que hacen, por qué lo hacen
-            y cómo impacta en sus resultados y en sus relaciones.
+            Los equipos comerciales mejoran cuando entienden lo que hacen, por qué lo hacen
+            y cómo impacta en sus resultados y relaciones.
           </p>
-
           <p className="lead left">
-            Por eso empezamos desde dentro: desarrollando hábitos, claridad y autoliderazgo, para que
-            la mejora comercial sea real y sostenible en el tiempo.
+            Por eso empezamos desde dentro: desarrollando hábitos, claridad y autoliderazgo
+            para que la mejora sea real y sostenible.
           </p>
         </div>
       </section>
 
-      {/* HOW */}
+      {/* CÓMO */}
       <section className="section">
         <div className="wrap">
           <h2>Cómo trabajamos</h2>
-
           <p className="lead left">
-            Trabajamos para desarrollar y profesionalizar equipos de ventas, combinando formación,
-            acompañamiento y herramientas prácticas.
+            Desarrollamos equipos comerciales combinando formación, acompañamiento
+            y herramientas prácticas.
           </p>
         </div>
       </section>
 
-      {/* WHAT / SERVICES */}
+      {/* QUÉ */}
       <section id="servicios" className="section">
         <div className="wrap">
           <h2>Qué hacemos</h2>
@@ -114,103 +103,65 @@ export default function HomeES() {
             <article className="card">
               <div className="badge">Formación</div>
               <h3>Formación comercial para equipos de ventas</h3>
-              <p>
-                Prospección, reuniones comerciales, propuesta de valor, gestión de objeciones y cierre.
-              </p>
-              <p>Contenido práctico, enfocado al día a día del equipo.</p>
+              <p>Prospección, reuniones, propuesta de valor, objeciones y cierre.</p>
+              <p>Contenido práctico para el día a día del equipo.</p>
             </article>
 
             <article className="card">
               <div className="badge">Acompañamiento</div>
               <h3>Acompañamiento comercial a vendedores</h3>
-              <p>
-                Preparación de visitas, roleplays, observación de reuniones y feedback individual.
-              </p>
-              <p>Convertir la formación en hábitos y resultados sostenibles.</p>
+              <p>Preparación de visitas, roleplays, observación y feedback.</p>
+              <p>Convertir la formación en hábitos y resultados.</p>
             </article>
 
             <article className="card">
               <div className="badge">DISC</div>
               <h3>DISC aplicado a ventas y comunicación</h3>
-              <p>Mejora de la comunicación comercial adaptando el mensaje al perfil del cliente.</p>
-              <p>Aplicación práctica del modelo en ventas y negociación.</p>
+              <p>Adaptar el mensaje al perfil del cliente.</p>
+              <p>Uso práctico en ventas y negociación.</p>
             </article>
           </div>
         </div>
       </section>
 
-      {/* ABOUT */}
-      <section id="sobre" className="section">
+      {/* TRABAJAMOS ASÍ */}
+      <section id="proceso" className="section">
         <div className="wrap">
-          <h2>Quién está detrás</h2>
+          <h2>Un proceso claro para hacer crecer y evolucionar al equipo comercial</h2>
 
-          <div className="twoCol">
-            <div className="panel">
-              <p className="lead left">
-                Soy Luca Chiesa. Trabajo con equipos comerciales desde hace más de 15 años
-                en entornos B2B y B2C. Mi enfoque es práctico: lo que hacemos en sesión debe
-                sostenerse después en el día a día.
-              </p>
-
-              <ul className="bullets">
-                <li>+15 años con equipos comerciales (B2B y B2C)</li>
-                <li>Certificación DISC aplicada a ventas y comunicación</li>
-                <li>Autoliderazgo y motivación como base para el rendimiento</li>
-                <li>Experiencia internacional (Europa y Asia)</li>
-              </ul>
-            </div>
-
-            <div className="panel soft">
-              <h3>Cómo se nota en el trabajo</h3>
-              <p>
-                Menos teoría decorativa y más práctica: guiones, simulaciones, conversaciones difíciles
-                y seguimiento. Buscamos claridad, criterio y hábitos.
-              </p>
-              <p className="muted">
-                Si quieres, después añadimos aquí 2–3 casos reales con nombres (o anonimizados).
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* RESULTS */}
-      <section id="resultados" className="section">
-        <div className="wrap">
-          <h2>Resultados habituales</h2>
           <p className="lead left">
-            Dependiendo del sector y del punto de partida, estos son resultados típicos que buscamos:
+            Antes de decidir si trabajamos con formación, acompañamiento o ambos,
+            analizamos el contexto comercial y definimos el enfoque más adecuado.
           </p>
 
           <div className="grid">
             <article className="card">
-              <div className="badge">Pipeline</div>
-              <h3>Mejores conversaciones comerciales</h3>
+              <div className="badge">Paso 1</div>
+              <h3>Diagnóstico breve</h3>
               <p>
-                Reuniones más estructuradas, preguntas mejores y propuestas de valor más claras.
+                Entendemos el tipo de venta, el ciclo comercial, el perfil del equipo
+                y los puntos de mejora actuales.
               </p>
             </article>
 
             <article className="card">
-              <div className="badge">Cierre</div>
-              <h3>Más control ante objeciones</h3>
+              <div className="badge">Paso 2</div>
+              <h3>Plan y foco</h3>
               <p>
-                Gestión de precio, competencia y “déjamelo pensar” con criterio y sin tensión.
+                Definimos prioridades, mensajes clave y hábitos concretos.
+                Decidimos qué intervención tiene más sentido.
               </p>
             </article>
 
             <article className="card">
-              <div className="badge">Equipo</div>
-              <h3>Hábitos sostenibles</h3>
+              <div className="badge">Paso 3</div>
+              <h3>Implementación y seguimiento</h3>
               <p>
-                Rituales simples (preparación, seguimiento, foco) que mantienen el rendimiento.
+                Entrenamos en situaciones reales y acompañamos el proceso
+                para consolidar aprendizajes y resultados.
               </p>
             </article>
           </div>
-
-          <p className="note">
-            *No prometemos magia: medimos, entrenamos y consolidamos hábitos. Lo importante es la transferencia.
-          </p>
         </div>
       </section>
 
@@ -218,100 +169,50 @@ export default function HomeES() {
       <section className="section">
         <div className="wrap contactBox">
           <h2>Cuéntanos tu situación comercial</h2>
-
           <p className="lead left">
-            Si quieres desarrollar o profesionalizar tu equipo de ventas, explícanos brevemente tu contexto
-            y valoramos el encaje.
+            Explícanos brevemente tu contexto y valoramos si tiene sentido trabajar juntos.
           </p>
-
-          <a
-            className="btn primary"
-            href={`mailto:${email}?subject=${subject}&body=${body}`}
-          >
+          <a className="btn primary" href={`mailto:${email}?subject=${subject}&body=${body}`}>
             Escribir a {email}
           </a>
         </div>
       </section>
 
-      {/* FOOTER */}
       <footer className="footer">
         <p>© 2025 Luca Chiesa</p>
       </footer>
 
-      {/* STYLES */}
+      {/* ESTILOS */}
       <style jsx>{`
         :root {
-          --bg:#f6f7fb;
-          --ink:#0f172a;
-          --muted:#475569;
-          --muted2:#64748b;
-          --paper:#ffffff;
-          --brand:#2563eb;
-          --wrap:1060px;
-          --radius:18px;
-          --shadow:0 10px 24px rgba(16,24,40,.06);
+          --bg:#f6f7fb; --ink:#0f172a; --muted:#475569; --muted2:#64748b;
+          --paper:#ffffff; --brand:#2563eb; --wrap:1060px;
+          --radius:18px; --shadow:0 10px 24px rgba(16,24,40,.06);
         }
-
-        :global(html,body){
-          margin:0;
-          background:var(--bg);
-          color:var(--ink);
-          font-family:Inter,system-ui,Arial;
-        }
-
+        :global(html,body){margin:0;background:var(--bg);color:var(--ink);font-family:Inter,system-ui;}
         .wrap{max-width:var(--wrap);margin:0 auto;padding:0 20px;}
         .topbarInner{display:flex;justify-content:flex-end;padding:18px 20px;}
         .lang{font-size:14px;color:var(--muted);}
         .lang a{text-decoration:none;color:var(--muted2);}
         .lang .active{font-weight:700;color:var(--brand);}
         .lang .dot{margin:0 6px;}
-
         .hero{padding-top:20px;}
-        .heroCard{
-          background:var(--paper);
-          border-radius:28px;
-          padding:40px 32px;
-          box-shadow:var(--shadow);
-          text-align:center;
-        }
-
+        .heroCard{background:var(--paper);border-radius:28px;padding:40px 32px;box-shadow:var(--shadow);text-align:center;}
         h1{font-size:42px;margin:0 0 16px;}
-        h2{margin:0 0 12px;}
-        h3{margin:0 0 8px;}
         .kicker{color:var(--muted);font-weight:600;}
         .sub{max-width:820px;margin:12px auto;color:var(--muted2);}
-
         .ctaRow{margin-top:20px;display:flex;gap:10px;justify-content:center;flex-wrap:wrap;}
         .btn{padding:12px 18px;border-radius:12px;text-decoration:none;font-weight:700;}
         .btn.primary{background:var(--brand);color:#fff;}
         .btn.ghost{background:#fff;border:1px solid #ddd;color:var(--ink);}
-
         .section{padding:60px 0;}
         .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:18px;}
         .card{background:#fff;border-radius:var(--radius);padding:20px;box-shadow:var(--shadow);}
-        .badge{font-size:12px;font-weight:700;color:var(--brand); margin-bottom:10px;}
-        .lead{color:var(--muted2); line-height:1.7; max-width:900px;}
+        .badge{font-size:12px;font-weight:700;color:var(--brand);margin-bottom:8px;}
+        .lead{color:var(--muted2);line-height:1.7;max-width:900px;}
         .lead.left{margin:0 0 12px;}
-        .note{margin-top:12px;color:var(--muted);font-size:13px;}
-
-        .twoCol{display:grid;grid-template-columns:1fr;gap:18px;margin-top:12px;}
-        .panel{background:var(--paper);border-radius:var(--radius);padding:20px;box-shadow:var(--shadow);}
-        .panel.soft{background:#f1f5ff;}
-        .bullets{margin:12px 0 0;padding-left:18px;color:var(--muted2);line-height:1.7;}
-        .muted{color:var(--muted);font-size:13px;margin-top:10px;}
-
-        .contactBox{
-          background:var(--paper);
-          border-radius:28px;
-          padding:28px 22px;
-          box-shadow:var(--shadow);
-        }
-
+        .contactBox{background:var(--paper);border-radius:28px;padding:28px 22px;box-shadow:var(--shadow);}
         .footer{text-align:center;color:var(--muted);padding:40px 0;}
-
-        @media (min-width: 920px){
-          .twoCol{grid-template-columns:1.15fr .85fr;}
-        }
       `}</style>
     </>
   );
