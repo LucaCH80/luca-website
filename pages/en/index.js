@@ -19,36 +19,21 @@ export default function HomeEN() {
         <div className="wrap">
           <h1>We help you develop and professionalise your sales team</h1>
           <p className="sub">
-            Training and commercial coaching for sales teams, focused on real conversations and execution.
+            Training and commercial coaching focused on real conversations and execution.
           </p>
         </div>
       </section>
 
       <section className="section">
         <div className="wrap">
-          <h2>Real cases</h2>
-
-          <div className="grid">
-            <article className="card">
-              <h3>Consultative selling (B2B)</h3>
-              <p>Structuring sales conversations and defending value in complex sales situations.</p>
-            </article>
-
-            <article className="card">
-              <h3>Horizontal selling</h3>
-              <p>Increasing average ticket size and developing existing customers.</p>
-            </article>
-
-            <article className="card">
-              <h3>Handling objections</h3>
-              <p>Practical training to manage price and competitive objections with confidence.</p>
-            </article>
-
-            <article className="card">
-              <h3>Sales follow-up</h3>
-              <p>Improving follow-up discipline to increase control and closing rates.</p>
-            </article>
-          </div>
+          <h2>Let’s talk about how to drive sales forward</h2>
+          <p className="lead left">
+            If you want to take a step forward in how your team sells,
+            share your context and we will analyse it together, with focus and judgement.
+          </p>
+          <a href={`mailto:${email}?subject=${subject}&body=${body}`}>
+            Email {email}
+          </a>
         </div>
       </section>
 
