@@ -19,6 +19,7 @@ export default function HomeES() {
         <meta property="og:type" content="website" />
       </Head>
 
+      {/* TOPBAR */}
       <header className="topbar">
         <div className="topbarInner">
           <nav className="lang">
@@ -29,6 +30,7 @@ export default function HomeES() {
         </div>
       </header>
 
+      {/* HERO */}
       <section className="hero">
         <div className="wrap">
           <div className="heroCard">
@@ -63,6 +65,7 @@ export default function HomeES() {
         </div>
       </section>
 
+      {/* POR QUÉ */}
       <section id="porque" className="section">
         <div className="wrap">
           <h2>Por qué hacemos este trabajo</h2>
@@ -80,6 +83,7 @@ export default function HomeES() {
         </div>
       </section>
 
+      {/* CÓMO */}
       <section className="section">
         <div className="wrap">
           <h2>Cómo trabajamos</h2>
@@ -90,6 +94,7 @@ export default function HomeES() {
         </div>
       </section>
 
+      {/* QUÉ */}
       <section id="servicios" className="section">
         <div className="wrap">
           <h2>Qué hacemos</h2>
@@ -99,63 +104,31 @@ export default function HomeES() {
               <div className="badge">Formación</div>
               <h3>Formación comercial para equipos de ventas</h3>
               <p>Prospección, reuniones, propuesta de valor, objeciones y cierre.</p>
-              <p>Contenido práctico para el día a día del equipo.</p>
             </article>
 
             <article className="card">
               <div className="badge">Acompañamiento</div>
               <h3>Acompañamiento comercial a vendedores</h3>
               <p>Preparación de visitas, roleplays, observación y feedback.</p>
-              <p>Convertir la formación en hábitos y resultados.</p>
             </article>
 
             <article className="card">
               <div className="badge">DISC</div>
               <h3>DISC aplicado a ventas y comunicación</h3>
               <p>Adaptar el mensaje al perfil del cliente.</p>
-              <p>Uso práctico en ventas y negociación.</p>
             </article>
           </div>
         </div>
       </section>
 
-      <section id="proceso" className="section">
+      {/* TRABAJAMOS ASÍ */}
+      <section className="section">
         <div className="wrap">
           <h2>Un proceso claro para hacer crecer y evolucionar al equipo comercial</h2>
-
           <p className="lead left">
             Antes de decidir si trabajamos con formación, acompañamiento o ambos,
             analizamos el contexto comercial y definimos el enfoque más adecuado.
           </p>
-
-          <div className="grid">
-            <article className="card">
-              <div className="badge">Paso 1</div>
-              <h3>Diagnóstico breve</h3>
-              <p>
-                Entendemos el tipo de venta, el ciclo comercial, el perfil del equipo
-                y los puntos de mejora actuales.
-              </p>
-            </article>
-
-            <article className="card">
-              <div className="badge">Paso 2</div>
-              <h3>Plan y foco</h3>
-              <p>
-                Definimos prioridades, mensajes clave y hábitos concretos.
-                Decidimos qué intervención tiene más sentido.
-              </p>
-            </article>
-
-            <article className="card">
-              <div className="badge">Paso 3</div>
-              <h3>Implementación y seguimiento</h3>
-              <p>
-                Entrenamos en situaciones reales y acompañamos el proceso
-                para consolidar aprendizajes y resultados.
-              </p>
-            </article>
-          </div>
         </div>
       </section>
 
@@ -163,36 +136,42 @@ export default function HomeES() {
       <section className="section">
         <div className="wrap">
           <h2>Cuándo no tiene sentido trabajar juntos</h2>
-
           <p className="lead left">
             No siempre tiene sentido trabajar juntos, y preferimos decirlo con claridad desde el principio.
           </p>
+        </div>
+      </section>
+
+      {/* CASOS */}
+      <section className="section">
+        <div className="wrap">
+          <h2>Casos reales</h2>
 
           <div className="grid">
             <article className="card">
-              <h3>No tiene sentido si</h3>
-              <ul className="bullets">
-                <li>Se busca una solución rápida sin implicación real del equipo.</li>
-                <li>No hay disposición a revisar hábitos y conversaciones.</li>
-                <li>Se espera que la formación sustituya al liderazgo.</li>
-                <li>El foco está solo en hacer más, sin mejorar cómo se vende.</li>
-                <li>No existe compromiso para dar continuidad.</li>
-              </ul>
+              <h3>Venta consultiva B2B</h3>
+              <p>Formación y acompañamiento para estructurar conversaciones, profundizar en necesidades y defender valor.</p>
             </article>
 
             <article className="card">
-              <h3>Sí tiene sentido si</h3>
-              <ul className="bullets">
-                <li>Se quiere desarrollar al equipo a medio y largo plazo.</li>
-                <li>Se busca combinar criterio, práctica y acompañamiento.</li>
-                <li>Existe apertura para cuestionar y mejorar.</li>
-                <li>Se persigue impacto sostenible.</li>
-              </ul>
+              <h3>Venta horizontal</h3>
+              <p>Trabajo para aumentar el ticket medio y pasar de vendedor de pedidos a desarrollador de clientes.</p>
+            </article>
+
+            <article className="card">
+              <h3>Gestión de objeciones</h3>
+              <p>Formación práctica para gestionar precio, competencia y bloqueos habituales con mayor criterio.</p>
+            </article>
+
+            <article className="card">
+              <h3>Seguimiento comercial</h3>
+              <p>Estructuración del seguimiento para mejorar control del pipeline y cierre de oportunidades.</p>
             </article>
           </div>
         </div>
       </section>
 
+      {/* CTA */}
       <section className="section">
         <div className="wrap contactBox">
           <h2>Cuéntanos tu situación comercial</h2>
@@ -208,10 +187,6 @@ export default function HomeES() {
       <footer className="footer">
         <p>© 2025 Luca Chiesa</p>
       </footer>
-
-      <style jsx>{`
-        .bullets{padding-left:18px;line-height:1.7;color:#475569;}
-      `}</style>
     </>
   );
 }
