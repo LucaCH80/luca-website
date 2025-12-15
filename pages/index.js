@@ -19,7 +19,6 @@ export default function HomeES() {
         <meta property="og:type" content="website" />
       </Head>
 
-      {/* TOPBAR */}
       <header className="topbar">
         <div className="topbarInner">
           <nav className="lang">
@@ -30,7 +29,6 @@ export default function HomeES() {
         </div>
       </header>
 
-      {/* HERO */}
       <section className="hero">
         <div className="wrap">
           <div className="heroCard">
@@ -65,7 +63,6 @@ export default function HomeES() {
         </div>
       </section>
 
-      {/* POR QUÉ */}
       <section id="porque" className="section">
         <div className="wrap">
           <h2>Por qué hacemos este trabajo</h2>
@@ -83,7 +80,6 @@ export default function HomeES() {
         </div>
       </section>
 
-      {/* CÓMO */}
       <section className="section">
         <div className="wrap">
           <h2>Cómo trabajamos</h2>
@@ -94,7 +90,6 @@ export default function HomeES() {
         </div>
       </section>
 
-      {/* QUÉ */}
       <section id="servicios" className="section">
         <div className="wrap">
           <h2>Qué hacemos</h2>
@@ -124,7 +119,6 @@ export default function HomeES() {
         </div>
       </section>
 
-      {/* TRABAJAMOS ASÍ */}
       <section id="proceso" className="section">
         <div className="wrap">
           <h2>Un proceso claro para hacer crecer y evolucionar al equipo comercial</h2>
@@ -165,7 +159,40 @@ export default function HomeES() {
         </div>
       </section>
 
-      {/* CTA FINAL */}
+      {/* CUÁNDO NO */}
+      <section className="section">
+        <div className="wrap">
+          <h2>Cuándo no tiene sentido trabajar juntos</h2>
+
+          <p className="lead left">
+            No siempre tiene sentido trabajar juntos, y preferimos decirlo con claridad desde el principio.
+          </p>
+
+          <div className="grid">
+            <article className="card">
+              <h3>No tiene sentido si</h3>
+              <ul className="bullets">
+                <li>Se busca una solución rápida sin implicación real del equipo.</li>
+                <li>No hay disposición a revisar hábitos y conversaciones.</li>
+                <li>Se espera que la formación sustituya al liderazgo.</li>
+                <li>El foco está solo en hacer más, sin mejorar cómo se vende.</li>
+                <li>No existe compromiso para dar continuidad.</li>
+              </ul>
+            </article>
+
+            <article className="card">
+              <h3>Sí tiene sentido si</h3>
+              <ul className="bullets">
+                <li>Se quiere desarrollar al equipo a medio y largo plazo.</li>
+                <li>Se busca combinar criterio, práctica y acompañamiento.</li>
+                <li>Existe apertura para cuestionar y mejorar.</li>
+                <li>Se persigue impacto sostenible.</li>
+              </ul>
+            </article>
+          </div>
+        </div>
+      </section>
+
       <section className="section">
         <div className="wrap contactBox">
           <h2>Cuéntanos tu situación comercial</h2>
@@ -182,37 +209,8 @@ export default function HomeES() {
         <p>© 2025 Luca Chiesa</p>
       </footer>
 
-      {/* ESTILOS */}
       <style jsx>{`
-        :root {
-          --bg:#f6f7fb; --ink:#0f172a; --muted:#475569; --muted2:#64748b;
-          --paper:#ffffff; --brand:#2563eb; --wrap:1060px;
-          --radius:18px; --shadow:0 10px 24px rgba(16,24,40,.06);
-        }
-        :global(html,body){margin:0;background:var(--bg);color:var(--ink);font-family:Inter,system-ui;}
-        .wrap{max-width:var(--wrap);margin:0 auto;padding:0 20px;}
-        .topbarInner{display:flex;justify-content:flex-end;padding:18px 20px;}
-        .lang{font-size:14px;color:var(--muted);}
-        .lang a{text-decoration:none;color:var(--muted2);}
-        .lang .active{font-weight:700;color:var(--brand);}
-        .lang .dot{margin:0 6px;}
-        .hero{padding-top:20px;}
-        .heroCard{background:var(--paper);border-radius:28px;padding:40px 32px;box-shadow:var(--shadow);text-align:center;}
-        h1{font-size:42px;margin:0 0 16px;}
-        .kicker{color:var(--muted);font-weight:600;}
-        .sub{max-width:820px;margin:12px auto;color:var(--muted2);}
-        .ctaRow{margin-top:20px;display:flex;gap:10px;justify-content:center;flex-wrap:wrap;}
-        .btn{padding:12px 18px;border-radius:12px;text-decoration:none;font-weight:700;}
-        .btn.primary{background:var(--brand);color:#fff;}
-        .btn.ghost{background:#fff;border:1px solid #ddd;color:var(--ink);}
-        .section{padding:60px 0;}
-        .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:18px;}
-        .card{background:#fff;border-radius:var(--radius);padding:20px;box-shadow:var(--shadow);}
-        .badge{font-size:12px;font-weight:700;color:var(--brand);margin-bottom:8px;}
-        .lead{color:var(--muted2);line-height:1.7;max-width:900px;}
-        .lead.left{margin:0 0 12px;}
-        .contactBox{background:var(--paper);border-radius:28px;padding:28px 22px;box-shadow:var(--shadow);}
-        .footer{text-align:center;color:var(--muted);padding:40px 0;}
+        .bullets{padding-left:18px;line-height:1.7;color:#475569;}
       `}</style>
     </>
   );
