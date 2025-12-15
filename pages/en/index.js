@@ -2,303 +2,241 @@ import Head from "next/head";
 
 export default function HomeEN() {
   const email = "contact@lucachiesa.net";
-  const subject = encodeURIComponent("Website inquiry");
+  const subject = encodeURIComponent("Website enquiry");
   const body = encodeURIComponent("Hi Luca,");
 
   return (
     <>
       <Head>
-        <title>Luca Chiesa — Sales • Leadership • DISC</title>
+        <title>Luca Chiesa — Sales Team Development</title>
         <meta
           name="description"
-          content="Sales enablement and practical training. Communication, team motivation, leadership and DISC certification."
+          content="Training and commercial coaching for B2B and B2C sales teams. Sales, communication, motivation and DISC applied to daily performance."
         />
         <link rel="canonical" href="https://lucachiesa.net/en" />
-        <link rel="alternate" hrefLang="en" href="https://lucachiesa.net/en" />
         <link rel="alternate" hrefLang="es" href="https://lucachiesa.net/" />
-        <meta property="og:locale" content="en_US" />
-        <meta property="og:title" content="Luca Chiesa — Sales • Leadership • DISC" />
-        <meta
-          property="og:description"
-          content="Sales enablement and practical training. Communication, team motivation, leadership and DISC certification."
-        />
-        <meta property="og:url" content="https://lucachiesa.net/en" />
+        <link rel="alternate" hrefLang="en" href="https://lucachiesa.net/en" />
         <meta property="og:type" content="website" />
       </Head>
 
-      {/* Topbar with language selector */}
+      {/* TOPBAR */}
       <header className="topbar">
-        <nav className="lang">
-          <a href="/" aria-label="Versión en español">ES</a>
-          <span className="dot">•</span>
-          <span className="active">EN</span>
-        </nav>
+        <div className="topbarInner">
+          <nav className="lang">
+            <a href="/">ES</a>
+            <span className="dot">•</span>
+            <span className="active">EN</span>
+          </nav>
+        </div>
       </header>
 
       {/* HERO */}
-      <section className="wrap hero">
-        <h1>Luca Chiesa</h1>
-        <p className="kicker">Sales • Leadership • DISC</p>
-        <p className="sub">
-          Over 15 years helping commercial teams grow, communicate better and sell with purpose.
-        </p>
+      <section className="hero">
+        <div className="wrap">
+          <div className="heroCard">
+            <h1>
+              We help you develop and professionalise
+              <br />
+              your sales team
+            </h1>
 
-        <a
-          className="cta"
-          href={`mailto:${email}?subject=${subject}&body=${body}`}
-        >
-          Contact Luca
-        </a>
-      </section>
-
-      {/* ABOUT */}
-      <section className="wrap section">
-        <h2 className="h2">About</h2>
-        <p className="lead">
-          I partner with teams and professionals to sell with meaning, communicate clearly and build relationships that last.
-          I work from real experience, with a practical and human approach focused on achieving tangible, sustainable results.
-        </p>
-      </section>
-
-      {/* SERVICES */}
-      <section className="wrap section">
-        <h2 className="h2">Services</h2>
-
-        <div className="grid">
-          <article className="card">
-            <h3 className="h3">Sales Training</h3>
-            <p>
-              Prospecting, discovery, value proposition, objections and closing.
-              Hands-on workshops to sell with method and confidence.
+            <p className="kicker">
+              Sales · Communication · Motivation · DISC
             </p>
-          </article>
 
-          <article className="card">
-            <h3 className="h3">Communication</h3>
-            <p>
-              Effective meetings, feedback and real connection.
-              Improve client and team relationships by understanding different communication styles.
+            <p className="sub">
+              Sales training and commercial coaching focused on real situations.
+              Practical work with B2B and B2C sales teams, from self-leadership
+              to daily execution.
             </p>
-          </article>
 
-          <article className="card">
-            <h3 className="h3">Team Motivation</h3>
-            <p>
-              Rituals, focus and habits. Sustained energy to reach goals while taking care of the team.
-            </p>
-          </article>
+            <div className="ctaRow">
+              <a
+                className="btn primary"
+                href={`mailto:${email}?subject=${subject}&body=${body}`}
+              >
+                Talk for 15 minutes
+              </a>
 
-          <article className="card">
-            <h3 className="h3">Leadership &amp; Self-Leadership</h3>
-            <p>
-              Key conversations, prioritising, delegating and giving direction.
-              Developing leaders’ judgement and consistency.
-            </p>
-          </article>
+              <a className="btn ghost" href="#services">
+                View services
+              </a>
 
-          <article className="card">
-            <h3 className="h3">DISC Certification</h3>
-            <p>
-              Open certifications and in-company programmes for HR and managers.
-              Real implementation of the model inside the organisation.
-            </p>
-          </article>
+              <a
+                className="btn ghost"
+                href="https://www.linkedin.com/in/lucachiesa/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                LinkedIn
+              </a>
+            </div>
 
-          <article className="card">
-            <h3 className="h3">Sales Coaching</h3>
-            <p>
-              1:1 and on-the-job sessions. Visit prep, role-plays and follow-up
-              to accelerate results and learning.
-            </p>
-          </article>
+            <div className="proof">
+              <span className="proofItem">
+                <span className="okDot" /> 15+ years working with B2B & B2C sales teams
+              </span>
+              <span className="proofItem">
+                <span className="okDot" /> DISC certification applied to sales and communication
+              </span>
+              <span className="proofItem">
+                <span className="okDot" /> Training plus real commercial coaching
+              </span>
+            </div>
+          </div>
         </div>
       </section>
 
-      {/* FINAL CTA */}
-      <section className="wrap section ctaBlock">
-        <h2 className="h2">Let’s talk</h2>
-        <p className="lead">
-          Tell me where you are now and we’ll design the next step together.
-        </p>
+      {/* SERVICES */}
+      <section id="services" className="section">
+        <div className="wrap">
+          <h2>How we work</h2>
 
-        <a
-          className="cta"
-          href={`mailto:${email}?subject=${subject}&body=${body}`}
-        >
-          Email {email}
-        </a>
+          <p className="lead left">
+            Interventions designed to develop and professionalise sales teams,
+            combining training, coaching and practical tools.
+          </p>
+
+          <div className="grid">
+            <article className="card">
+              <div className="badge">Training</div>
+              <h3>Sales training for teams</h3>
+              <p>
+                Programmes adapted to the team’s reality: prospecting, sales
+                meetings, value proposition, objection handling and closing.
+              </p>
+              <p>
+                Practical content directly applicable to daily sales activity.
+              </p>
+            </article>
+
+            <article className="card">
+              <div className="badge">Coaching</div>
+              <h3>Commercial coaching for salespeople</h3>
+              <p>
+                Direct work with salespeople: meeting preparation, role plays,
+                observation and individual feedback.
+              </p>
+              <p>
+                Turning training into habits and sustainable results.
+              </p>
+            </article>
+
+            <article className="card">
+              <div className="badge">DISC</div>
+              <h3>DISC applied to sales and communication</h3>
+              <p>
+                Improving sales conversations by adapting communication to
+                different behavioural styles.
+              </p>
+              <p>
+                Practical application of DISC in sales and negotiation.
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      {/* WHY */}
+      <section className="section">
+        <div className="wrap">
+          <h2>Why we do this work</h2>
+
+          <p className="lead left">
+            Because selling is not just about techniques. It is about judgement,
+            conversation and people.
+          </p>
+
+          <p className="lead left">
+            Sales teams improve when they understand what they do, why they do it
+            and how it impacts both results and relationships.
+          </p>
+
+          <p className="lead left">
+            That is why we work from the inside out: developing habits, clarity
+            and self-leadership to achieve real and sustainable improvement.
+          </p>
+        </div>
+      </section>
+
+      {/* CTA FINAL */}
+      <section className="section">
+        <div className="wrap contactBox">
+          <h2>Tell us about your sales context</h2>
+
+          <p className="lead left">
+            If you want to develop or professionalise your sales team, briefly
+            explain your situation and we will assess the fit.
+          </p>
+
+          <a
+            className="btn primary"
+            href={`mailto:${email}?subject=${subject}&body=${body}`}
+          >
+            Email {email}
+          </a>
+        </div>
       </section>
 
       {/* FOOTER */}
       <footer className="footer">
         <p>© 2025 Luca Chiesa</p>
-        <div className="icons">
-          <a
-            className="icon"
-            href={`mailto:${email}?subject=${subject}&body=${body}`}
-            aria-label="Email"
-          >
-            <svg width="22" height="22" viewBox="0 0 24 24" fill="none">
-              <path d="M4 6h16a1 1 0 0 1 1 1v10a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1Z" stroke="currentColor" strokeWidth="1.6" />
-              <path d="m4 7 8 6 8-6" stroke="currentColor" strokeWidth="1.6" fill="none" />
-            </svg>
-          </a>
-
-          <a
-            className="icon"
-            href="https://www.linkedin.com/in/lucachiesa/"
-            target="_blank"
-            rel="noopener noreferrer"
-            aria-label="LinkedIn"
-          >
-            <svg width="22" height="22" viewBox="0 0 24 24" fill="none">
-              <path d="M4.98 3.5C4.98 4.88 3.88 6 2.5 6S0 4.88 0 3.5 1.12 1 2.5 1s2.48 1.12 2.48 2.5ZM.5 8.5h4V23h-4V8.5Zm7.5 0h3.8v2h.05c.53-1 1.84-2.05 3.8-2.05C20.6 8.45 23 10.2 23 14.1V23h-4v-7.5c0-1.8-.03-4.1-2.5-4.1-2.5 0-2.88 1.95-2.88 4v7.6H8V8.5Z" fill="currentColor"/>
-            </svg>
-          </a>
-        </div>
       </footer>
 
-      {/* STYLES (same refined scale as ES) */}
+      {/* STYLES */}
       <style jsx>{`
-        :root{
-          --bg: #f6f7fb;
-          --ink: #111214;
-          --muted: #475569;
-          --muted-2: #64748b;
-          --brand: #2563eb;
-          --brand-700: #1e40af;
-          --paper: #fff;
-          --ring: rgba(37, 99, 235, .35);
-          --shadow: 0 10px 24px rgba(16,24,40,.06);
-          --shadow-2: 0 14px 28px rgba(30,64,175,.20);
-          --radius: 14px;
-          --wrap: 1020px;
+        :root {
+          --bg:#f6f7fb;
+          --ink:#0f172a;
+          --muted:#475569;
+          --muted2:#64748b;
+          --paper:#ffffff;
+          --brand:#2563eb;
+          --wrap:1060px;
+          --radius:18px;
+          --shadow:0 10px 24px rgba(16,24,40,.06);
         }
 
-        :global(html, body) {
-          padding: 0;
-          margin: 0;
-          background: var(--bg);
-          color: var(--ink);
-          font-family: Inter, ui-sans-serif, system-ui, -apple-system, Segoe UI,
-            Roboto, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji";
-          text-rendering: optimizeLegibility;
-          -webkit-font-smoothing: antialiased;
-          -moz-osx-font-smoothing: grayscale;
+        :global(html,body){
+          margin:0;
+          background:var(--bg);
+          color:var(--ink);
+          font-family:Inter,system-ui,Arial;
         }
 
-        .topbar {
-          display: flex;
-          justify-content: flex-end;
-          max-width: var(--wrap);
-          margin: 0 auto;
-          padding: 18px 20px 0;
-        }
-        .lang {
-          font-size: 14.5px;
-          color: var(--muted);
-          display:flex; align-items:center; gap:.35rem;
-        }
-        .lang a { color: var(--muted-2); text-decoration: none; padding: 6px 9px; border-radius: 8px; }
-        .lang a:hover { background:#eef2ff; color:#1e2a8a; }
-        .lang .active { background:#e9efff; color:#1e40af; font-weight:600; padding:6px 9px; border-radius:8px; }
-        .lang .dot { opacity:.4; margin:0 .2rem; }
+        .wrap{max-width:var(--wrap);margin:0 auto;padding:0 20px;}
+        .topbarInner{display:flex;justify-content:flex-end;padding:18px 20px;}
+        .lang{font-size:14px;color:var(--muted);}
+        .lang a{text-decoration:none;color:var(--muted2);}
+        .lang .active{font-weight:700;color:var(--brand);}
+        .lang .dot{margin:0 6px;}
 
-        .wrap {
-          max-width: var(--wrap);
-          margin: 0 auto;
-          padding: clamp(36px, 6vw, 56px) 20px 0;
+        .hero{padding-top:20px;}
+        .heroCard{
+          background:var(--paper);
+          border-radius:28px;
+          padding:40px 32px;
+          box-shadow:var(--shadow);
+          text-align:center;
         }
 
-        .hero { text-align: center; padding-top: 10px; }
-        h1 {
-          font-size: clamp(38px, 5.4vw, 66px);
-          line-height: 1.08;
-          margin: 0 0 .5rem 0;
-          font-weight: 800;
-          letter-spacing: -0.02em;
-        }
-        .kicker {
-          margin: 0;
-          font-size: clamp(16.5px, 2.1vw, 22px);
-          color: var(--muted);
-          letter-spacing: .01em;
-        }
-        .sub {
-          margin: .6rem auto 0;
-          font-size: clamp(15.5px, 1.9vw, 18px);
-          color: var(--muted-2);
-          max-width: 820px;
-          line-height: 1.55;
-        }
+        h1{font-size:42px;margin:0 0 16px;}
+        .kicker{color:var(--muted);font-weight:600;}
+        .sub{max-width:820px;margin:12px auto;color:var(--muted2);}
 
-        .cta {
-          display: inline-block;
-          margin-top: 26px;
-          background: var(--brand);
-          color: #fff;
-          text-decoration: none;
-          padding: 13px 22px;
-          border-radius: 12px;
-          font-weight: 700;
-          box-shadow: var(--shadow);
-          transition: transform .12s ease, box-shadow .2s ease, background .15s ease;
-        }
-        .cta:hover { background: var(--brand-700); transform: translateY(-1px); box-shadow: var(--shadow-2); }
+        .ctaRow{margin-top:20px;display:flex;gap:10px;justify-content:center;flex-wrap:wrap;}
+        .btn{padding:12px 18px;border-radius:12px;text-decoration:none;font-weight:700;}
+        .btn.primary{background:var(--brand);color:#fff;}
+        .btn.ghost{background:#fff;border:1px solid #ddd;color:var(--ink);}
 
-        .section { margin-top: clamp(56px, 7vw, 78px); }
-        .h2 {
-          font-size: clamp(24px, 3.1vw, 32px);
-          margin: 0 0 .65rem 0;
-          letter-spacing: -.01em;
-        }
-        .lead {
-          font-size: clamp(16px, 2vw, 18.2px);
-          color: var(--muted-2);
-          line-height: 1.66;
-          max-width: 850px;
-          margin: 0;
-        }
+        .proof{margin-top:18px;display:flex;gap:14px;justify-content:center;flex-wrap:wrap;font-size:14px;}
+        .okDot{display:inline-block;width:8px;height:8px;background:var(--brand);border-radius:50%;margin-right:6px;}
 
-        .grid {
-          margin-top: 18px;
-          display: grid;
-          grid-template-columns: repeat(12, 1fr);
-          gap: 18px;
-        }
-        .card {
-          grid-column: span 12;
-          background: var(--paper);
-          border-radius: var(--radius);
-          padding: 18px 18px 16px;
-          box-shadow: 0 6px 18px rgba(0,0,0,.06);
-        }
-        .h3 { font-size: 18px; margin: 0 0 6px; letter-spacing: -.005em; }
-        .card p { margin: 0; color: var(--muted-2); line-height: 1.6; }
-
-        @media (min-width: 720px) { .card { grid-column: span 6; } }
-        @media (min-width: 1024px) { .card { grid-column: span 4; } }
-
-        .ctaBlock { text-align: center; padding-bottom: 8px; }
-
-        .footer {
-          max-width: var(--wrap);
-          margin: clamp(64px, 8vw, 96px) auto 48px;
-          padding: 0 20px;
-          text-align: center;
-          color: var(--muted);
-        }
-        .icons {
-          display: flex; gap: 14px; align-items: center; justify-content: center; margin-top: 12px;
-        }
-        .icon {
-          display: inline-flex; align-items: center; justify-content: center;
-          width: 46px; height: 46px; border-radius: 12px;
-          background: var(--paper); color: #111827;
-          box-shadow: 0 4px 14px rgba(0,0,0,.08);
-          transition: transform .12s ease, box-shadow .2s ease;
-        }
-        .icon:hover { transform: translateY(-1px); box-shadow: 0 8px 18px rgba(0,0,0,.12); }
+        .section{padding:60px 0;}
+        .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:18px;}
+        .card{background:#fff;border-radius:var(--radius);padding:20px;box-shadow:var(--shadow);}
+        .badge{font-size:12px;font-weight:700;color:var(--brand);}
+        .footer{text-align:center;color:var(--muted);padding:40px 0;}
       `}</style>
     </>
   );
