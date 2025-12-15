@@ -41,8 +41,7 @@ export default function HomeES() {
       {/* HERO */}
       <section className="hero">
         <div className="wrap">
-          <div className="heroCard">
-            <div className="pill">Barcelona · Europa · Online</div>
+          <div className="heroCard"
 
             <h1>
               Te ayudamos a desarrollar y profesionalizar
