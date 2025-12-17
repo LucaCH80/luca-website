@@ -8,25 +8,22 @@ export default function LinkedInLanding() {
   return (
     <>
       <Head>
-        <title>Impulsar las ventas | Luca Chiesa</title>
+        <title>Conversaciones sobre ventas | Luca Chiesa</title>
         <meta
           name="description"
-          content="Formación y acompañamiento comercial para equipos de ventas. Una conversación con criterio sobre cómo evolucionar la forma de vender."
+          content="Formación y acompañamiento comercial. Conversaciones sobre ventas con equipos comerciales."
         />
         <link rel="canonical" href="https://lucachiesa.net/linkedin" />
       </Head>
 
+      {/* HERO */}
       <section className="hero">
         <div className="wrap">
-          <h1>
-            Impulsar las ventas no va solo de técnicas.
-            <br />
-            Va de conversaciones, criterio y hábitos.
-          </h1>
+          <h1>Conversaciones sobre ventas.</h1>
 
           <p className="sub">
-            Trabajo con equipos comerciales para acompañar la evolución de su forma de vender,
-            reforzando claridad, foco y continuidad sin romper lo que ya funciona.
+            Con equipos comerciales, compartiendo <strong>formas de trabajar</strong> y
+            experiencias del día a día.
           </p>
 
           <p className="tag">
@@ -34,7 +31,7 @@ export default function LinkedInLanding() {
           </p>
 
           <a
-            className="btn"
+            className="btn primary"
             href={`mailto:${email}?subject=${subject}&body=${body}`}
           >
             Hablemos de cómo impulsar las ventas
@@ -42,29 +39,40 @@ export default function LinkedInLanding() {
         </div>
       </section>
 
+      {/* BLOQUE ANCLA */}
       <section className="section">
+        <div className="wrap narrow">
+          <p className="anchor">No va de corregir.</p>
+          <p className="anchor">No va de empezar de cero.</p>
+          <p className="anchor">No va de aplicar recetas.</p>
+
+          <p className="anchor strong">
+            Va de pensar juntos cómo se está vendiendo hoy<br />
+            y dar continuidad a lo que ya funciona.
+          </p>
+        </div>
+      </section>
+
+      {/* PARA QUIÉN */}
+      <section className="section light">
         <div className="wrap">
           <h2>Para quién tiene sentido</h2>
 
           <ul>
             <li>Dirección comercial o general</li>
             <li>Responsables de formación</li>
-            <li>Empresas que quieren dar un paso más en su forma de vender</li>
-            <li>Equipos que buscan más criterio y coherencia comercial</li>
+            <li>Equipos comerciales que valoran contrastar enfoques</li>
+            <li>Organizaciones que buscan coherencia y continuidad</li>
           </ul>
-
-          <p className="note">
-            No va de corregir ni de empezar de cero.
-            Va de evolucionar sobre lo que ya existe.
-          </p>
         </div>
       </section>
 
-      <section className="section light">
+      {/* CÓMO TRABAJO */}
+      <section className="section">
         <div className="wrap">
           <h2>Cómo trabajo</h2>
 
-          <ul>
+          <ul className="cols">
             <li>Formación práctica en ventas</li>
             <li>Acompañamiento a vendedores</li>
             <li>Trabajo sobre conversaciones reales</li>
@@ -72,54 +80,60 @@ export default function LinkedInLanding() {
           </ul>
 
           <p className="note">
-            Sin recetas universales.  
-            Sin discursos motivacionales vacíos.  
-            Con foco en el día a día comercial.
+            Sin discursos vacíos.<br />
+            Sin fórmulas universales.
           </p>
         </div>
       </section>
 
-      <section className="section">
+      {/* FOCOS */}
+      <section className="section light">
         <div className="wrap">
-          <h2>Algunos focos habituales</h2>
+          <h2>Focos habituales de trabajo</h2>
 
-          <ul>
+          <ul className="cols">
             <li>Venta consultiva en entornos B2B</li>
             <li>Venta horizontal y desarrollo de clientes</li>
             <li>Gestión de objeciones habituales</li>
             <li>Seguimiento comercial y cierre</li>
           </ul>
+
+          <p className="note">
+            Cada equipo es distinto.<br />
+            El enfoque se define caso a caso.
+          </p>
         </div>
       </section>
 
-      <section className="section light">
+      {/* CUÁNDO NO */}
+      <section className="section">
         <div className="wrap">
           <h2>Cuándo no tiene sentido</h2>
 
           <p>
-            No tiene sentido si se busca una solución rápida
+            No tiene sentido si se busca una solución rápida<br />
             o sin implicación del equipo.
           </p>
 
           <p>
-            Sí lo tiene cuando hay interés en trabajar
-            con criterio y continuidad.
+            Sí lo tiene cuando hay interés<br />
+            en trabajar con continuidad.
           </p>
         </div>
       </section>
 
+      {/* CTA FINAL */}
       <section className="section cta">
         <div className="wrap">
           <h2>Hablemos de cómo impulsar las ventas</h2>
 
-          <p>
-            Si quieres dar un paso adelante en la forma en que tu equipo vende,
-            cuéntanos brevemente tu contexto y lo analizamos juntos,
-            con foco y criterio.
+          <p className="sub">
+            Si te apetece poner en común cómo se está vendiendo hoy,
+            lo analizamos juntos con calma.
           </p>
 
           <a
-            className="btn"
+            className="btn primary"
             href={`mailto:${email}?subject=${subject}&body=${body}`}
           >
             Escribir a {email}
@@ -131,6 +145,7 @@ export default function LinkedInLanding() {
         <p>© 2025 Luca Chiesa</p>
       </footer>
 
+      {/* ESTILOS */}
       <style jsx>{`
         :root {
           --bg:#f6f7fb;
@@ -147,8 +162,12 @@ export default function LinkedInLanding() {
           padding:0 20px;
         }
 
+        .wrap.narrow {
+          max-width:700px;
+        }
+
         .hero {
-          padding:80px 0;
+          padding:80px 0 64px;
           background:white;
           text-align:center;
         }
@@ -156,25 +175,25 @@ export default function LinkedInLanding() {
         h1 {
           font-size:42px;
           line-height:1.15;
+          margin-bottom:16px;
         }
 
         .sub {
-          color:var(--muted);
           font-size:18px;
-          max-width:800px;
-          margin:20px auto;
+          color:var(--muted);
+          margin-bottom:20px;
         }
 
         .tag {
           font-weight:600;
-          margin-bottom:24px;
+          margin-bottom:28px;
         }
 
         .btn {
           display:inline-block;
           background:var(--brand);
           color:white;
-          padding:14px 26px;
+          padding:14px 28px;
           border-radius:10px;
           text-decoration:none;
           font-weight:700;
@@ -188,13 +207,32 @@ export default function LinkedInLanding() {
           background:white;
         }
 
+        h2 {
+          margin-bottom:20px;
+        }
+
         ul {
           line-height:1.8;
           color:var(--muted);
         }
 
+        ul.cols {
+          columns:2;
+          column-gap:40px;
+        }
+
+        .anchor {
+          font-size:18px;
+          margin:6px 0;
+        }
+
+        .anchor.strong {
+          margin-top:18px;
+          font-weight:600;
+        }
+
         .note {
-          margin-top:20px;
+          margin-top:24px;
           color:var(--muted);
           font-style:italic;
         }
@@ -207,6 +245,11 @@ export default function LinkedInLanding() {
           padding:40px 0;
           text-align:center;
           color:var(--muted);
+        }
+
+        @media (max-width: 640px) {
+          h1 { font-size:32px; }
+          ul.cols { columns:1; }
         }
       `}</style>
     </>
